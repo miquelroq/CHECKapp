@@ -3,4 +3,5 @@ Projeto desenvolvido no âmbito do Curso de Verao "Aplicações IOT para a área
 
 Authors:
 Miguel Roque <miguelroque99@tecnico.ulisboa.pt>
+
 Tiago Melo <tiagomelo@ua.pt>
