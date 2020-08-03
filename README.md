@@ -1,7 +1,7 @@
 
-Projeto desenvolvido no âmbito do Curso de Verao "Aplicações IOT para a área da saúde" no IPV.
+*Projeto desenvolvido no âmbito do Curso de Verao "Aplicações IOT para a área da saúde" no IPV.*
 
-Authors:
+**Authors:**
 
 Miguel Roque <miguelroque99@tecnico.ulisboa.pt>
 
