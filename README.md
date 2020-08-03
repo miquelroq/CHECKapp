@@ -3,6 +3,6 @@
 
 **Authors:**
 
-Miguel Roque <miguelroque99@tecnico.ulisboa.pt>
+Miguel Roque: <miguelroque99@tecnico.ulisboa.pt>
 
-Tiago Melo <tiagomelo@ua.pt>
+Tiago Melo: <tiagomelo@ua.pt>
