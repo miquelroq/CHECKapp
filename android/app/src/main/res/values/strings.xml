@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">alarm-doc</string>
+    <string name="fast_check">Fast Check</string>
+    <string name="description_logo">logo</string>
+    <string name="stats">Statistics</string>
+    <string name="loading">Testing</string>
+    <string name="unhealthy">Call a doc!</string>
+    <string name="healthy">All seems good</string>
+</resources>
