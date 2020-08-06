@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+
     tools:context=".MainActivity">
 
     <ImageView
@@ -21,20 +23,25 @@
 
     <Button
         android:id="@+id/fast_check"
-        android:layout_width="158dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="305dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="92dp"
+        android:background="@color/colorPrimaryDark"
         android:text="@string/fast_check"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo" />
 
     <Button
         android:id="@+id/stats"
-        android:layout_width="158dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="307dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/colorPrimaryDark"
         android:text="@string/stats"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fast_check" />
