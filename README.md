@@ -15,6 +15,8 @@ COVID probability functionality.
 
 - <https://bitalino.com/en/learn/get-started>
 
+- https://medium.com/google-developers/about-10-things-you-probably-didn-t-know-you-could-do-in-android-studio-de231071b375
+
 
 ***health***
 - <https://www.medis.pt/covid-19-symptom-checker/>
