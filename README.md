@@ -26,6 +26,8 @@
 
 - <https://developer.android.com/reference/kotlin/android/location/LocationManager> (**Location Manager**)
 
+- **!!!** <https://github.com/leanderme/sytora> **!!! -> CHECK THIS REALLY IMPORTANT**
+
 ***Health***
 - <https://www.medis.pt/covid-19-symptom-checker/> 
   - <https://ouraring.com/ucsf-tempredict-study>
