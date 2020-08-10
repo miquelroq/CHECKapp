@@ -33,6 +33,8 @@
 
 - <https://www.datarevenue.com/en-blog/machine-learning-covid-19> (**Machine learning**)
 
+- <https://www.kaggle.com/iamhungundji/covid19-symptoms-checker?select=Raw-Data.csv> (**Dataset with Symptons and Locations, is good**)
+
 **Authors:**
 
 Miguel Roque: <miguelroque99@tecnico.ulisboa.pt>
