@@ -59,7 +59,7 @@
  
  - <https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=dataset.csv>
  
-Subject data worth knowing:
+***Subject data worth knowing:***
  
   - Gender
   - Age
@@ -75,7 +75,7 @@ Subject data worth knowing:
   - Chills (Sensor?)
   - Temperature (Sensor)
   
-Diseases we aim to predict
+***Diseases we aim to predict***
  
   - Fever
   - Tachycardia ( > 100 bpm)
