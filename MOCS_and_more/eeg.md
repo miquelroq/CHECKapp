@@ -14,7 +14,7 @@
  - alcohol or drug abuse
  - head injury
 
-## ***What can the EEG show?
+## What can the EEG show?
 
 *The EEG shows patterns of normal or abnormal brain electrical activity. Some abnormal patterns may occur with a number of different conditions, not just seizures.*
 
