@@ -27,6 +27,10 @@
  - Generalized **epilepsy** is suggested by **spike-and-wave discharges that are widely spread over both side of the brain**, especially if they begin in both sides at the same time.
 
  - See table at <https://pt.wikipedia.org/wiki/Eletroencefalografia#Uso_m%C3%A9dico>
+ 
+## Processing EEG signals
+
+ - <https://mne.tools/dev/auto_tutorials/intro/plot_10_overview.html>
 
 ## Sources
 
