@@ -1,4 +1,5 @@
 # EEG
+*https://prezi.com/i/swoempghlyed/*
 
 ## What can be diagnosed by EEG
 
@@ -31,6 +32,7 @@
 ## Processing EEG signals
 
  - <https://mne.tools/dev/auto_tutorials/intro/plot_10_overview.html>
+ - <https://bitalino.com/datasheets/REVOLUTION_EEG_Sensor_Datasheet.pdf>
 
 ## Sources
 
