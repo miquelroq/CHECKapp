@@ -37,13 +37,26 @@
 
 - <https://www.datarevenue.com/en-blog/machine-learning-covid-19> (**Machine learning**)
 
-- <https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=dataset.csv> (**Dataset with Symptons and Locations, is good**)
 
-- <https://medium.com/@ODSC/15-open-datasets-for-healthcare-830b19980d9> (**Datasets**)
+***DATASETS***
 
-- <https://www.datasciencecentral.com/m/blogpost?id=6448529%3ABlogPost%3A376308> (**Datasets**)
+*seem the best ones*
 
-- <https://hpo.jax.org/app/download/annotation> (**Datasets**)
+ - <https://www.kaggle.com/plarmuseau/sdsort/home>
+ 
+ - <https://www.kaggle.com/plarmuseau/primer>
+ 
+ - https://www.kaggle.com/plarmuseau/symptom-disease-recommender
+
+*others*
+
+ - <https://hpo.jax.org/app/download/annotation> 
+ 
+ - <https://www.datasciencecentral.com/m/blogpost?id=6448529%3ABlogPost%3A376308> 
+ 
+ - <https://medium.com/@ODSC/15-open-datasets-for-healthcare-830b19980d9>
+ 
+ - <https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=dataset.csv> 
 
 ## Authors
 
