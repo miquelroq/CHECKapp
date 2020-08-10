@@ -57,7 +57,29 @@
  
  - <https://medium.com/@ODSC/15-open-datasets-for-healthcare-830b19980d9>
  
- - <https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=dataset.csv> 
+ - <https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=dataset.csv>
+ 
+ - Subject data worth knowing:
+ 
+  - Gender
+  - Age
+  - Heart rate (Sensor)
+  - Breath rate (Sensor)
+  - Glicemia (Sensor?)
+  - Blood pressure (Sensor?)
+  - Reaction time
+  - Last time/how often fainted (Sensores de queda)
+  - Fatigue (Sensor)
+  - Migraine / Headache (Sensor EEG)
+  - Muscle Pain (Sensor?)
+  - Chills (Sensor?)
+  
+ - Diseases we aim to predict
+ 
+  - Tachycardia ( > 100 bpm)
+  - Bradycardia ( < 60 bpm)
+  - Epylepsy
+  - Check the ones in datasets
 
 ## Authors
 
