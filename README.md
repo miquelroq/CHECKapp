@@ -37,7 +37,7 @@
 
 - <https://www.kaggle.com/iamhungundji/covid19-symptoms-checker?select=Raw-Data.csv> (**Dataset with Symptons and Locations, is good**)
 
-## Authors:
+## Authors
 
 Miguel Roque: <miguelroque99@tecnico.ulisboa.pt>
 
