@@ -1,13 +1,15 @@
 
+# Alarm-doc
+
 *Project developed in the Summer Course "IoT apps in the health field" by IPV, supported by a research schoolarship of the FCT.*
 
 
-**TODO**
+## TODO
 - Add to mocks a popup/notification of danger of having COVID based on the datasets of people with COVID.
 - COVID probability functionality.
 - Ecrâ inicial ter logo as stats
 
-**Useful links**
+## Useful links
 
 ***software***
 - <https://www.instructables.com/id/Android-Bluetooth-Control-LED-Part-2/> 
@@ -35,7 +37,7 @@
 
 - <https://www.kaggle.com/iamhungundji/covid19-symptoms-checker?select=Raw-Data.csv> (**Dataset with Symptons and Locations, is good**)
 
-**Authors:**
+## Authors:
 
 Miguel Roque: <miguelroque99@tecnico.ulisboa.pt>
 
