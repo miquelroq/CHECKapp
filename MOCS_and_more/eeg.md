@@ -20,7 +20,7 @@
 
  - For example, certain types of waves may be seen after **head trauma, stroke, brain tumor, or seizures**. A common example of this type is called **"slowing,"** in which the **rhythm of the brain waves is slower than would be expected** for the patient's age and level of alertness.
 
- - Certain other patterns indicate a **tendency toward seizures**. Your doctor may refer to these waves as "epileptiform abnormalities" or "epilepsy waves." **They can look like spikes, sharp waves, and spike-and-wave discharges.*
+ - Certain other patterns indicate a **tendency toward seizures**. Your doctor may refer to these waves as "epileptiform abnormalities" or "epilepsy waves." **They can look like spikes, sharp waves, and spike-and-wave discharges.**
 
  - If you have **partial seizures, spikes and sharp waves** on the EEG in a specific area of the brain, such as the a temporal lobe, can show where the seizures are coming from.   
 
