@@ -59,7 +59,7 @@
  
  - <https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=dataset.csv>
  
- - Subject data worth knowing:
+Subject data worth knowing:
  
   - Gender
   - Age
@@ -74,7 +74,7 @@
   - Muscle Pain (Sensor?)
   - Chills (Sensor?)
   
- - Diseases we aim to predict
+Diseases we aim to predict
  
   - Tachycardia ( > 100 bpm)
   - Bradycardia ( < 60 bpm)
