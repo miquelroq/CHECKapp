@@ -73,9 +73,11 @@ Subject data worth knowing:
   - Migraine / Headache (Sensor EEG)
   - Muscle Pain (Sensor?)
   - Chills (Sensor?)
+  - Temperature (Sensor)
   
 Diseases we aim to predict
  
+  - Fever
   - Tachycardia ( > 100 bpm)
   - Bradycardia ( < 60 bpm)
   - Epylepsy
