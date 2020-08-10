@@ -35,7 +35,7 @@
 
 - <https://www.datarevenue.com/en-blog/machine-learning-covid-19> (**Machine learning**)
 
-- <https://www.kaggle.com/iamhungundji/covid19-symptoms-checker?select=Raw-Data.csv> (**Dataset with Symptons and Locations, is good**)
+- <https://www.kaggle.com/itachi9604/disease-symptom-description-dataset?select=dataset.csv> (**Dataset with Symptons and Locations, is good**)
 
 - <https://medium.com/@ODSC/15-open-datasets-for-healthcare-830b19980d9> (**Datasets**)
 
