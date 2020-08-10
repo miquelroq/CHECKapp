@@ -1,6 +1,6 @@
 # EEG
 
-## What can be diagnosed by EEG***
+## What can be diagnosed by EEG
 
 *Abnormal EEG results may be due to:*
 
@@ -14,7 +14,7 @@
  - alcohol or drug abuse
  - head injury
 
-## ***What can the EEG show?***
+## ***What can the EEG show?
 
 *The EEG shows patterns of normal or abnormal brain electrical activity. Some abnormal patterns may occur with a number of different conditions, not just seizures.*
 
@@ -28,7 +28,7 @@
 
  - See table at <https://pt.wikipedia.org/wiki/Eletroencefalografia#Uso_m%C3%A9dico>
 
-## ***Sources***
+## Sources
 
  - <https://www.epilepsy.com/learn/diagnosis/eeg>
  - <https://www.healthline.com/health/eeg#results>
