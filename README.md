@@ -11,7 +11,7 @@
 
 ## Useful links
 
-***software***
+***Software***
 - <https://www.instructables.com/id/Android-Bluetooth-Control-LED-Part-2/> 
 
 - <https://medium.com/@jeyahariprakash/android-design-patterns-3b69e649aad6> (**Design patterns**)
@@ -26,7 +26,7 @@
 
 - <https://developer.android.com/reference/kotlin/android/location/LocationManager> (**Location Manager**)
 
-***health***
+***Health***
 - <https://www.medis.pt/covid-19-symptom-checker/> 
   - <https://ouraring.com/ucsf-tempredict-study>
   - <https://www.biofourmis.com/>
@@ -36,6 +36,8 @@
 - <https://www.datarevenue.com/en-blog/machine-learning-covid-19> (**Machine learning**)
 
 - <https://www.kaggle.com/iamhungundji/covid19-symptoms-checker?select=Raw-Data.csv> (**Dataset with Symptons and Locations, is good**)
+
+- https://medium.com/@ODSC/15-open-datasets-for-healthcare-830b19980d9 (**Datasets**)
 
 ## Authors
 
