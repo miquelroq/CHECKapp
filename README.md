@@ -37,7 +37,9 @@
 
 - <https://www.kaggle.com/iamhungundji/covid19-symptoms-checker?select=Raw-Data.csv> (**Dataset with Symptons and Locations, is good**)
 
-- https://medium.com/@ODSC/15-open-datasets-for-healthcare-830b19980d9 (**Datasets**)
+- <https://medium.com/@ODSC/15-open-datasets-for-healthcare-830b19980d9> (**Datasets**)
+
+- <https://www.datasciencecentral.com/m/blogpost?id=6448529%3ABlogPost%3A376308> (**Datasets**)
 
 ## Authors
 
