@@ -11,7 +11,7 @@
 
 ## Useful links
 
-***Software***
+### Software
 - <https://www.instructables.com/id/Android-Bluetooth-Control-LED-Part-2/> 
 
 - <https://medium.com/@jeyahariprakash/android-design-patterns-3b69e649aad6> (**Design patterns**)
@@ -28,7 +28,8 @@
 
 - **!!!** <https://github.com/leanderme/sytora> **!!! -> CHECK THIS REALLY IMPORTANT**
 
-***Health***
+
+### Health
 - <https://www.medis.pt/covid-19-symptom-checker/> 
   - <https://ouraring.com/ucsf-tempredict-study>
   - <https://www.biofourmis.com/>
@@ -38,9 +39,9 @@
 - <https://www.datarevenue.com/en-blog/machine-learning-covid-19> (**Machine learning**)
 
 
-***DATASETS***
+### DATASETS
 
-*seem the best ones*
+***seem the best ones***
 
  - <https://www.kaggle.com/plarmuseau/sdsort/home>
  
@@ -48,7 +49,7 @@
  
  - https://www.kaggle.com/plarmuseau/symptom-disease-recommender
 
-*others*
+***others***
 
  - <https://hpo.jax.org/app/download/annotation> 
  
