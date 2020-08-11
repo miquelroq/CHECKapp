@@ -1,6 +1,6 @@
 from opensignalsreader import OpenSignalsReader
 
 # Read OpenSignals file
-acq = OpenSignalsReader('tiago.txt')
+acq = OpenSignalsReader('tiago2.txt')
 
 acq.plot()
