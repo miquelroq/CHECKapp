@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(), Checkup.class);
+                Intent intent = new Intent(getApplicationContext(), SelectDiagnostic.class);
                 startActivity(intent);
 
             }
