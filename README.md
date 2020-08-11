@@ -11,40 +11,43 @@
 
 ## Planning
 
-### Subject data worth knowing:
+### Subject data worth knowing (by method):
  
-  - Gender                       (*formulário inicial*)
-  - Age                          (*formulário inicial*)
-  - Height                       (*formulário inicial*)
-  - Weight                       (*formulário inicial*)
-  - Lifestyle                    (*formulário inicial*)
+- **Formulário inicial**
+  - Gender                       
+  - Age                          
+  - Height                       
+  - Weight                       
+  - Lifestyle                    
   
+- **Sensor ECG**
+  - Heart rate                   
+  - Breath rate                  
+ 
+- **Sensor acelerómetro**
+  - Last time/how often fainted    
   
-  - Heart rate                   (*Sensor ECG*) 
-  - Breath rate                  (*Sensor ECG*)
+- **Boolean Question**
+  - Chills   
+  - Fatigue      
   
+- **Sensor EEG**  
+  - Migraine / Headache          
+                  
+- **Sensor EMG**
+  - Muscle Pain    
+            
+- **Sensor temperatura**
+  - Temperature     
+
+- **Sensor ???**
+  - Blood pressure               
   
-  - Glicemia                     (*not viable?*)
+- **don't know how- maybe develop a simple test in the app**
+  - Reaction time                
   
-  
-  - Blood pressure               (*Sensor ???*)
-  - Reaction time                (*Calculated based on something or asked*) 
-  
-  
-  - Last time/how often fainted  (*Sensor acelerómetro*)
-  
-  
-  - Fatigue                      (*Boolean Question*)
-  - Chills                       (*Boolean Question*)
-  
-  
-  - Migraine / Headache          (*Sensor EEG*)
-  
-  
-  - Muscle Pain                  (*Sensor EMG*)
-  
-  
-  - Temperature                  (*Sensor temperatura*)
+- **not viable**               
+   - Glicemia
   
 ### Diseases we aim to predict
  
