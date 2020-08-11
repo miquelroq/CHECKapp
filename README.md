@@ -13,19 +13,30 @@
 
 ### Subject data worth knowing:
  
-  - Gender
-  - Age
-  - Heart rate (Sensor)
-  - Breath rate (Sensor)
-  - Glicemia (Sensor?)
-  - Blood pressure (Sensor?)
-  - Reaction time
-  - Last time/how often fainted (Sensores de queda)
-  - Fatigue (Sensor)
-  - Migraine / Headache (Sensor EEG)
-  - Muscle Pain (Sensor?)
-  - Chills (Sensor?)
-  - Temperature (Sensor)
+  - Gender                       (*formulário inicial*)
+  - Age                          (*formulário inicial*)
+  - Height                       (*formulário inicial*)
+  - Weight                       (*formulário inicial*)
+  - Lifestyle                    (*formulário inicial*)
+  
+  - Heart rate                   (*Sensor ECG*) 
+  - Breath rate                  (*Sensor ECG*)
+  
+  - Glicemia                     (*not viable?*)
+  
+  - Blood pressure               (*Sensor ???*)
+  - Reaction time                (*Calculated based on something or asked*) 
+  
+  - Last time/how often fainted  (*Sensor acelerómetro*)
+  
+  - Fatigue                      (*Boolean Question*)
+  - Chills                       (*Boolean Question*)
+  
+  - Migraine / Headache          (*Sensor EEG*)
+  
+  - Muscle Pain                  (*Sensor EMG*)
+  
+  - Temperature                  (*Sensor temperatura*)
   
 ### Diseases we aim to predict
  
