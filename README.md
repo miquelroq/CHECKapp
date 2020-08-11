@@ -18,7 +18,8 @@
   - Age                          
   - Height                       
   - Weight                       
-  - Lifestyle                    
+  - Lifestyle   
+  - Previous diseases (dropdown)
   
 - **Sensor ECG**
   - Heart rate                   
