@@ -33,6 +33,9 @@
 
  - <https://mne.tools/dev/auto_tutorials/intro/plot_10_overview.html>
  - <https://bitalino.com/datasheets/REVOLUTION_EEG_Sensor_Datasheet.pdf>
+ - <https://pypi.org/project/opensignalsreader/>
+ 
+ ![image](https://github.com/miquelroq/health-app/blob/master/bitalino/zoomed.png)
 
 ## Sources
 
