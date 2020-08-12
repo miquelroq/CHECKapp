@@ -34,6 +34,7 @@
  - <https://mne.tools/dev/auto_tutorials/intro/plot_10_overview.html>
  - <https://bitalino.com/datasheets/REVOLUTION_EEG_Sensor_Datasheet.pdf>
  - <https://pypi.org/project/opensignalsreader/>
+ - <https://www.noisebridge.net/images/4/46/DWTandFFTforEEG.pdf>
  
  ![image](https://github.com/miquelroq/health-app/blob/master/bitalino/zoomed.png)
 
