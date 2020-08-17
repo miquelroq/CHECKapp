@@ -57,6 +57,15 @@
   - Bradycardia ( < 60 bpm)
   - Epylepsy
   - Check the ones in datasets
+  
+  
+### Lifecycle
+
+ - Recolha de dados (sensores + formulário)
+ - Cálculo e atribuição de determinados valores numa espécie de matriz (ex: matriz FIFA - *see below*)
+   ![alt text](https://github.com/miquelroq/health-app/blob/master/MOCS_and_more/resources/Screenshot%202020-08-17%20at%2011.18.23.png)
+ - Interseção com a "matriz" de determinadas doenças
+ - Diagnóstico
 
 
 ## Useful links
