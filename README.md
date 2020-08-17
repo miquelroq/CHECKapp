@@ -4,7 +4,7 @@
 *Project developed in the Summer Course "IoT apps in the health field" by IPV, supported by a research schoolarship of the FCT.*
 
 
-## TODO
+## Ideas (possibly implement later)
 - Add to mocks a popup/notification of danger of having COVID based on the datasets of people with COVID.
 - COVID probability functionality.
 - Ecrâ inicial ter logo as stats
