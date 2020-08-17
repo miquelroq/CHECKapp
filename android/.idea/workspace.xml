@@ -35,7 +35,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -54,9 +56,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.-511743599">
+      <recent name="com.example.alarm_doc" />
+    </key>
     <key name="android.template.1794688958">
       <recent name="com.example.alarm_doc" />
     </key>
@@ -213,14 +218,16 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597319739373" />
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1597158019903">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="263" y="148" width="824" height="491" key="AndroidCreateResourceFileDialog" timestamp="1597675684307">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597158019903" />
-    <state x="541" y="177" key="AndroidCreateXmlResourceDialog" timestamp="1597159559653">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="263" y="148" width="824" height="491" key="AndroidCreateResourceFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1597675684307" />
+    <state x="541" y="207" width="291" height="342" key="AndroidCreateXmlResourceDialog" timestamp="1597675721021">
+      <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="541" y="177" key="AndroidCreateXmlResourceDialog/0.0.1366.728@0.0.1366.728" timestamp="1597159559653" />
+    <state x="541" y="207" width="291" height="342" key="AndroidCreateXmlResourceDialog/0.27.1366.741@0.27.1366.741" timestamp="1597675721021" />
     <state x="274" y="0" key="CommitChangelistDialog2" timestamp="1597337346302">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -245,10 +252,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597337123876" />
-    <state x="172" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1597672947531">
+    <state x="172" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1597675476549">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="172" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1597672947531" />
+    <state x="172" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1597675476549" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1597319584404">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

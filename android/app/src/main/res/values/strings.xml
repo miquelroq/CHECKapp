@@ -17,4 +17,5 @@
     <string name="weekly">Weekly Check-up</string>
     <string name="custom_check">Custom..</string>
     <string name="pick">What are we going for today?</string>
+    <string name="action_settings">Settings</string>
 </resources>
