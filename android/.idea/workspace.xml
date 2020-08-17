@@ -11,14 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_localbroadcastmanager_localbroadcastmanager_1_0_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Checkup.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Checkup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_checkup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_checkup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit_retrofit_1_5_1_jar.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Projecto_AStudio_V1_5/Projecto_V1" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.1794688958">
@@ -162,10 +155,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="274" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597337346302" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1597157339651">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1597677809036">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597157339651" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597677809036" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1597337123876">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

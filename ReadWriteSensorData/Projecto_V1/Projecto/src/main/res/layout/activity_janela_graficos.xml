@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JanelaGraficos">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <Button
+            android:id="@+id/Btn_Clear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/St_Clear_Graficos"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/Btn_Mostrar_Graficos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/St_Mostrar_Graficos"
+            android:textAlignment="viewStart" />
+
+        <org.eazegraph.lib.charts.ValueLineChart
+            android:id="@+id/Grafico_ValueLineChart"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            app:egUseCubic="true"
+            app:egUseOverlapFill="true"
+            app:egCurveSmoothness="0.4"
+            app:egLegendHeight="40dp"
+            app:egAxisTextColor="#777777"
+            app:egLegendColor="#F5F5F5" />
+
+        <org.eazegraph.lib.charts.BarChart
+            android:id="@+id/Grafico_Barchart"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:padding="10dp"
+            app:egFixedBarWidth="true"
+            app:egBarWidth="20dp"
+            app:egLegendHeight="40dp"/>
+
+        <org.eazegraph.lib.charts.PieChart
+            android:id="@+id/Grafico_PieChart"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:padding="10dp"
+            app:egFixedBarWidth="true"
+            app:egBarWidth="20dp"
+            app:egLegendHeight="40dp"/>
+
+        <org.eazegraph.lib.charts.StackedBarChart
+            android:id="@+id/Grafico_StackedBarChart"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:padding="10dp"
+            app:egFixedBarWidth="true"
+            app:egBarWidth="20dp"
+            app:egLegendHeight="40dp"/>
+    </LinearLayout>
+</ScrollView>

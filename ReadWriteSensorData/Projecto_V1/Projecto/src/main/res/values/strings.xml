@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Projecto_V1</string>
+    <string name="str_run_actividade">Run Actividade</string>
+    <string name="St_Clear_Graficos">Apagar Gráficos</string>
+    <string name="St_Mostrar_Graficos">Mostrar Gráficos</string>
+    <string name="textViewSamplingRateLabel">Sampling Rate</string>
+    <string name="TextView01">Channel Selection:</string>
+    <string name="checkBoxCh1">1 - EMG</string>
+    <string name="checkBoxCh2">2 - EDA</string>
+    <string name="checkBoxCh3">3 - ECG</string>
+    <string name="checkBoxCh4">4 - ACC</string>
+    <string name="checkBoxCh5">5 - LUX</string>
+    <string name="checkBoxCh6">6 - BATT</string>
+
+    <string name="checkBoxDout">"Digital Inputs [ I1, I2, I3, I4 ]"</string>
+    <string name="Str_GPS">Onde estou!?</string>
+    <string name="write">Write to File</string>
+    <string name="read">Read file</string>
+</resources>

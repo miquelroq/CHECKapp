@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.retrofit:retrofit:1.5.1@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.5.1/266695d62b6df0e1176af2be3634bcd0837d4fbd/retrofit-1.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.5.1/59f2e5c0eb5302d132fc9314f608b6b78baf3553/retrofit-1.5.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.5.1/4a6e38c568eec344581174cf6f902fabebd96442/retrofit-1.5.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
