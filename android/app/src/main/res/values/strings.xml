@@ -1,9 +1,20 @@
 <resources>
     <string name="app_name">alarm-doc</string>
-    <string name="fast_check">Fast Check</string>
+    <string name="diagnose">Diagnose</string>
     <string name="description_logo">logo</string>
     <string name="stats">Statistics</string>
     <string name="loading">Testing</string>
     <string name="unhealthy">Call a doc!</string>
     <string name="healthy">All seems good</string>
+    <string name="custom">Custom Diagnostic</string>
+    <string name="select_request">Please, select the checks you wish to perform</string>
+    <string name="basic_checkup">Basic Checkup (Temperature, Heartbeat, Blood pressure, Breath rate)</string>
+    <string name="eeg">EEG</string>
+    <string name="ecg">ECG</string>
+    <string name="info">i</string>
+    <string name="hint">Temperature, Heartbeat, Blood pressure, Breath rate</string>
+    <string name="daily">Daily Check-up</string>
+    <string name="weekly">Weekly Check-up</string>
+    <string name="custom_check">Custom..</string>
+    <string name="pick">What are we going for today?</string>
 </resources>

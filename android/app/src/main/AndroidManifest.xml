@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Unhealthy"></activity>
+        <activity android:name=".SelectDiagnostic"></activity>
+        <activity android:name=".DiagnoseCustomizer" />
+        <activity android:name=".Unhealthy" />
         <activity android:name=".Healthy" />
         <activity android:name=".Checkup" />
         <activity android:name=".MainActivity">
@@ -19,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".DataGenerator" />
     </application>
 
 </manifest>
