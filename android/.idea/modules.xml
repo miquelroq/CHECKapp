@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/alarm-doc.iml" filepath="$PROJECT_DIR$/.idea/modules/alarm-doc.iml" group="alarm-doc" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/modules/app/alarm-doc-app.iml" filepath="$PROJECT_DIR$/../.idea/modules/app/alarm-doc-app.iml" group="alarm-doc/app" />
+      <module fileurl="file://$PROJECT_DIR$/../.idea/modules/android-alarm-doc.iml" filepath="$PROJECT_DIR$/../.idea/modules/android-alarm-doc.iml" group="alarm-doc" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="alarm-doc/app" />
     </modules>
   </component>

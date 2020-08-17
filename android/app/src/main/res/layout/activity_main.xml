@@ -22,12 +22,12 @@
         tools:srcCompat="@drawable/alarm_doc" />
 
     <Button
-        android:id="@+id/fast_check"
+        android:id="@+id/diagnose"
         android:layout_width="305dp"
         android:layout_height="72dp"
         android:layout_marginTop="44dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/fast_check"
+        android:text="@string/diagnose"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,6 +43,6 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fast_check" />
+        app:layout_constraintTop_toBottomOf="@+id/diagnose" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

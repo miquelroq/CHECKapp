@@ -10,9 +10,13 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit_retrofit_1_5_1_jar.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="" />
+>>>>>>> 55ceb4518d594141080332473071afb837bde4dd
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +24,9 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="5ebed666" />
   <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/..">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
@@ -39,7 +46,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1fgjPKa4RfSXcu4tAkLR0thNoly" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -52,7 +59,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Projecto_AStudio_V1_5/Projecto_V1" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+>>>>>>> 55ceb4518d594141080332473071afb837bde4dd
   </component>
   <component name="RecentsManager">
     <key name="android.template.1794688958">
@@ -65,10 +77,61 @@
       <recent name="com.example.alarm_doc" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android App.alarm-doc-app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="alarm-doc-app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="alarm-doc-app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -138,7 +201,24 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="278" y="59" width="800" height="684" key="#Notifications" timestamp="1597671321611">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="278" y="59" width="800" height="684" key="#Notifications/0.27.1366.741@0.27.1366.741" timestamp="1597671321611" />
+    <state x="357" y="43" width="642" height="716" key="#app" timestamp="1597670949720">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="357" y="43" width="642" height="716" key="#app/0.27.1366.741@0.27.1366.741" timestamp="1597670949720" />
+    <state x="141" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597671610343">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="141" y="55" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1366.741@0.27.1366.741" timestamp="1597671610343" />
     <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1597319739373">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -175,6 +255,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597337123876" />
+    <state x="172" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1597672947531">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="172" y="31" width="1022" height="737" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1597672947531" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1597319584404">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

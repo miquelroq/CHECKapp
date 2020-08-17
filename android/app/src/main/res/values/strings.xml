@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">alarm-doc</string>
-    <string name="fast_check">Diagnose</string>
+    <string name="diagnose">Diagnose</string>
     <string name="description_logo">logo</string>
     <string name="stats">Statistics</string>
     <string name="loading">Testing</string>
