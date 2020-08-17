@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.bitalino:bitalino-java-sdk:1.0.1@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bitalino/bitalino-java-sdk/1.0.1/741dcb9504ab684a002f5783a3ace7afe8d0083e/bitalino-java-sdk-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bitalino/bitalino-java-sdk/1.0.1/5c64bda50ed963734b84448286144161f7cb2ea3/bitalino-java-sdk-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bitalino/bitalino-java-sdk/1.0.1/72653f8a5b2eea72c20f2da5a62881fb40bef28e/bitalino-java-sdk-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
