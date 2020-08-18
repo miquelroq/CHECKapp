@@ -1,4 +1,3 @@
-
 # Alarm-doc
 
 *Project developed in the Summer Course "IoT apps in the health field" by IPV, supported by a research schoolarship of the FCT.*
@@ -65,7 +64,7 @@
  - Recolha de dados (sensores + formulário)
  - Cálculo e atribuição de determinados valores numa espécie de matriz (ex: matriz FIFA - *see below*)
  
-   <img src="https://github.com/miquelroq/health-app/blob/master/MOCS_and_more/resources/Screenshot%202020-08-17%20at%2011.18.23.png" alt="graph" width="300"/>
+   <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/radar_graph" alt="graph" width="300"/>
  - Interseção com a "matriz" de determinadas doenças
  - Diagnóstico
 
