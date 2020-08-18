@@ -23,7 +23,7 @@
   
 - **Sensor ECG**
   - Heart rate                   
-  - Breath rate                  
+  - Breath rate    
  
 - **Sensor acelerómetro**
   - Last time/how often fainted    
@@ -37,6 +37,7 @@
                   
 - **Sensor EMG**
   - Muscle Pain    
+  - <https://ieeexplore.ieee.org/document/4147460>
             
 - **Sensor temperatura**
   - Temperature     
