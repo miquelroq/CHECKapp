@@ -1,4 +1,3 @@
-
 # Alarm-doc
 
 *Project developed in the Summer Course "IoT apps in the health field" by IPV, supported by a research schoolarship of the FCT.*
