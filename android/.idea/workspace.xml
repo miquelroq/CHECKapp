@@ -52,7 +52,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="5ebed666" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -68,6 +67,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
         <option value="layoutResourceFile_vertical" />
         <option value="resourceFile" />
@@ -93,13 +93,13 @@
     <property name="memory.settings.postsync.last.time.stamp" value="1597338625587" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.315108766">
+    <key name="android.template.-642450518">
       <recent name="com.example.alarm_doc" />
     </key>
     <key name="android.template.1794688958">
       <recent name="com.example.alarm_doc" />
     </key>
-    <key name="android.template.-642450518">
+    <key name="android.template.315108766">
       <recent name="com.example.alarm_doc" />
     </key>
     <key name="android.template.1185155591">
@@ -243,10 +243,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="renamed fast_check to diagnose" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1597319739373">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="514" y="89" key="#com.intellij.ide.util.MemberChooser" timestamp="1597834658666">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597319739373" />
+    <state x="514" y="89" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1597834658666" />
+    <state x="494" y="316" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597834805989">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="494" y="316" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1597834805989" />
     <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1597158019903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -259,7 +264,7 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="274" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597337346302" />
-    <state x="289" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1597676466272" />
+    <state x="707" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1597834769896" />
     <state x="80" y="26" key="DiffContextDialog" timestamp="1597533932182">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -296,6 +301,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1597533961894" />
+    <state x="515" y="235" key="chooseDestDirectoryDialog" timestamp="1597834568647">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="515" y="235" key="chooseDestDirectoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1597834568647" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1597319584404">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
