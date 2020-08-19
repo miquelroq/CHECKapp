@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Texto_to_Speak("On Vibrate");
                 FuncaoVibrar();
                 break;
-                case R.id.Btn_Bluetooth:
+            case R.id.Btn_Bluetooth:
                 Uteis.MSG(getApplicationContext(), "Bluetooth!");
                 startActivity(new Intent(this, JanelaBluetooth.class));
                 break;

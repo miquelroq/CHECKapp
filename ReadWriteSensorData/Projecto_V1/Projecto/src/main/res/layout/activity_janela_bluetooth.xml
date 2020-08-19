@@ -29,6 +29,18 @@
                 android:text="BLE" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/Btn_TurnOn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/on" />
+
+        <Button
+            android:id="@+id/Btn_TurnOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/off" />
+
 
     </LinearLayout>
 </ScrollView>

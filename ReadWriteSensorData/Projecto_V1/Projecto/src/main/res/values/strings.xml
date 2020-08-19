@@ -16,4 +16,6 @@
     <string name="Str_GPS">Onde estou!?</string>
     <string name="write">Write to File</string>
     <string name="read">Read file</string>
+    <string name="on">Turn On Bitalino</string>
+    <string name="off">Turn Off Bitalino</string>
 </resources>

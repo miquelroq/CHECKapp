@@ -24,7 +24,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.sql.Timestamp;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 public class JanelaSensores extends AppCompatActivity implements View.OnClickListener, SensorEventListener {
     private SensorManager mSensorManager;
@@ -196,7 +199,17 @@ public class JanelaSensores extends AppCompatActivity implements View.OnClickLis
     private void writeToFile(String data, Context context) {
         try {
             Toast.makeText(getApplicationContext(), data, Toast.LENGTH_LONG).show();
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("banana.txt", Context.MODE_APPEND));
+
+            Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
+            Date date = calendar.getTime();
+
+            int day = calendar.get(Calendar.DATE);
+            int month = calendar.get(Calendar.MONTH);
+            int year = calendar.get(Calendar.YEAR);
+
+            String filename = Integer.toString(day) + Integer.toString(month) + Integer.toString(year) + "ola.txt";
+
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput(filename, Context.MODE_APPEND));
             outputStreamWriter.append(data);
             outputStreamWriter.close();
         }
@@ -211,7 +224,17 @@ public class JanelaSensores extends AppCompatActivity implements View.OnClickLis
         String ret = "";
 
         try {
-            InputStream inputStream = context.openFileInput("banana.txt");
+
+            Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
+            Date date = calendar.getTime();
+
+            int day = calendar.get(Calendar.DATE);
+            int month = calendar.get(Calendar.MONTH);
+            int year = calendar.get(Calendar.YEAR);
+
+            String filename = Integer.toString(day) + Integer.toString(month) + Integer.toString(year) + "ola.txt";
+
+            InputStream inputStream = context.openFileInput(filename);
 
             if ( inputStream != null ) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -220,7 +243,6 @@ public class JanelaSensores extends AppCompatActivity implements View.OnClickLis
                 StringBuilder stringBuilder = new StringBuilder();
 
                 while ( (receiveString = bufferedReader.readLine()) != null ) {
-                    Toast.makeText(getApplicationContext(), "banana", Toast.LENGTH_SHORT).show();
                     stringBuilder.append("\n").append(bufferedReader.readLine());
                 }
 
@@ -257,19 +279,8 @@ public class JanelaSensores extends AppCompatActivity implements View.OnClickLis
 
     // Unregister all sensors
     private void unregisterAll() {
-        mSensorAcelerometro = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        mSensorManager.unregisterListener(this, mSensorAcelerometro);
-        //-----------
-        Sensor mSensorGyroscope = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
-        mSensorManager.unregisterListener(this, mSensorGyroscope);
-        //-----------
-        Sensor mSensorGyroscopeUncalibrate = mSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE_UNCALIBRATED);
-        mSensorManager.unregisterListener(this, mSensorGyroscopeUncalibrate);
-        //-----------
-        Sensor mSensorMagnetometer = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-        mSensorManager.unregisterListener(this, mSensorMagnetometer);
-        //-----------
-        Sensor mSensorLuz = mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-        mSensorManager.unregisterListener(this, mSensorLuz);
+
+        mSensorManager.unregisterListener(this);
+
     }
 }

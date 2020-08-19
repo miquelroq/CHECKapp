@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.bluetooth.BluetoothHeadset;
+import android.bluetooth.BluetoothHealth;
 import android.bluetooth.BluetoothManager;
+import android.bluetooth.BluetoothProfile;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
@@ -14,8 +17,11 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bitalino.comm.BITalinoDevice;
 import com.bitalino.comm.BITalinoException;
@@ -39,8 +45,7 @@ public class JanelaBluetooth extends AppCompatActivity {
         setContentView(R.layout.activity_janela_bluetooth);
 
         checkBox_BLE = findViewById(R.id.checkBox_BLE);
-       // mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        Uteis.MSG(getApplicationContext(), "JanelaBluetooth: PASSO - 1");
+
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Uteis.MSG(getApplicationContext(), "JanelaBluetooth: FEATURE_BLUETOOTH_LE Não Suportado!");
             checkBox_BLE.setChecked(false);
@@ -49,29 +54,44 @@ public class JanelaBluetooth extends AppCompatActivity {
             Uteis.MSG(getApplicationContext(), "JanelaBluetooth: FEATURE_BLUETOOTH_LE SUPORTADO!");
             checkBox_BLE.setChecked(true);
         }
-/*uportado!");
-        if(!mBluetoothAdapter.isEnabled()) mBluetoothAdapter.enable();
 
-        mBluetoothAdapter.startDiscovery();
-        Set<BluetoothDevice> pairedDeviceSet = mBluetoothAdapter.getBondedDevices();
-        if (pairedDeviceSet.size() > 0)
-        {
-            Uteis.MSG(getApplicationContext(),"N. Elementos = ");
-            for (BluetoothDevice device : pairedDeviceSet){
-                Uteis.MSG(getApplicationContext(), device.getName() + "\n" + device.getAddress());
-                Uteis.MSG_DEBUG("BLUE", device.getName() + "\n" + device.getAddress());
-            }
-        }
-        else Uteis.MSG(getApplicationContext(),"No Paired Device.");
-        //Funcao_BLE();
-        int res_start_bitalino = start_bitalino();
-        Uteis.MSG(getApplicationContext(), "res_start_bitalino = " + res_start_bitalino);
-        */
         String[] myDeviceList = this.getBluetoothDevices();
         for (String S : myDeviceList){
-            Uteis.MSG(getApplicationContext(), "S:"  +S);
+            Uteis.MSG(getApplicationContext(), "Detected devices"  +S);
             Uteis.MSG_DEBUG("BLUETOOTH", "S:"  +S);
         }
+
+        // Set up buttons //
+
+        Button turnOn = (Button) findViewById(R.id.Btn_TurnOn);
+        turnOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String[] myDeviceList = getBluetoothDevices();
+                for (String S : myDeviceList){
+                    Uteis.MSG(getApplicationContext(), "Detected devices"  +S);
+                    Uteis.MSG_DEBUG("BLUETOOTH", "S:"  +S);
+                }
+
+                Toast.makeText(getApplicationContext(), "Turn on bitalino", Toast.LENGTH_LONG).show();
+                start_bitalino();
+
+            }
+        });
+
+
+        Button turnOff = (Button) findViewById(R.id.Btn_TurnOff);
+        turnOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                stop_bitalino();
+
+            }
+        });
+
+        /////////
     }
     private static final int REQUEST_ENABLE_BT = 12;
     private String[] getBluetoothDevices(){
@@ -80,17 +100,21 @@ public class JanelaBluetooth extends AppCompatActivity {
         BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (!mBluetoothAdapter.isEnabled()){
             Log.e("Dialog", "Couldn't find enabled the mBluetoothAdapter");
+
+            // Dialog that requests BT
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+
         }else{
+
             Set<BluetoothDevice> devList = mBluetoothAdapter.getBondedDevices();
 
             for( BluetoothDevice device : devList)
                 devices.add(device.getName() + "-"+ device.getAddress());
 
             String[] aux_items = new String[devices.size()];
-            final String[] items = devices.toArray(aux_items);
-            result = items;
+            result = devices.toArray(aux_items);
+
         }
         return result;
 
@@ -101,6 +125,30 @@ public class JanelaBluetooth extends AppCompatActivity {
     {
         try
         {
+            // Connect to BITalino
+            final BluetoothHealth[] btHealth = new BluetoothHealth[1];
+
+            // Get the default adapter
+            BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+
+            BluetoothProfile.ServiceListener profileListener = new BluetoothProfile.ServiceListener() {
+                public void onServiceConnected(int profile, BluetoothProfile proxy) {
+                    if (profile == BluetoothProfile.HEALTH) {
+                        btHealth[0] = (BluetoothHealth) proxy;
+                    }
+                }
+                public void onServiceDisconnected(int profile) {
+                    if (profile == BluetoothProfile.HEALTH) {
+                        btHealth[0] = null;
+                    }
+                }
+            };
+
+            // Establish connection to the proxy.
+            bluetoothAdapter.getProfileProxy(getApplicationContext(), profileListener, BluetoothProfile.HEALTH);
+
+            
+
             bitalino = new BITalinoDevice(100, new int[]{0, 1, 2, 3, 4, 5});
             bitalino.start();
         }
@@ -157,10 +205,10 @@ public class JanelaBluetooth extends AppCompatActivity {
                 public void onScanResult(int callbackType, ScanResult result) {
                     super.onScanResult(callbackType, result);
                     Uteis.MSG(getApplicationContext(), result.getDevice().toString());
-                    /*
-                    leDeviceListAdapter.addDevice(result.getDevice());
-                    leDeviceListAdapter.notifyDataSetChanged();
-                    */
+
+                    /*leDeviceListAdapter.addDevice(result.getDevice());
+                    leDeviceListAdapter.notifyDataSetChanged();*/
+
                 }
             };
     //------------------------------------------------------

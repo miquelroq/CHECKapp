@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FileRead"></activity>
+        <activity android:name=".BluetoothReceiver"></activity>
+        <activity android:name=".FileRead" />
         <activity android:name=".JanelaGPS" />
         <activity android:name=".JanelaGraficos" />
         <activity android:name=".JanelaBluetooth" />

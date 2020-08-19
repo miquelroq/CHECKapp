@@ -6,15 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".FileRead">
 
-    <TextView
-        android:id="@+id/content"
-        android:layout_width="385dp"
-        android:layout_height="702dp"
-        android:text="TextView"
+    <ScrollView
+        android:layout_width="327dp"
+        android:layout_height="435dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:scrollbars = "vertical"
-        />
+        app:layout_constraintVertical_bias="0.415">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="702dp"
+                android:scrollbars="vertical"
+                android:text="TextView" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
