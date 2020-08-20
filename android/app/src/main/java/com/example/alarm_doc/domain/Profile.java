@@ -15,14 +15,14 @@ public class Profile {
     private int     age;
     private float weight;
     private float height;
-    private Uri photo;
+    private String photo;
     private List<Conditions> conditions;
     private List<Register> registers;
 
     public Profile() {
     }
 
-    public Profile(String name, boolean female, int age, float weight, float height, Uri photo, List<Conditions> conditions){
+    public Profile(String name, boolean female, int age, float weight, float height, String photo, List<Conditions> conditions){
         setName(name);
         setFemale(female);
         setAge(age);
@@ -52,7 +52,7 @@ public class Profile {
         return weight;
     }
 
-    public Uri getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
@@ -84,7 +84,7 @@ public class Profile {
         this.height = height;
     }
 
-    public void setPhoto(Uri photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 

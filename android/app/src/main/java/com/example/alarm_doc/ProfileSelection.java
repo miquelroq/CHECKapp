@@ -45,10 +45,10 @@ public class ProfileSelection extends AppCompatActivity {
 
         // For each profile, inflate a view with the name and their pfp
         for (Profile p : profiles) {
-            //Toast.makeText(getApplicationContext(), img_name.toString(), Toast.LENGTH_LONG).show();
+//            Toast.makeText(getApplicationContext(), p.getPhoto().toString(), Toast.LENGTH_LONG).show();
             // addView("banana", img_name);
 
-            addView(p.getName(), p.getPhoto());
+            addView(p.getName(), Uri.parse(p.getPhoto()));
         }
 
         // Set up the button to add a new profile

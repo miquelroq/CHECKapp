@@ -2,17 +2,25 @@ package com.example.alarm_doc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.alarm_doc.domain.Conditions;
+import com.example.alarm_doc.domain.Profile;
+import com.example.alarm_doc.utils.Utils;
+
+import java.util.ArrayList;
 
 
 public class NewProfile extends AppCompatActivity {
@@ -25,9 +33,11 @@ public class NewProfile extends AppCompatActivity {
     private final int MAX_HEIGHT = 250;
     private final int MIN_WEIGHT = 20;
     private final int MAX_WEIGHT = 140;
+    private final int REQUEST_GET_SINGLE_FILE = 1;
 
-    private static final int REQUEST_GET_SINGLE_FILE = 1;
-    public static Uri img_name = null;
+    public Uri img_name = null;
+    public Utils utils = new Utils();
+    public Activity act = this;
 
 
     @Override
@@ -35,17 +45,30 @@ public class NewProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_profile);
 
-        // Fill in the Spinner
-        Spinner spinner = (Spinner) findViewById(R.id.sex_select);
+
+        // Fill in the sex Spinner
+        Spinner sex = (Spinner) findViewById(R.id.sex_select);
         // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> sex_adapter = ArrayAdapter.createFromResource(this,
                         R.array.sex_array, android.R.layout.simple_spinner_item);
+
+        // Specify the layout to use when the list of choices appears
+        sex_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner
+        sex.setAdapter(sex_adapter);
+
+        // Fill in the lifestyle Spinner
+        Spinner lifestyle = (Spinner) findViewById(R.id.lifestyle_selector);
+        // Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(),
+                R.array.fitness_array, android.R.layout.simple_spinner_item);
 
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+        lifestyle.setAdapter(adapter);
 
         // Configure buttons
         Button next = findViewById(R.id.next);
@@ -92,20 +115,57 @@ public class NewProfile extends AppCompatActivity {
                     valid = false;
                 }
 
+                // TODO: Process lifestyle
+
+                // Validate and extract previous diseases
+                ArrayList<Conditions> conditions = new ArrayList<>();
+
+                // Fetch CheckBox values
+                CheckBox hiv = (CheckBox) findViewById(R.id.prev_dis);
+                CheckBox aids = (CheckBox) findViewById(R.id.prev_dis1);
+                CheckBox epilepsy = (CheckBox) findViewById(R.id.prev_dis2);
+                CheckBox asthma = (CheckBox) findViewById(R.id.prev_dis3);
+
+                if(hiv.isChecked()) {
+                    conditions.add(Conditions.HIV);
+                }
+
+                if(aids.isChecked()) {
+                    conditions.add(Conditions.AIDS);
+                }
+
+                if(epilepsy.isChecked()) {
+                    conditions.add(Conditions.EPILEPSY);
+                }
+
+                if(asthma.isChecked()) {
+                    conditions.add(Conditions.ASTHMA);
+                }
+
+
+                // Launch the Profile Selection activity and display the newly created profile
+                Intent selection = new Intent(getApplicationContext(), ProfileSelection.class);
+                startActivity(selection);
+
                 // // // // // // // // // // // //
 
                 if(valid) {
 
-                    Intent followUp = new Intent(getApplicationContext(), NewProfileFollowUp.class);
+                    // Instance a profile
+                    // TODO: Discuss: where do we include the lifestyle parameter?
+                    Profile p = new Profile(
+                            input_name,
+                            female,
+                            input_age,
+                            input_weight,
+                            input_height,
+                            img_name.toString(),
+                            conditions
+                    );
 
-                    followUp.putExtra("name", input_name);
-                    followUp.putExtra("age", input_age);
-                    followUp.putExtra("female", female);
-                    followUp.putExtra("height", input_height);
-                    followUp.putExtra("weight", input_weight);
-                    followUp.putExtra("pfp", img_name);
+                    // Save profile persistently
+                    utils.saveProfile(p, act);
 
-                    startActivity(followUp);
                     return;
 
                 }

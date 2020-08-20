@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.alarm_doc.domain.Conditions;
 import com.example.alarm_doc.domain.Profile;
@@ -50,50 +51,7 @@ public class NewProfileFollowUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                ArrayList<Conditions> conditions = new ArrayList<>();
 
-                // Fetch CheckBox values
-                CheckBox hiv = (CheckBox) findViewById(R.id.prev_dis);
-                CheckBox aids = (CheckBox) findViewById(R.id.prev_dis1);
-                CheckBox epilepsy = (CheckBox) findViewById(R.id.prev_dis2);
-                CheckBox asthma = (CheckBox) findViewById(R.id.prev_dis3);
-
-                if(hiv.isChecked()) {
-                    conditions.add(Conditions.HIV);
-                }
-
-                if(aids.isChecked()) {
-                    conditions.add(Conditions.AIDS);
-                }
-
-                if(epilepsy.isChecked()) {
-                    conditions.add(Conditions.EPILEPSY);
-                }
-
-                if(asthma.isChecked()) {
-                    conditions.add(Conditions.ASTHMA);
-                }
-
-                // Instance a profile
-                // TODO: Discuss: where do we include the lifestyle parameter?
-                Profile p = new Profile(
-
-                        intent.getStringExtra("name"),
-                        intent.getBooleanExtra("female", false),
-                        intent.getIntExtra("age", -1),
-                        intent.getFloatExtra("weight", -1),
-                        intent.getFloatExtra("height", -1),
-                        (Uri) intent.getSerializableExtra("pfp"),
-                        conditions
-
-                );
-
-                // Save profile persistently
-                utils.saveProfile(p, act);
-
-                // Launch the Profile Selection activity and display the newly created profile
-                Intent selection = new Intent(getApplicationContext(), ProfileSelection.class);
-                startActivity(selection);
 
             }
         });
