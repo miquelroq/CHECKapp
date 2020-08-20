@@ -17,112 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="136dp"
-                android:layout_marginEnd="316dp"
-                android:layout_marginRight="316dp"
-                android:text="@string/name" />
-
-            <EditText
-                android:id="@+id/name_select"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="56dp"
-                android:layout_marginLeft="56dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="John Doe"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/sex"
-                android:layout_width="wrap_content"
-                android:layout_height="16dp"
-                android:layout_marginEnd="328dp"
-                android:layout_marginRight="328dp"
-                android:layout_marginBottom="368dp"
-                android:text="@string/sex_hehe" />
-
-            <Spinner
-                android:id="@+id/sex_select"
-                android:layout_width="277dp"
-                android:layout_height="29dp"
-                android:layout_marginStart="56dp"
-                android:layout_marginLeft="56dp"
-                android:layout_marginTop="12dp" />
-
-            <TextView
-                android:id="@+id/age"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="244dp"
-                android:layout_marginEnd="328dp"
-                android:layout_marginRight="328dp"
-                android:text="@string/age" />
-
-            <EditText
-                android:id="@+id/age_select"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="56dp"
-                android:layout_marginLeft="56dp"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:hint="24"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/weight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="56dp"
-                android:layout_marginLeft="56dp"
-                android:layout_marginBottom="188dp"
-                android:text="@string/weight" />
-
-            <EditText
-                android:id="@+id/weight_select"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="56dp"
-                android:layout_marginLeft="56dp"
-                android:layout_marginTop="12dp"
-                android:ems="10"
-                android:hint="80"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/height"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="56dp"
-                android:layout_marginLeft="56dp"
-                android:layout_marginTop="24dp"
-                android:text="@string/height" />
-
-            <EditText
-                android:id="@+id/height_select"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="56dp"
-                android:layout_marginLeft="56dp"
-                android:layout_marginTop="8dp"
-                android:ems="10"
-                android:hint="175"
-                android:inputType="textPersonName" />
-
-            <Button
-                android:id="@+id/next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
-                android:layout_marginBottom="28dp"
-                android:text="@string/next" />
-
             <Button
                 android:id="@+id/uploadPic"
                 android:layout_width="wrap_content"
@@ -136,19 +30,116 @@
                 android:id="@+id/pfp_preview"
                 android:layout_width="66dp"
                 android:layout_height="68dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="-60dp"
                 app:srcCompat="@drawable/alarm_doc"
                 tools:srcCompat="@drawable/alarm_doc" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:text="@string/name" />
+
+            <EditText
+                android:id="@+id/name_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:ems="10"
+                android:hint="John Doe"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:text="@string/sex_hehe" />
+
+            <Spinner
+                android:id="@+id/sex_select"
+                android:layout_width="277dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:text="@string/age" />
+
+            <EditText
+                android:id="@+id/age_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:ems="10"
+                android:hint="24"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:text="@string/weight" />
+
+            <EditText
+                android:id="@+id/weight_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:ems="10"
+                android:hint="80"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:text="@string/height" />
+
+            <EditText
+                android:id="@+id/height_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:ems="10"
+                android:hint="175"
+                android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/lifestyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
                 android:text="@string/lifestyle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -157,19 +148,30 @@
                 android:id="@+id/lifestyle_selector"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="84dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/prev_dis_selector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:text="@string/prev_dis"
+                app:layout_constraintBottom_toTopOf="@+id/prev_dis1"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <CheckBox
                 android:id="@+id/prev_dis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginTop="148dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
                 android:text="@string/hiv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lifestyle_selector" />
@@ -178,9 +180,9 @@
                 android:id="@+id/prev_dis1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
                 android:text="@string/aids"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lifestyle_selector" />
@@ -189,9 +191,9 @@
                 android:id="@+id/prev_dis2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginTop="240dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
                 android:text="@string/epilepsy"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lifestyle_selector" />
@@ -200,23 +202,22 @@
                 android:id="@+id/prev_dis3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginLeft="48dp"
-                android:layout_marginTop="196dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
                 android:text="@string/asthma"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lifestyle_selector" />
 
-            <TextView
-                android:id="@+id/prev_dis_selector"
+            <Button
+                android:id="@+id/next"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginBottom="28dp"
-                android:text="@string/prev_dis"
-                app:layout_constraintBottom_toTopOf="@+id/prev_dis1"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/finish" />
 
         </LinearLayout>
     </ScrollView>

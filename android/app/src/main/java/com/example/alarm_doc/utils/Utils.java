@@ -35,9 +35,7 @@ public class Utils {
         // Fetch activity's shared preferences and their editor
         SharedPreferences sharedPreferences = activity.getSharedPreferences("profiles", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        editor.clear();
-
+        
         // Serialize the profile to be saved
         String serializedProfile = gson.toJson(p);
 
