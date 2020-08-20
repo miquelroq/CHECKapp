@@ -1,6 +1,8 @@
 package com.example.alarm_doc.domain;
 
 
+import android.net.Uri;
+
 import com.example.alarm_doc.domain.Conditions;
 import com.example.alarm_doc.domain.Register;
 
@@ -13,14 +15,14 @@ public class Profile {
     private int     age;
     private float weight;
     private float height;
-    private String photo;
+    private Uri photo;
     private List<Conditions> conditions;
     private List<Register> registers;
 
     public Profile() {
     }
 
-    public Profile(String name, boolean female, int age, float weight, float height, String photo, List<Conditions> conditions){
+    public Profile(String name, boolean female, int age, float weight, float height, Uri photo, List<Conditions> conditions){
         setName(name);
         setFemale(female);
         setAge(age);
@@ -28,7 +30,6 @@ public class Profile {
         setHeight(height);
         setPhoto(photo);
         setConditions(conditions);
-
     }
 
     public String getName() {
@@ -51,7 +52,7 @@ public class Profile {
         return weight;
     }
 
-    public String getPhoto() {
+    public Uri getPhoto() {
         return photo;
     }
 
@@ -83,7 +84,7 @@ public class Profile {
         this.height = height;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(Uri photo) {
         this.photo = photo;
     }
 

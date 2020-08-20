@@ -1,7 +1,8 @@
 package com.example.alarm_doc.domain;
 
 public enum Conditions{
-    ASHTMA,
+    ASTHMA,
     EPILEPSY,
     HIV,
+    AIDS,
 }

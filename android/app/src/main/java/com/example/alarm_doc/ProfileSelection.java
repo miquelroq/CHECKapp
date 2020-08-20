@@ -1,5 +1,6 @@
 package com.example.alarm_doc;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -7,6 +8,8 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 
+import com.example.alarm_doc.domain.Profile;
+import com.example.alarm_doc.utils.Utils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -22,14 +25,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
+import java.util.List;
 
 public class ProfileSelection extends AppCompatActivity {
 
-    private static final int REQUEST_GET_SINGLE_FILE = 1;
-    LinearLayout layout;
-    public static final int PICK_IMAGE = 1;
-    public static Uri img_name = null;
-
+    private LinearLayout layout;
+    private Activity act = this;
+    private Utils utils = new Utils();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,17 +40,15 @@ public class ProfileSelection extends AppCompatActivity {
 
         layout = findViewById(R.id.linear_layout);
 
-/*        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("image/*");
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), REQUEST_GET_SINGLE_FILE);*/
-
         // Fetch every profile
+        List<Profile> profiles = utils.getAllProfiles(act);
 
         // For each profile, inflate a view with the name and their pfp
-        for (int i = 0; i < 3; i++) {
+        for (Profile p : profiles) {
             //Toast.makeText(getApplicationContext(), img_name.toString(), Toast.LENGTH_LONG).show();
-            addView("banana", img_name);
+            // addView("banana", img_name);
+
+            addView(p.getName(), p.getPhoto());
         }
 
         // Set up the button to add a new profile
@@ -66,9 +66,6 @@ public class ProfileSelection extends AppCompatActivity {
         });
 
 
-
-
-
     }
 
     private void addView(String name, Uri img) {
@@ -79,26 +76,14 @@ public class ProfileSelection extends AppCompatActivity {
         display_name.setText(name);
 
         ImageView display_img = (ImageView) avatar.findViewById(R.id.avatar_img);
-        // display_img.setImageBitmap(img);
         display_img.setImageURI(img);
+
+        // TODO: Make the picture and the text clickable and start activities
 
         layout.addView(avatar);
 
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == REQUEST_GET_SINGLE_FILE) {
-            // Fetch selected picture
-            // Toast.makeText(getApplicationContext(), data.getDataString(), Toast.LENGTH_LONG).show();
-
-            img_name = data.getData();
-            Toast.makeText(getApplicationContext(), img_name.toString(), Toast.LENGTH_LONG).show();
-
-        }
-    }
 
 }
