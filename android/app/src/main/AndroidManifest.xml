@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".NewProfile"></activity>
         <activity
             android:name=".ProfileSelection"
             android:label="@string/title_activity_profile_selection"
@@ -24,9 +25,7 @@
         <activity android:name=".Unhealthy" />
         <activity android:name=".Healthy" />
         <activity android:name=".Checkup" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
         <service android:name=".DataGenerator" />
     </application>

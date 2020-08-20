@@ -24,6 +24,12 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="new_profile">New Profile</string>
+    <string name="name">Name</string>
+    <string name="Age" />
+    <string name="sex_hehe">Sex</string>
+    <string name="age">Age</string>
+    <string name="height">Height (cm)</string>
+    <string name="weight">Weight (kg)</string>
+
 </resources>
