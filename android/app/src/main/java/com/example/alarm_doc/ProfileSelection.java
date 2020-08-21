@@ -68,17 +68,35 @@ public class ProfileSelection extends AppCompatActivity {
 
     }
 
-    private void addView(String name, Uri img) {
+    private void addView(final String name, Uri img) {
 
         View avatar = getLayoutInflater().inflate(R.layout.avatar_img, null, false);
+        final Intent mainMenu = new Intent(getApplicationContext(), MainActivity.class);
+        mainMenu.putExtra("profile", name);
 
         TextView display_name = (TextView) avatar.findViewById(R.id.profile_name);
         display_name.setText(name);
 
+        display_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(mainMenu);
+
+            }
+        });
+
         ImageView display_img = (ImageView) avatar.findViewById(R.id.avatar_img);
         display_img.setImageURI(img);
 
-        // TODO: Make the picture and the text clickable and start activities
+        display_img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(mainMenu);
+
+            }
+        });
 
         layout.addView(avatar);
 

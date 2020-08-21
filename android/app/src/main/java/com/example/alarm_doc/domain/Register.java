@@ -13,6 +13,43 @@ public class Register {
     //cardio-respiratory score class
     private CardioRespiratory cardioRespiratory;
 
-    //TODO: Add setters getters and constructor
+    public int getEmotional() {
+        return emotional;
+    }
 
+    public void setEmotional(int emotional) {
+        this.emotional = emotional;
+    }
+
+    public NervousMuscular getNervousMuscular() {
+        return nervousMuscular;
+    }
+
+    public void setNervousMuscular(NervousMuscular nervousMuscular) {
+        this.nervousMuscular = nervousMuscular;
+    }
+
+    public Neurologic getNeurologic() {
+        return neurologic;
+    }
+
+    public void setNeurologic(Neurologic neurologic) {
+        this.neurologic = neurologic;
+    }
+
+    public Fitness getFitness() {
+        return fitness;
+    }
+
+    public void setFitness(Fitness fitness) {
+        this.fitness = fitness;
+    }
+
+    public CardioRespiratory getCardioRespiratory() {
+        return cardioRespiratory;
+    }
+
+    public void setCardioRespiratory(CardioRespiratory cardioRespiratory) {
+        this.cardioRespiratory = cardioRespiratory;
+    }
 }
