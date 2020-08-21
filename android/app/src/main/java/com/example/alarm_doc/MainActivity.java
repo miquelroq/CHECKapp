@@ -9,14 +9,12 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button diagnose;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        diagnose = (Button) findViewById(R.id.diagnose);
+        Button diagnose = (Button) findViewById(R.id.diagnose);
 
         // Not the way taught in classes, needs reviewing
         diagnose.setOnClickListener(new View.OnClickListener() {
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(), SelectDiagnostic.class);
+                Intent intent = new Intent(getApplicationContext(), CheckupProcess.class);
                 startActivity(intent);
 
             }
