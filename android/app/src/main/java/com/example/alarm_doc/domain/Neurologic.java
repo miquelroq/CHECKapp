@@ -4,4 +4,9 @@ public class Neurologic {
 
     private int score;
     //TODO: Add other attributes setters getters and constructor
+
+    public int getScore() {
+        return score;
+    }
+
 }

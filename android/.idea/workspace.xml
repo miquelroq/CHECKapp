@@ -10,15 +10,15 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/CardioRespiratory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Conditions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Fitness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/NervousMuscular.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Neurologic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Profile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Register.java" afterDir="false" />
+    <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="updated Register class , Emotional class skeleton">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Emotional.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/CardioRespiratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/CardioRespiratory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Fitness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/NervousMuscular.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/NervousMuscular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Neurologic.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Neurologic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Register.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +63,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1597338625587" />
+    <property name="memory.settings.postsync.last.time.stamp" value="1597843418351" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.1794688958">
@@ -205,12 +205,21 @@
       <option name="project" value="LOCAL" />
       <updated>1597533958494</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="domain skeleton w.i.p.">
+      <created>1597834839832</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597834839833</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="renamed fast_check to diagnose" />
-    <option name="LAST_COMMIT_MESSAGE" value="renamed fast_check to diagnose" />
+    <MESSAGE value="domain skeleton w.i.p." />
+    <MESSAGE value="updated Register class , Emotional class skeleton" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Register class , Emotional class skeleton" />
   </component>
   <component name="WindowStateProjectService">
     <state x="514" y="89" key="#com.intellij.ide.util.MemberChooser" timestamp="1597834658666">
@@ -230,11 +239,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="541" y="177" key="AndroidCreateXmlResourceDialog/0.0.1366.728@0.0.1366.728" timestamp="1597159559653" />
-    <state x="707" y="105" key="CommitChangelistDialog2" timestamp="1597834769896">
+    <state x="707" y="105" key="CommitChangelistDialog2" timestamp="1597967962403">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="274" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1597337346302" />
-    <state x="707" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1597834769896" />
+    <state x="707" y="105" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1597967962403" />
     <state x="80" y="26" key="DiffContextDialog" timestamp="1597533932182">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -243,42 +252,47 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597157339651" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1597337123876">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1597967962484">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597337123876" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1597337123876">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597967962484" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1597967962483">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597337123876" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1597337123876">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597967962483" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1597967962482">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597337123876" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1597337123876">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597967962482" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1597967962484">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597337123876" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597967962484" />
     <state x="433" y="173" key="MultipleFileMergeDialog" timestamp="1597676441518">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="433" y="173" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1597676441518" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1597533961894">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1597834854489">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1597533961894" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1597834854489" />
     <state x="515" y="235" key="chooseDestDirectoryDialog" timestamp="1597834568647">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="515" y="235" key="chooseDestDirectoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1597834568647" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1597319584404">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1597319584404" />
-    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597834735872">
+    <state x="400" y="237" key="com.intellij.ide.util.TipDialog" timestamp="1597950809235">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1597834735872" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1597319584404" />
+    <state x="400" y="237" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1597950809235" />
+    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597967786613">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1597967786613" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1597834266622">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
