@@ -12,32 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/CheckupProcess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/PagerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Question1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Question2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Question3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_checkup_process.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_question1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_question2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_question3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/active_dot.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/no_active_dot.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/NewProfileFollowUp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_new_profile_follow_up.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile_selection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_profile_selection.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/CheckupProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/CheckupProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_checkup_process.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_checkup_process.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_30" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="5ebed666" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -55,9 +41,9 @@
       <list>
         <option value="Enum" />
         <option value="layoutResourceFile_vertical" />
-        <option value="resourceFile" />
         <option value="valueResourceFile" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -253,19 +239,19 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="494" y="316" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1597834805989" />
-    <state x="1779" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598007776094">
+    <state x="1779" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598100807250">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1779" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598007776094" />
-    <state x="1629" y="119" key="AndroidCreateResourceFileDialog" timestamp="1597927229753">
+    <state x="1779" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598100807250" />
+    <state x="1629" y="119" key="AndroidCreateResourceFileDialog" timestamp="1598100950129">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1629" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1597927229753" />
+    <state x="1629" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598100950129" />
     <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597158019903" />
-    <state x="1907" y="177" key="AndroidCreateXmlResourceDialog" timestamp="1597939214072">
+    <state x="1907" y="177" key="AndroidCreateXmlResourceDialog" timestamp="1598100905741">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1907" y="177" key="AndroidCreateXmlResourceDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1597939214072" />
+    <state x="1907" y="177" key="AndroidCreateXmlResourceDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598100905741" />
     <state x="541" y="177" key="AndroidCreateXmlResourceDialog/0.0.1366.728@0.0.1366.728" timestamp="1597833923558" />
     <state x="289" y="0" key="CommitChangelistDialog2" timestamp="1597676466272">
       <screen x="0" y="0" width="1440" height="900" />
@@ -316,10 +302,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="515" y="235" key="chooseDestDirectoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1597834568647" />
-    <state x="1745" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1598000253530">
+    <state x="1745" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1598100531979">
       <screen x="1366" y="0" width="1366" height="728" />
     </state>
-    <state x="1745" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598000253530" />
+    <state x="1745" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598100531979" />
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1597319584404" />
     <state x="1849" y="303" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598014117881">
       <screen x="1366" y="0" width="1366" height="728" />

@@ -1,45 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".CheckupProcess"
-    android:orientation="horizontal">
-
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
-        android:background="@color/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SlidingTabs"
-            android:textSize="20sp">
-
-        </TextView>
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <com.google.android.material.tabs.TabLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tablayout"
-        android:background="@color/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-    </com.google.android.material.tabs.TabLayout>
+    android:layout_height="match_parent">
 
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/pager">
+        android:layout_height="match_parent"/>
 
-    </androidx.viewpager.widget.ViewPager>
 
-</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutDots"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="45dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="40dp"
+        android:background="@drawable/alarm_doc"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="40dp"
+        android:background="@drawable/alarm_doc"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/skipBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/alarm_doc"
+        android:layout_alignParentRight="true" />
+
+
+</RelativeLayout>
