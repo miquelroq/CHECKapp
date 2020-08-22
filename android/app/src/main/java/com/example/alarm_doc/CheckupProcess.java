@@ -54,7 +54,7 @@ public class CheckupProcess extends Activity {
             btnNext =  findViewById(R.id.btn_next);
             skipBtn = findViewById(R.id.skipBtn);
 
-            // layouts of welcome sliders
+            // layouts of questions
             layouts = new int[]{
                     R.layout.fragment_question1,
                     R.layout.fragment_question2,
@@ -64,7 +64,9 @@ public class CheckupProcess extends Activity {
             // adding bottom dots
             dotscount =3;
             dots = new ImageView[dotscount];
+
             for(int i = 0; i < dotscount; i++) {
+
                 dots[i] = new ImageView(this);
                 dots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.no_active_dot));
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -72,11 +74,13 @@ public class CheckupProcess extends Activity {
                 dotsLayout.addView(dots[i], params);
 
             }
+
             dots[0].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
             myViewPagerAdapter = new MyViewPagerAdapter();
             viewPager.setAdapter(myViewPagerAdapter);
             viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
             btnBack.setBackgroundResource(R.drawable.alarm_doc);
+
             btnBack.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -106,8 +110,6 @@ public class CheckupProcess extends Activity {
             });
         }
 
-
-
         private int getItem(int i) {
             return viewPager.getCurrentItem() + i;
         }
@@ -122,14 +124,17 @@ public class CheckupProcess extends Activity {
                 dots[position].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.active_dot));
 
                 if (position == layouts.length - 1) {
-                    btnNext.setBackgroundResource(R.drawable.alarm_doc);
+                    // Grey out right arrow
+                    btnNext.setBackgroundResource(R.drawable.ic_arrow_right_light);
                 }
                 else if (position == 0){
-                    btnBack.setBackgroundResource(R.drawable.alarm_doc);
+                    // Grey out left arrow
+                    btnBack.setBackgroundResource(R.drawable.ic_arrow_left_light);
                 }
                 else{
-                    btnBack.setBackgroundResource(R.drawable.alarm_doc);
-                    btnNext.setBackgroundResource(R.drawable.alarm_doc);
+                    // Have them both available
+                    btnBack.setBackgroundResource(R.drawable.ic_arrow_left);
+                    btnNext.setBackgroundResource(R.drawable.ic_arrow_right);
                 }
             }
 
