@@ -37,10 +37,9 @@ public class Emotional {
         this.var2 = var2;
     }
 
-    public int calculateScore() {
+    public void calculateScore() {
         int score = 100 - (1/2) * var1 - (1/2) * var2;
         this.setScore(score);
-        return score;
         //TODO: max score como variavel global
         //TODO: formula
     }
