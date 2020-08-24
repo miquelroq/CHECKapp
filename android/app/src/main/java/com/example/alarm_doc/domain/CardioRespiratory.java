@@ -3,7 +3,7 @@ package com.example.alarm_doc.domain;
 import static java.lang.Math.abs;
 
 public class CardioRespiratory {
-    //TODO: Turn those into global variables and use correct values
+    //TODO: replace using BaseVAlues Handler value
     //idea - method called getBaseValues that uses machine learning to get the best "normal" base values
     private int BASEBPM = -1;
     private int BASEFREQ = -1;

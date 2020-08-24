@@ -3,7 +3,7 @@ package com.example.alarm_doc.domain.waves;
 import static java.lang.Math.abs;
 
 public class Alpha {
-    //TODO: Turn those into global variables and use correct values
+    //TODO: replace using BaseVAlues Handler value
     //idea - method called getBaseValues that uses machine learning to get the best "normal" base values
     private int BASEFREQ = -1;
 

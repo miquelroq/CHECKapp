@@ -4,7 +4,8 @@ import static java.lang.Math.abs;
 
 public class Fitness {
 
-    public int bmiIdeal; //TODO: profile variable or calculated?
+    public int bmiIdeal; //TODO: replace using BaseVAlues Handler value
+    public int bodyFatIdeal; //TODO: replace using BaseVAlues Handler value
 
     private int score;
     private int bmi;
@@ -42,7 +43,7 @@ public class Fitness {
     }
 
     public void calculateScore() {
-        int score = 100 - (1/2) * (abs(bmi-bmiIdeal)) - (1/2) * bodyFat;
+        int score = 100 - (1/2) * (abs(bmi-bmiIdeal)/bmiIdeal) - (1/2) * (abs(bodyFat-bodyFatIdeal)/bodyFatIdeal);
         this.setScore(score);
         //TODO: max score como variavel global
         //TODO: formula

@@ -15,19 +15,22 @@ public class Profile {
     private float height;
     private String photo;
     private List<Conditions> conditions;
+    private int activityLevel;
     private List<Register> registers;
+    private BaseValuesHandler baseValues;
 
     public Profile() {
     }
 
-    public Profile(String name, boolean female, int age, float weight, float height, String photo, List<Conditions> conditions){
-        setName(name);
-        setFemale(female);
-        setAge(age);
-        setWeight(weight);
-        setHeight(height);
-        setPhoto(photo);
-        setConditions(conditions);
+    public Profile(String name, boolean female, int age, float weight, float height, String photo, int activityLevel, List<Conditions> conditions){
+        this.name = name;
+        this.female = female;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        this.photo = photo;
+        this.conditions = conditions;
+        baseValues = new BaseValuesHandler(age,female,  weight, height, activityLevel, conditions);
 
     }
 
@@ -59,8 +62,16 @@ public class Profile {
         return conditions;
     }
 
+    public int getActivityLevel() {
+        return activityLevel;
+    }
+
     public List<Register> getRegisters() {
         return registers;
+    }
+
+    public BaseValuesHandler getBaseValues() {
+        return baseValues;
     }
 
     public void setName( String name) {
@@ -69,18 +80,22 @@ public class Profile {
 
     public void setFemale(boolean female) {
         this.female = female;
+        baseValues.calculateIdeal(age,female,  weight, height, activityLevel, conditions);
     }
 
     public void setAge(int age) {
         this.age = age;
+        baseValues.calculateIdeal(age,female,  weight, height, activityLevel, conditions);
     }
 
     public void setWeight(float weight) {
         this.weight = weight;
+        baseValues.calculateIdeal(age,female,  weight, height, activityLevel, conditions);
     }
 
     public void setHeight(float height) {
         this.height = height;
+        baseValues.calculateIdeal(age,female,  weight, height, activityLevel, conditions);
     }
 
     public void setPhoto(String photo) {
@@ -89,10 +104,23 @@ public class Profile {
 
     public void setConditions(List<Conditions> conditions) {
         this.conditions = conditions;
+        baseValues.calculateIdeal(age,female,  weight, height, activityLevel, conditions);
+    }
+
+    public void setActivityLevel(int activityLevel) {
+        this.activityLevel = activityLevel;
+        baseValues.calculateIdeal(age,female,  weight, height, activityLevel, conditions);
+    }
+
+    public void setRegisters(List<Register> registers) {
+        this.registers = registers;
+    }
+
+    public void setBaseValues(BaseValuesHandler baseValues) {
+        this.baseValues = baseValues;
     }
 
     public void addRegister(Register register) {
         this.registers.add(register);
     }
-
 }
