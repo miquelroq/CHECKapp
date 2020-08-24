@@ -87,7 +87,12 @@
 
 - **!!!** <https://github.com/leanderme/sytora> **!!! -> CHECK THIS REALLY IMPORTANT**
 
-- **<https://forum.bitalino.com/viewtopic.php?t=129>** **!!! -> CHECK THIS REALLY IMPORTANT**
+
+---
+
+- **<https://forum.bitalino.com/viewtopic.php?t=129>** **!!! -> BITALINO SIGNAL** 
+
+---
 
 
 ### Health
