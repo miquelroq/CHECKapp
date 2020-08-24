@@ -4,9 +4,8 @@
 
 
 ## Ideas (possibly implement later)
-- Add to mocks a popup/notification of danger of having COVID based on the datasets of people with COVID.
+- popup/notification of danger of having COVID based on the datasets of people with COVID.
 - COVID probability functionality.
-- Ecrâ inicial ter logo as stats
 
 ## Planning
 
@@ -87,6 +86,8 @@
 - <https://developer.android.com/reference/kotlin/android/location/LocationManager> (**Location Manager**)
 
 - **!!!** <https://github.com/leanderme/sytora> **!!! -> CHECK THIS REALLY IMPORTANT**
+
+- **<https://forum.bitalino.com/viewtopic.php?t=129>** **!!! -> CHECK THIS REALLY IMPORTANT**
 
 
 ### Health
