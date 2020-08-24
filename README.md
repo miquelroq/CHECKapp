@@ -3,6 +3,10 @@
 *Project developed in the Summer Course "IoT apps in the health field" by IPV, supported by a research schoolarship of the FCT.*
 
 
+## POST IT NOTES 
+ - BITalino protocol and utilities meant to write to/read from BITalino devices. <https://github.com/BITalinoWorld/java-sdk>
+ - BITalino physical link (i.e. Bluetooth connection) management  <https://github.com/BITalinoWorld/revolution-android-api>
+
 ## Ideas (possibly implement later)
 - popup/notification of danger of having COVID based on the datasets of people with COVID.
 - COVID probability functionality.
