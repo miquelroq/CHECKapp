@@ -10,8 +10,9 @@ import com.example.alarm_doc.domain.waves.Theta;
 public class Neurologic {
 
     private int score;
-    //TODO: Add other attributes setters getters and constructor
 
+    //TODO: if alpha, beta, delta and theta waves come to be processed exactly the same consider
+    // merging all the classes into a "Wave" class
     public Alpha alpha;
     public Beta beta;
     public Delta delta;

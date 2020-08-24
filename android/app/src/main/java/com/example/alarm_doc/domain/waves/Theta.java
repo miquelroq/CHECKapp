@@ -11,8 +11,13 @@ public class Theta {
     private int pikes;
     private int frequency;
 
-    public Theta() {
+    public Theta(){
 
+    }
+
+    public Theta(int pikes, int frequency) {
+        setPikes(pikes);
+        setFrequency(frequency);
     }
 
     public int getScore() {
@@ -27,16 +32,18 @@ public class Theta {
         return frequency;
     }
 
-    public void setScore(int score) {
+    private void setScore(int score) {
         this.score = score;
     }
 
     public void setPikes(int pikes) {
         this.pikes = pikes;
+        calculateScore();
     }
 
     public void setFrequency(int frequency) {
         this.frequency = frequency;
+        calculateScore();
     }
 
     public void calculateScore() {

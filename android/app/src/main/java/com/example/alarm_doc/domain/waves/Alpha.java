@@ -14,6 +14,10 @@ public class Alpha {
     public Alpha() {
 
     }
+    public Alpha(int pikes, int frequency) {
+        setPikes(pikes);
+        setFrequency(frequency);
+    }
 
     public int getScore() {
         return score;
@@ -27,16 +31,18 @@ public class Alpha {
         return frequency;
     }
 
-    public void setScore(int score) {
+    private void setScore(int score) {
         this.score = score;
     }
 
     public void setPikes(int pikes) {
         this.pikes = pikes;
+        calculateScore();
     }
 
     public void setFrequency(int frequency) {
         this.frequency = frequency;
+        calculateScore();
     }
 
     public void calculateScore() {
