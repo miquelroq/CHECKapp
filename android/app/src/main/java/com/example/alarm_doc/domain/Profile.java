@@ -8,6 +8,7 @@ import java.util.List;
 
 public class Profile {
 
+    private int id; //TODO: auto incremented sequential ID
     private String name;
     private boolean female;
     private int     age;
@@ -32,6 +33,10 @@ public class Profile {
         this.conditions = conditions;
         baseValues = new BaseValuesHandler(age,female,  weight, height, activityLevel, conditions);
 
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {
