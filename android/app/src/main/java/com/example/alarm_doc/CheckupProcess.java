@@ -29,8 +29,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+/**
+ *
+ * Code adapted from @joselfrias
+ *
+ */
 
 public class CheckupProcess extends Activity {
 
@@ -43,11 +50,21 @@ public class CheckupProcess extends Activity {
         private int dotscount;
         Button btnToApp;
         Button skipBtn;
+        RadioGroup radioGroup;
+
+
+    public void checkButton(View v) {
+            int radioId = radioGroup.getCheckedRadioButtonId();
+            Toast.makeText(getApplicationContext(), Integer.toString(radioId), Toast.LENGTH_LONG).show();
+        }
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_checkup_process);
+
+            radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+
             viewPager =  findViewById(R.id.view_pager);
             dotsLayout = findViewById(R.id.layoutDots);
             btnBack = findViewById(R.id.btn_back);
@@ -58,11 +75,14 @@ public class CheckupProcess extends Activity {
             layouts = new int[]{
                     R.layout.fragment_question1,
                     R.layout.fragment_question2,
-                    R.layout.fragment_question3
+                    R.layout.fragment_question3,
+                    R.layout.fragment_question4,
+                    R.layout.fragment_question5,
+                    R.layout.fragment_question6
             };
 
             // adding bottom dots
-            dotscount =3;
+            dotscount = 6;
             dots = new ImageView[dotscount];
 
             for(int i = 0; i < dotscount; i++) {

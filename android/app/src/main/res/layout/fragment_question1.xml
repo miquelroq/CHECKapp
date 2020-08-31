@@ -8,8 +8,61 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="question 1"
-        android:layout_centerInParent="true"
-        android:textSize="50sp"/>
+        android:text="@string/question1"
+        android:textSize="30sp"
+        android:padding="10sp"
+        android:layout_marginTop="200dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <RadioButton
+            android:id="@+id/never"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/never"
+            android:layoutDirection="rtl"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:onClick="checkButton"
+            >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/almost_never"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/sometimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/almost_always"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/always"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/everyday"
+            android:onClick="checkButton">
+        </RadioButton>
+
+    </RadioGroup>
 
 </RelativeLayout>

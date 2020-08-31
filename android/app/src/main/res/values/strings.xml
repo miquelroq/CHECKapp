@@ -41,5 +41,10 @@
     <string name="uploadPic">Choose from gallery</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="question1">How often have you felt chills lately?</string>
+    <string name="question2">How often do you feel fatigued?</string>
+    <string name="insert_electrodes">Insert the electrodes as pictured</string>
+    <string name="everyday">Everyday</string>
+    <string name="never">Never</string>
 
 </resources>
