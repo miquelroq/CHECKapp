@@ -6,37 +6,28 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="tabs" />
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/BaseValuesHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Emotional.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Alpha.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Beta.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Delta.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Theta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../files/assignments/gdpr.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/CardioRespiratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/CardioRespiratory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Emotional.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Emotional.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Fitness.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/NervousMuscular.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/NervousMuscular.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Neurologic.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Neurologic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../files/domain/domain.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../files/domain/domain.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../files/domain/domain.png" beforeDir="false" afterPath="$PROJECT_DIR$/../files/domain/domain.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="5ebed666" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_30" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -53,10 +44,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="layoutResourceFile_vertical" />
-        <option value="valueResourceFile" />
         <option value="Class" />
-        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -75,34 +63,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1597338625587" />
-    <property name="project.structure.last.edited" value="Dependencies" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.2" />
     <property name="memory.settings.postsync.last.time.stamp" value="1597843418351" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.315108766">
-      <recent name="com.example.alarm_doc" />
-    </key>
-    <key name="android.template.1185155591">
+    <key name="android.template.1794688958">
       <recent name="com.example.alarm_doc" />
     </key>
     <key name="android.template.-642450518">
       <recent name="com.example.alarm_doc" />
     </key>
-    <key name="android.template.-575784124">
-      <recent name="com.example.alarm_doc" />
-    </key>
-    <key name="android.template.1794688958">
-      <recent name="com.example.alarm_doc" />
-    </key>
-    <key name="android.template.1134086599">
+    <key name="android.template.1185155591">
       <recent name="com.example.alarm_doc" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Android App.alarm-doc-app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -258,24 +234,18 @@
     <state x="514" y="89" key="#com.intellij.ide.util.MemberChooser" timestamp="1598052206176">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="1854" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598014080029" />
     <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1597319739373" />
     <state x="514" y="89" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1598052206176" />
     <state x="494" y="316" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597834805989">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="494" y="316" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1597834805989" />
-    <state x="1779" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598100807250">
-      <screen x="1366" y="0" width="1366" height="728" />
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1597158019903">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="1779" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598100807250" />
-    <state x="1629" y="119" key="AndroidCreateResourceFileDialog" timestamp="1598100950129">
-      <screen x="1366" y="0" width="1366" height="728" />
-    </state>
-    <state x="1629" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598100950129" />
     <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1597158019903" />
-    <state x="1907" y="177" key="AndroidCreateXmlResourceDialog" timestamp="1598107720153">
-      <screen x="1366" y="0" width="1366" height="728" />
+    <state x="541" y="177" key="AndroidCreateXmlResourceDialog" timestamp="1597159559653">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="541" y="177" key="AndroidCreateXmlResourceDialog/0.0.1366.728@0.0.1366.728" timestamp="1597159559653" />
     <state x="707" y="105" key="CommitChangelistDialog2" timestamp="1598059533681">
@@ -287,36 +257,28 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="80" y="26" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1597533932182" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1597826631749">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1597157339651">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1597157339651" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1597967962484">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597337123876" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597967962484" />
     <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1597967962483">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597337123876" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597967962483" />
     <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1597967962482">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667302" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597337123876" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597967962482" />
     <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1597967962484">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597337123876" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597967962484" />
     <state x="433" y="173" key="MultipleFileMergeDialog" timestamp="1597676441518">
@@ -343,6 +305,6 @@
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1597834266622">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1597957792358" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1597834266622" />
   </component>
 </project>

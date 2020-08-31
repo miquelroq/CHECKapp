@@ -1,12 +1,15 @@
 # Alarm-doc
 
-*Project developed in the Summer Course "IoT apps in the health field" by IPV, supported by a research schoolarship of the FCT.*
+*Project developed in the Summer Course "IoT apps in the health field" by IPV, supported by a research schoolarship by FCT.*
 
+
+## POST IT NOTES 
+ - BITalino protocol and utilities meant to write to/read from BITalino devices. <https://github.com/BITalinoWorld/java-sdk>
+ - BITalino physical link (i.e. Bluetooth connection) management  <https://github.com/BITalinoWorld/revolution-android-api>
 
 ## Ideas (possibly implement later)
-- Add to mocks a popup/notification of danger of having COVID based on the datasets of people with COVID.
+- popup/notification of danger of having COVID based on the datasets of people with COVID.
 - COVID probability functionality.
-- Ecrâ inicial ter logo as stats
 
 ## Planning
 
@@ -87,6 +90,14 @@
 - <https://developer.android.com/reference/kotlin/android/location/LocationManager> (**Location Manager**)
 
 - **!!!** <https://github.com/leanderme/sytora> **!!! -> CHECK THIS REALLY IMPORTANT**
+
+
+---
+
+- **<https://forum.bitalino.com/viewtopic.php?t=129>** **!!! -> BITALINO SIGNAL** 
+- <https://bitalino.com/en/development/apis>
+
+---
 
 
 ### Health

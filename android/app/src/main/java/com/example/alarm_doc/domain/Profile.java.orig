@@ -25,7 +25,8 @@ public class Profile {
     public Profile() {
     }
 
-    public Profile(String name, boolean female, int age, float weight, float height, String photo, List<Conditions> conditions) {
+<<<<<<< HEAD
+    public Profile(String name, boolean female, int age, float weight, float height, String photo, List<Conditions> conditions){
         setName(name);
         setFemale(female);
         setAge(age);
@@ -33,8 +34,7 @@ public class Profile {
         setHeight(height);
         setPhoto(photo);
         setConditions(conditions);
-    }
-
+=======
     public Profile(String name, boolean female, int age, float weight, float height, String photo, int activityLevel, List<Conditions> conditions){
         this.name = name;
         this.female = female;
@@ -44,6 +44,8 @@ public class Profile {
         this.photo = photo;
         this.conditions = conditions;
         baseValues = new BaseValuesHandler(age,female,  weight, height, activityLevel, conditions);
+
+>>>>>>> master
     }
 
     public int getId() {
