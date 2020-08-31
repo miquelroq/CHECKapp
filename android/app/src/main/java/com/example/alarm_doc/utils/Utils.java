@@ -30,6 +30,7 @@ public class Utils {
         this.gson = new Gson();
     }
 
+    // Used when a new Profile is created
     public void saveProfile(Profile p, Activity activity) {
 
         // Fetch activity's shared preferences and their editor
@@ -45,6 +46,7 @@ public class Utils {
 
     }
 
+    // Used to display all the profiles stored in shared preferences (mainly in the ProfileSelection activity)
     public List<Profile> getAllProfiles(Activity activity) {
 
         SharedPreferences sharedPreferences = activity.getSharedPreferences("profiles", Context.MODE_PRIVATE);
@@ -61,4 +63,33 @@ public class Utils {
         return ret;
 
     }
+
+    // Set up the logged in user "Global Variable"
+    public void logIn(Profile p, Activity activity) {
+
+        // Fetch activity's shared preferences and their editor
+        SharedPreferences sharedPreferences = activity.getSharedPreferences("logged_user", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        // Serialize the profile to be saved
+        String serializedProfile = gson.toJson(p);
+
+        // Use an easy macro as the key to fetch it later
+        editor.putString("LOGGED_IN_USER", serializedProfile);
+        editor.apply();
+
+    }
+
+    // Get the profile that is logged in
+    public Profile getLoggedProfile(Activity activity) {
+
+        SharedPreferences sharedPreferences = activity.getSharedPreferences("logged_user", Context.MODE_PRIVATE);
+        ArrayList<Profile> ret = new ArrayList<>();
+
+        String serializedProfile = sharedPreferences.getString("LOGGED_IN_USER", "default");
+        return gson.fromJson(serializedProfile, Profile.class);
+
+    }
+
+
 }

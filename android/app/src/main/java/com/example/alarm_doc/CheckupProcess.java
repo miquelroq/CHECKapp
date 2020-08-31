@@ -53,9 +53,36 @@ public class CheckupProcess extends Activity {
         RadioGroup radioGroup;
 
 
-    public void checkButton(View v) {
-            int radioId = radioGroup.getCheckedRadioButtonId();
-            Toast.makeText(getApplicationContext(), Integer.toString(radioId), Toast.LENGTH_LONG).show();
+
+        public void checkButton(View v){
+
+            int q = viewPager.getCurrentItem();
+
+            // Toast.makeText(this, ""+q, Toast.LENGTH_SHORT).show();
+
+            switch(v.getId()) {
+
+                case R.id.never:
+                    // Toast.makeText(getApplicationContext(), "NEVER", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case R.id.almost_never:
+                    // Toast.makeText(getApplicationContext(), "NEVER", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case R.id.sometimes:
+                    // Toast.makeText(getApplicationContext(), "ALWAYS", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case R.id.almost_always:
+                    // Toast.makeText(getApplicationContext(), "NEVER", Toast.LENGTH_SHORT).show();
+                    break;
+
+                case R.id.always:
+                    // Toast.makeText(getApplicationContext(), "ALWAYS", Toast.LENGTH_SHORT).show();
+                    break;
+
+            }
         }
 
         @Override
@@ -63,7 +90,6 @@ public class CheckupProcess extends Activity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_checkup_process);
 
-            radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
             viewPager =  findViewById(R.id.view_pager);
             dotsLayout = findViewById(R.id.layoutDots);

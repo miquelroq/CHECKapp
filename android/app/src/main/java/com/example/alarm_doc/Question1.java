@@ -60,15 +60,25 @@ public class Question1 extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
 
-
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View myView = inflater.inflate(R.layout.fragment_question1, container, false);
+
+        RadioGroup radioGroup = (RadioGroup) myView.findViewById(R.id.radioGroup);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+
+            }
+        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question1, container, false);
+        return myView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

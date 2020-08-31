@@ -44,12 +44,8 @@ public class ProfileSelection extends AppCompatActivity {
         List<Profile> profiles = utils.getAllProfiles(act);
 
         // For each profile, inflate a view with the name and their pfp
-        for (Profile p : profiles) {
-//            Toast.makeText(getApplicationContext(), p.getPhoto().toString(), Toast.LENGTH_LONG).show();
-            // addView("banana", img_name);
-
-            addView(p.getName(), Uri.parse(p.getPhoto()));
-        }
+        for (Profile p : profiles)
+            addView(p);
 
         // Set up the button to add a new profile
         Button add = (Button) findViewById(R.id.fab);
@@ -65,10 +61,12 @@ public class ProfileSelection extends AppCompatActivity {
             }
         });
 
-
     }
 
-    private void addView(final String name, Uri img) {
+    private void addView(final Profile p) {
+
+        String name = p.getName();
+        Uri img = Uri.parse(p.getPhoto());
 
         View avatar = getLayoutInflater().inflate(R.layout.avatar_img, null, false);
         final Intent mainMenu = new Intent(getApplicationContext(), MainActivity.class);
@@ -93,6 +91,10 @@ public class ProfileSelection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                // Configure the logged in user
+                utils.logIn(p, act);
+
+                // Launch the main menu
                 startActivity(mainMenu);
 
             }

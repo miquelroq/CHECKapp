@@ -14,42 +14,50 @@
         android:layout_marginTop="200dp"/>
 
     <RadioGroup
+        android:id="@+id/radioGroupFatigue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        >
 
         <RadioButton
+            android:id="@+id/AAAA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/never"
             android:layoutDirection="rtl"
             android:textAlignment="textStart"
             android:layout_gravity="start"
+            android:onClick="checkButton"
             >
         </RadioButton>
 
         <RadioButton
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"            >
-        </RadioButton>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"            >
-        </RadioButton>
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"            >
+            android:layout_height="wrap_content"
+            android:onClick="checkButton">
         </RadioButton>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/everyday">
+            android:onClick="checkButton">
+        </RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton">
+        </RadioButton>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/everyday"
+            android:onClick="checkButton">
         </RadioButton>
 
     </RadioGroup>

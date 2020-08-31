@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,8 +64,22 @@ public class Question2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        View myView = inflater.inflate(R.layout.fragment_question2, container, false);
+
+        RadioGroup radioGroup = (RadioGroup) myView.findViewById(R.id.radioGroupFatigue);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
+
+                Toast.makeText(getContext(), "OLA", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_question1, container, false);
+        return myView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
