@@ -5,6 +5,12 @@ This file serves as a primary means to identify and record non-graphical data re
 ## All Screens
 * Either center or remove the CHECKapp logo
 * Top Bar is invisible but contains a back arrow
+* Fonts: TODO: FILL IN HERE
+	* Header 1 - 
+	* Header 2 - 
+	* Header 3 / Body - 
+	* Header 1 Bold - 
+	* Header 2 Bold - 
 
 ## Screen A (Loading Screen)
 
