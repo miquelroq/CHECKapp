@@ -58,8 +58,6 @@ public class CheckupProcess extends Activity {
 
             int q = viewPager.getCurrentItem();
 
-            // Toast.makeText(this, ""+q, Toast.LENGTH_SHORT).show();
-
             switch(v.getId()) {
 
                 case R.id.never:
@@ -83,6 +81,14 @@ public class CheckupProcess extends Activity {
                     break;
 
             }
+
+            // Depending on what fragment we are we will update our dictionary differently
+            if(q == 0){
+                // TODO: Update dic with chills frequency
+            } else if(q == 1){
+                // TODO: Update dic with fatigue frequency
+            }
+
         }
 
         @Override
