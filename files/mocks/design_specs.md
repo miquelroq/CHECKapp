@@ -3,14 +3,15 @@
 This file serves as a primary means to identify and record non-graphical data regarding the already designed Mock-Ups, such as fonts, text size and etc.
 
 ## All Screens
-* Either center or remove the CHECKapp logo
 * Top Bar is invisible but contains a back arrow
 * Fonts: 
-	* Header 1 - Commuters sans Light (lowercase)
-	* Header 2 - Commuters sans Ultralight (lowercase)
-	* Header 3 / Body - Commuters sans Ultralight 
-	* Header 1 Bold - Alieron Heavy 
-	* Header 2 Bold - Alieron Heavy
+	* Header 1 - *Commuters sans Light (lowercase)* SIZE:56
+	* Header 2 - *Commuters sans Ultralight (lowercase)* SIZE: 43
+	* Header 3  - *Commuters sans Ultralight* SIZE: 32
+	* Body - *Commuters sans Ultralight* SIZE: 32
+	* Header 1 Bold - *Alieron Heavy* SIZE: 41,5
+	* Header 2 Bold - *Alieron Heavy* SIZE: 26
+	* Header 3 Bold - *Alieron Heavy* SIZE: 19
 
 ## Screen A (Loading Screen)
 <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/A.png" alt="A" width="300"/>
@@ -38,6 +39,7 @@ The loading logo should be a single ImageView containing both the logo and the t
 * Profiles
 	* Equal spacing inbetween
 	* Add new profile - Floating Action Button or programatically stage a fake profile with no name and a Plus Symbol as PFP
+	* Name field in Header 3 Bold
 
 
 ## Screen C (Register Form)
@@ -47,10 +49,16 @@ Selecting a Text Field automatically scrolls the window up
 
 * Font - Header 3 / Body on each field
 * Numeric Pad for the fields:
-	* Age
 	* Height
 	* Weight
-
+* Alfa-numeric Pad for the fields:
+	* Name
+* Dropdown for the fields:
+	* Date of Birth
+	* Sex
+	* Lifestyle
+	* Previous diseases
+	
 
 ## Screen D (Main Menu)
 <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/D.png" alt="D" width="300"/>
