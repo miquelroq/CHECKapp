@@ -5,14 +5,15 @@ This file serves as a primary means to identify and record non-graphical data re
 ## All Screens
 * Either center or remove the CHECKapp logo
 * Top Bar is invisible but contains a back arrow
-* Fonts: TODO: FILL IN HERE
-	* Header 1 - 
-	* Header 2 - 
-	* Header 3 / Body - 
-	* Header 1 Bold - 
-	* Header 2 Bold - 
+* Fonts: 
+	* Header 1 - Commuters sans Light (lowercase)
+	* Header 2 - Commuters sans Ultralight (lowercase)
+	* Header 3 / Body - Commuters sans Ultralight 
+	* Header 1 Bold - Alieron Heavy 
+	* Header 2 Bold - Alieron Heavy
 
 ## Screen A (Loading Screen)
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/A.png" alt="A" width="300"/>
 
 The loading logo should be a single ImageView containing both the logo and the text to be displayed
 
@@ -25,6 +26,7 @@ The loading logo should be a single ImageView containing both the logo and the t
 
 
 ## Screen B (Profile Selection)
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/B.png" alt="B" width="300"/>
 
 ### **Logo Upper Right Corner**
 * Color - ```#466181```
@@ -39,6 +41,7 @@ The loading logo should be a single ImageView containing both the logo and the t
 
 
 ## Screen C (Register Form)
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/C.png" alt="C" width="300"/> <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/C2.png" alt="C2" width="300"/>
 
 Selecting a Text Field automatically scrolls the window up
 
@@ -50,7 +53,7 @@ Selecting a Text Field automatically scrolls the window up
 
 
 ## Screen D (Main Menu)
-
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/D.png" alt="D" width="300"/>
 ### **Buttons**
 * Font - Header 2 on each 
 * Color - ```#466181```
@@ -64,6 +67,7 @@ Selecting a Text Field automatically scrolls the window up
 
 
 ## Screen E (Registers)
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/E.png" alt="E" width="300"/>
 
 ### **TopBar**
 * Back Arrow
@@ -76,6 +80,7 @@ Generate a horizontal bar for each past register
 
 
 ## Screen F (Diagnostic with RadioGroup)
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/F.png" alt="F" width="300"/> <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/F2.png" alt="F2" width="300"/>
 
 ### **Question number**
 * Font - Header 2
@@ -103,6 +108,9 @@ Generate a horizontal bar for each past register
 
 
 ## Screen G (Diagnostic with ImageView)
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/G.png" alt="G" width="300"/> <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/G2.png" alt="G2" width="300"/>
+
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/G3.png" alt="G3" width="300"/> <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/G4.png" alt="G4" width="300"/>
 
 ### **Question number**
 * Font - Header 2
@@ -127,15 +135,16 @@ Generate a horizontal bar for each past register
 	* Background Color - ```#8bb3e1```
 
 
-## Screen G (Testing)
+## Screen H (Testing)
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/H.png" alt="H" width="300"/>
 
 ### **Testing Widget**
 * Cool
 * Follows ```#466181```, ```#8bb3e1```, ```#ffffff``` color scheme
 
 
-## Screen H (Report)
-
+## Screen I (Report)
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/I.png" alt="I" width="300"/> <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/I2.png" alt="I2" width="300"/>
 ### **Patient Name**
 * Font - Header 2
 * Font Color - ```#ffffff```
@@ -167,8 +176,8 @@ Generate a horizontal bar for each past register
 	* Background Color - ```#8bb3e1```
 
 
-## Screen I (Profile)
-
+## Screen J (Profile)
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/J.png" alt="J" width="300"/>
 ### **Patient Name**
 * Font - Header 1
 * Font Color - ```#466181```
