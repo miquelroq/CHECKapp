@@ -86,12 +86,12 @@
                 android:id="@+id/age_select"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="24"
-                android:inputType="textPersonName" />
+                android:inputType="date|datetime" />
 
             <TextView
                 android:id="@+id/weight"
@@ -106,12 +106,12 @@
                 android:id="@+id/weight_select"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="80"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
 
             <TextView
                 android:id="@+id/height"
@@ -126,12 +126,12 @@
                 android:id="@+id/height_select"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="175"
-                android:inputType="textPersonName" />
+                android:inputType="number" />
 
             <TextView
                 android:id="@+id/lifestyle"

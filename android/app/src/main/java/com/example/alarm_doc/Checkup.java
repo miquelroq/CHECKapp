@@ -8,11 +8,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -25,6 +27,7 @@ public class Checkup extends AppCompatActivity {
 
         double test_outcome = Math.random();
         final Intent intent;
+        int fatigue, chills;
         Timer timer = new Timer();
         final TextView tv = (TextView) findViewById(R.id.number);
 
@@ -33,15 +36,29 @@ public class Checkup extends AppCompatActivity {
                     @Override
                     public void onReceive(Context context, Intent intent) {
                         int randomNr = intent.getIntExtra(DataGenerator.EXTRA_RANDOM, 0);
-                        System.out.println(randomNr);
                         tv.setText(Integer.toString(randomNr));
                     }
                 }, new IntentFilter(DataGenerator.ACTION_DATAGEN_BROADCAST)
         );
 
+        // Show the received dictionary
+        fatigue = getIntent().getIntExtra("fatigue", 0);
+        Log.d("toasty", ""+fatigue);
+
+        chills = getIntent().getIntExtra("chills", 0);
+        Log.d("toasty", ""+chills);
+
+        // TODO:
+        //      * Connect to BITalino via Bluetooth
+        //      * Collect BITalino data and store it in a HashMap or ArrayLists of ints
+        //      * Send the collected data to Django API
+        //      * Wait for the response
+        //      * Launch Healthy/Unhealthy activity according to the received response
+
         // Starting Datagen in the background when this activity is created
         Intent service = new Intent(this, DataGenerator.class);
         startService(service);
+
 
     }
 }

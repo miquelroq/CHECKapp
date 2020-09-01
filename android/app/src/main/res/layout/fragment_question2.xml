@@ -24,7 +24,7 @@
         >
 
         <RadioButton
-            android:id="@+id/AAAA"
+            android:id="@+id/never"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/never"
@@ -36,24 +36,28 @@
         </RadioButton>
 
         <RadioButton
+            android:id="@+id/almost_never"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton">
         </RadioButton>
 
         <RadioButton
+            android:id="@+id/sometimes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton">
         </RadioButton>
 
         <RadioButton
+            android:id="@+id/almost_always"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="checkButton">
         </RadioButton>
 
         <RadioButton
+            android:id="@+id/always"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/everyday"

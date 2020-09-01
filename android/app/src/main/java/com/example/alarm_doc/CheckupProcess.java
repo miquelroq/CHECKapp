@@ -33,6 +33,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.HashMap;
+
 /**
  *
  * Code adapted from @joselfrias
@@ -52,42 +54,54 @@ public class CheckupProcess extends Activity {
         Button skipBtn;
         RadioGroup radioGroup;
 
+        private int fatigue, chills;
 
 
         public void checkButton(View v){
 
             int q = viewPager.getCurrentItem();
+            int selectedFreq = -1;
 
             switch(v.getId()) {
 
                 case R.id.never:
-                    // Toast.makeText(getApplicationContext(), "NEVER", Toast.LENGTH_SHORT).show();
+                    selectedFreq = 0;
                     break;
 
                 case R.id.almost_never:
-                    // Toast.makeText(getApplicationContext(), "NEVER", Toast.LENGTH_SHORT).show();
+                    selectedFreq = 1;
                     break;
 
                 case R.id.sometimes:
-                    // Toast.makeText(getApplicationContext(), "ALWAYS", Toast.LENGTH_SHORT).show();
+                    selectedFreq = 2;
                     break;
 
                 case R.id.almost_always:
-                    // Toast.makeText(getApplicationContext(), "NEVER", Toast.LENGTH_SHORT).show();
+                    selectedFreq = 3;
                     break;
 
                 case R.id.always:
-                    // Toast.makeText(getApplicationContext(), "ALWAYS", Toast.LENGTH_SHORT).show();
+                    selectedFreq = 4;
                     break;
 
             }
 
             // Depending on what fragment we are we will update our dictionary differently
             if(q == 0){
-                // TODO: Update dic with chills frequency
+                chills = selectedFreq;
             } else if(q == 1){
-                // TODO: Update dic with fatigue frequency
+                fatigue = selectedFreq;
             }
+
+            btnNext.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int current = getItem(+1);
+                    if (current < layouts.length) {
+                        viewPager.setCurrentItem(current);
+                    }
+                }
+            });
 
         }
 
@@ -143,15 +157,17 @@ public class CheckupProcess extends Activity {
                 }
             });
 
-            btnNext.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int current = getItem(+1);
-                    if (current < layouts.length) {
-                        viewPager.setCurrentItem(current);
+            if(viewPager.getCurrentItem() != 0 && viewPager.getCurrentItem() != 1) {
+                btnNext.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int current = getItem(+1);
+                        if (current < layouts.length) {
+                            viewPager.setCurrentItem(current);
+                        }
                     }
-                }
-            });
+                });
+            }
 
             skipBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -177,16 +193,37 @@ public class CheckupProcess extends Activity {
 
                 if (position == layouts.length - 1) {
                     // Grey out right arrow
-                    btnNext.setBackgroundResource(R.drawable.ic_arrow_right_light);
-                }
-                else if (position == 0){
+                    btnNext.setBackgroundResource(R.drawable.ic_baseline_check_24);
+
+                    btnNext.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(CheckupProcess.this, Checkup.class);
+                            intent.putExtra("chills", chills);
+                            intent.putExtra("fatigue", fatigue);
+
+                            startActivity(intent);
+                        }
+                    });
+                } else if (position == 0) {
                     // Grey out left arrow
                     btnBack.setBackgroundResource(R.drawable.ic_arrow_left_light);
-                }
-                else{
+                } else {
                     // Have them both available
                     btnBack.setBackgroundResource(R.drawable.ic_arrow_left);
                     btnNext.setBackgroundResource(R.drawable.ic_arrow_right);
+
+                    if(viewPager.getCurrentItem() != 0 && viewPager.getCurrentItem() != 1) {
+                        btnNext.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                int current = getItem(+1);
+                                if (current < layouts.length) {
+                                    viewPager.setCurrentItem(current);
+                                }
+                            }
+                        });
+                    }
                 }
             }
 
