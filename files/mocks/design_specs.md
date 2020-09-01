@@ -152,7 +152,8 @@ Generate a horizontal bar for each past register
 
 
 ## Screen I (Report)
-<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/I.png" alt="I" width="300"/> <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/I2.png" alt="I2" width="300"/>
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/I.png" alt="I" width="300"/> <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/I2.png" alt="I2" width="300"/> <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/I3.png" alt="I2" width="300"/>
+
 ### **Patient Name**
 * Font - Header 2
 * Font Color - ```#ffffff```
@@ -182,6 +183,25 @@ Generate a horizontal bar for each past register
 	* Font - Header 3 / Body
 	* Font Color - ```#ffffff```
 	* Background Color - ```#8bb3e1```
+	
+### **Report Details**
+
+* Diagnostic Type Title
+	* Font - Header Bold 2
+	* Font Color - ```#466181```
+	
+* Diagnostic Type Details
+	* Font - Header 3 Bold
+	* Font Color - ```#8bb3e1```
+	
+* Diagnostic Type Data
+	* Font - Header 2
+	* Font Color - ```#466181```
+	
+* Charts
+	* TBD
+	* Colors - ```#466181```, ```#8bb3e1```
+
 
 
 ## Screen J (Profile)
