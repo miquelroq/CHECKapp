@@ -9,6 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.alarm_doc.domain.Profile;
+import com.example.alarm_doc.domain.Register;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
@@ -43,6 +44,19 @@ public class Utils {
         // Use the profile's name as the key to fetch it later
         editor.putString(p.getName(), serializedProfile);
         editor.apply();
+
+    }
+
+    // Used to delete a profile
+    public void deleteProfile(String username, Activity activity) {
+
+        // Fetch activity's shared preferences and their editor
+        SharedPreferences sharedPreferences = activity.getSharedPreferences("profiles", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        // Find and delete the user
+        editor.remove(username);
+        editor.apply();;
 
     }
 
@@ -92,4 +106,22 @@ public class Utils {
     }
 
 
+    public void addRegisterToLoggedUser(Register r, Activity activity) {
+
+        // Fetch the logged in user
+        Profile p = getLoggedProfile(activity);
+
+        // Delete profile p from SharedPreferences
+        deleteProfile(p.getName(), activity);
+
+        // Update p's registers
+        p.addRegister(r);
+
+        // Save p
+        saveProfile(p, activity);
+
+        // Login with p
+        logIn(p, activity);
+
+    }
 }

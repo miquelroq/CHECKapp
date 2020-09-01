@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CheckupProcess"></activity>
+        <activity android:name=".DisplayRegisters"></activity>
+        <activity android:name=".CheckupProcess" />
         <activity android:name=".NewProfile" />
         <activity
             android:name=".ProfileSelection"
@@ -21,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SelectDiagnostic" />
         <activity android:name=".DiagnoseCustomizer" />
         <activity android:name=".Unhealthy" />
         <activity android:name=".Healthy" />

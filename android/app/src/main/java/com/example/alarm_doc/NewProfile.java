@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -64,7 +65,7 @@ public class NewProfile extends AppCompatActivity {
         sex.setAdapter(sex_adapter);
 
         // Fill in the lifestyle Spinner
-        Spinner lifestyle = (Spinner) findViewById(R.id.lifestyle_selector);
+        final Spinner lifestyle = (Spinner) findViewById(R.id.lifestyle_selector);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getApplicationContext(),
                 R.array.fitness_array, android.R.layout.simple_spinner_item);
@@ -120,7 +121,38 @@ public class NewProfile extends AppCompatActivity {
                     valid = false;
                 }
 
-                // TODO: Process lifestyle
+                // Parse selected lifestyle
+                int activityLevel = -1;
+                String selectedLifestyle = lifestyle.getSelectedItem().toString();
+
+                // Awful. Ideal solution would be to associate each <item> with an integer
+                // and simply fetch that integer.
+                switch (selectedLifestyle) {
+                    case "Not active":
+                        activityLevel = 0;
+                        break;
+
+                    case "Barely active":
+                        activityLevel = 1;
+                        break;
+
+                    case "Somewhat active":
+                        activityLevel = 2;
+                        break;
+
+                    case "Moderately active":
+                        activityLevel = 3;
+                        break;
+
+                    case "Highly active":
+                        activityLevel = 4;
+                        break;
+
+                    case "Extremely active":
+                        activityLevel = 5;
+                        break;
+                }
+
 
                 // Validate and extract previous diseases
                 ArrayList<Conditions> conditions = new ArrayList<>();
@@ -157,7 +189,7 @@ public class NewProfile extends AppCompatActivity {
                 if(valid) {
 
                     // Instance a profile
-                    // TODO: Discuss: where do we include the lifestyle parameter?
+
                     Profile p = new Profile(
                             input_name,
                             female,
@@ -165,6 +197,7 @@ public class NewProfile extends AppCompatActivity {
                             input_weight,
                             input_height,
                             img_name.toString(),
+                            activityLevel,
                             conditions
                     );
 

@@ -70,7 +70,6 @@ public class ProfileSelection extends AppCompatActivity {
 
         View avatar = getLayoutInflater().inflate(R.layout.avatar_img, null, false);
         final Intent mainMenu = new Intent(getApplicationContext(), MainActivity.class);
-        mainMenu.putExtra("profile", name);
 
         TextView display_name = (TextView) avatar.findViewById(R.id.profile_name);
         display_name.setText(name);
@@ -79,6 +78,10 @@ public class ProfileSelection extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                // Configure the logged in user
+                utils.logIn(p, act);
+
+                // Launch the main menu
                 startActivity(mainMenu);
 
             }

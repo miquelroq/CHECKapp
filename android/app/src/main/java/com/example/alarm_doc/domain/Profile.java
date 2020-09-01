@@ -6,6 +6,7 @@ import android.net.Uri;
 import com.example.alarm_doc.domain.Conditions;
 import com.example.alarm_doc.domain.Register;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Profile {
@@ -19,7 +20,7 @@ public class Profile {
     private String photo;
     private List<Conditions> conditions;
     private int activityLevel;
-    private List<Register> registers;
+    private List<Register> registers = new ArrayList<>();
     private BaseValuesHandler baseValues;
 
     public Profile() {

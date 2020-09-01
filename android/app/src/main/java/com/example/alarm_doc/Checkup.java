@@ -31,6 +31,7 @@ public class Checkup extends AppCompatActivity {
         Timer timer = new Timer();
         final TextView tv = (TextView) findViewById(R.id.number);
 
+
         LocalBroadcastManager.getInstance(this).registerReceiver(
                 new BroadcastReceiver() {
                     @Override
@@ -41,12 +42,9 @@ public class Checkup extends AppCompatActivity {
                 }, new IntentFilter(DataGenerator.ACTION_DATAGEN_BROADCAST)
         );
 
-        // Show the received dictionary
+        // Collect the received dictionary
         fatigue = getIntent().getIntExtra("fatigue", 0);
-        Log.d("toasty", ""+fatigue);
-
         chills = getIntent().getIntExtra("chills", 0);
-        Log.d("toasty", ""+chills);
 
         // TODO:
         //      * Connect to BITalino via Bluetooth

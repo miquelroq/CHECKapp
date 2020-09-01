@@ -1,5 +1,6 @@
 package com.example.alarm_doc;
 
+import android.app.Activity;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
@@ -16,7 +17,13 @@ import android.os.Process;
 import androidx.annotation.Nullable;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.example.alarm_doc.domain.Register;
+import com.example.alarm_doc.utils.Utils;
+
 import java.util.TimerTask;
+
+import static android.app.PendingIntent.getActivity;
+import static androidx.core.app.ShareCompat.getCallingActivity;
 
 public class DataGenerator extends Service {
 
@@ -26,6 +33,8 @@ public class DataGenerator extends Service {
             ACTION_DATAGEN_BROADCAST = DataGenerator.class.getName() + "DataGenerator",
             EXTRA_RANDOM = "extra_random";
     public DataGenerator data_instance = this;
+    public Utils utils = new Utils();
+    public Activity launcher;
 
     // Handler that receives messages from the thread
     private final class ServiceHandler extends Handler {
@@ -49,21 +58,7 @@ public class DataGenerator extends Service {
             // Launch a new activity from this service.
             // Since we need to wait for it to be concluded to start it,
             // maybe it is best to launch it here rather than use IPC
-            double test_outcome = Math.random();
-            Intent outcome;
-
-            if (test_outcome > 0.5) {
-                // If user is healthy
-                // Launch healthy activity
-                outcome = new Intent(getApplicationContext(), Healthy.class);
-
-            } else {
-                // If user is not healthy
-                // Launch worried activity
-                outcome = new Intent(getApplicationContext(), Unhealthy.class);
-
-            }
-
+            Intent outcome = new Intent(getApplicationContext(), Healthy.class);
             outcome.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(outcome);
 
@@ -119,6 +114,10 @@ public class DataGenerator extends Service {
         Intent intent = new Intent(ACTION_DATAGEN_BROADCAST);
         intent.putExtra(EXTRA_RANDOM, i);
         LocalBroadcastManager.getInstance(data_instance).sendBroadcast(intent);
+    }
+
+    public void setActivity(Activity a) {
+        this.launcher = a;
     }
 
 }

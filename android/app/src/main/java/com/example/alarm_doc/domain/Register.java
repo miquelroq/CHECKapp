@@ -1,29 +1,46 @@
 package com.example.alarm_doc.domain;
 
+import android.annotation.SuppressLint;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Register {
 
     //emotional score class
     private Emotional emotional;
+
     //nervous and muscular score class
     private NervousMuscular nervousMuscular;
+
     //neurologic score class
     private Neurologic neurologic;
+
     //fitness score class
     private Fitness fitness;
+
     //cardio-respiratory score class
     private CardioRespiratory cardioRespiratory;
+
+    // Overall evaluation
+    private boolean healthy;
+
+    // Date in which the Register was generated
+    private String date;
 
 
     public Register() {
 
     }
 
+    @SuppressLint("SimpleDateFormat")
     public Register(Emotional emotional, NervousMuscular nervousMuscular, Neurologic neurologic, Fitness fitness, CardioRespiratory cardioRespiratory) {
         this.setEmotional(emotional);
         this.setNervousMuscular(nervousMuscular);
         this.setNeurologic(neurologic);
         this.setFitness(fitness);
         this.setCardioRespiratory(cardioRespiratory);
+        this.date = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
     }
 
     public Emotional getEmotional() {
@@ -84,6 +101,22 @@ public class Register {
 
     public void setCardioRespiratory(CardioRespiratory cardioRespiratory) {
         this.cardioRespiratory = cardioRespiratory;
+    }
+
+    public boolean isHealthy() {
+        return healthy;
+    }
+
+    public void setHealthy(boolean healthy) {
+        this.healthy = healthy;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
 }

@@ -12,7 +12,7 @@ public class CardioRespiratory {
     private int score;
     private int bpm;
     private int frequency;
-    private int pikes;
+    private int spikes;
     private int breathRate;
     //TODO: variables may be modificated in order to be more useful for the diagnosis
 
@@ -33,8 +33,8 @@ public class CardioRespiratory {
         return frequency;
     }
 
-    public int getPikes() {
-        return pikes;
+    public int getSpikes() {
+        return spikes;
     }
 
     public int getBreathRate() {
@@ -53,8 +53,8 @@ public class CardioRespiratory {
         this.frequency = frequency;
     }
 
-    public void setPikes(int pikes) {
-        this.pikes = pikes;
+    public void setSpikes(int spikes) {
+        this.spikes = spikes;
     }
 
     public void setBreathRate(int breathRate) {
@@ -63,7 +63,7 @@ public class CardioRespiratory {
 
     public void calculateScore(){
         int score = 100 - (1/4) * (abs(bpm-BASEBPM)/BASEBPM) - (1/4) * (abs(frequency-BASEFREQ)/BASEFREQ) -
-                (1/4) * (pikes/10) - (1/4) * (abs(breathRate-BASEBREATH)/BASEBREATH);
+                (1/4) * (spikes /10) - (1/4) * (abs(breathRate-BASEBREATH)/BASEBREATH);
         this.setScore(score);
         //TODO: max score como variavel global (?)
         //TODO: formula

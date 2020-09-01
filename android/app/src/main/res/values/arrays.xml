@@ -8,9 +8,9 @@
     <string-array name="fitness_array">
         <item>Not active</item>
         <item>Barely active</item>
+        <item>Somewhat active</item>
         <item>Moderately active</item>
-        <item>Higher active</item>
-        <item>IDK active</item>
+        <item>Highly active</item>
         <item>Extremely active</item>
     </string-array>
 </resources>
