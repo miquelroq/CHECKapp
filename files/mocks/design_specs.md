@@ -186,6 +186,7 @@ Generate a horizontal bar for each past register
 
 ## Screen J (Profile)
 <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/J.png" alt="J" width="300"/>
+
 ### **Patient Name**
 * Font - Header 1
 * Font Color - ```#466181```
