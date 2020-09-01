@@ -36,7 +36,7 @@
  - <https://pypi.org/project/opensignalsreader/>
  - <https://www.noisebridge.net/images/4/46/DWTandFFTforEEG.pdf>
  
- ![image](https://github.com/miquelroq/health-app/blob/master/bitalino/zoomed.png)
+ ![image](https://github.com/miquelroq/health-app/blob/master/files/bitalino/zoomed.png)
 
 ## Sources
 
