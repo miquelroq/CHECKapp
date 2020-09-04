@@ -12,81 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/BTHDeviceScan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/CommandArguments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/CommandProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/Communication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/ConnectionState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/Device.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalino.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoCRC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoCommunication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoCommunicationFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoDescription.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoErrorTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoFrameDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoStateDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/CommandDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/ble/BLECommunication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/ble/DeviceScan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/ble/PluxGattAttributes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/bth/BTHCommunication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/bth/BTHDeviceScan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/bth/OnBITalinoDataAvailable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/radio_button_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/actionbar_indeterminate_progress.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/listitem_device.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/jar/api.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/androidTest/java/info/plux/pluxapi/ApplicationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/BTHDeviceScan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/CommandArguments.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/CommandProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/Communication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/ConnectionState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/Device.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalino.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoCRC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoCommunication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoCommunicationFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoDescription.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoErrorTypes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoFrameDecoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoStateDecoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/CommandDecoder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/ble/BLECommunication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/ble/DeviceScan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/ble/PluxGattAttributes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/bth/BTHCommunication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/bth/BTHDeviceScan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/bth/OnBITalinoDataAvailable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Checkup.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Checkup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/CheckupProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/CheckupProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DiagnoseCustomizer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Healthy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Healthy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/NewProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/NewProfile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/ProfileSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/ProfileSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_checkup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_checkup.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -366,33 +293,33 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599243218442" />
-    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1599243579832">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1599244452903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
-    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599243579832" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599244452903" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597967962484" />
-    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1599243579832">
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1599244452903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
-    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599243579832" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599244452903" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597967962483" />
-    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1599243579831">
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1599244452903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667302" />
-    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599243579831" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599244452903" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597967962482" />
-    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1599243579832">
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1599244452903">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
-    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599243579832" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599244452903" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597967962484" />
     <state x="433" y="173" key="MultipleFileMergeDialog" timestamp="1597676441518">
       <screen x="0" y="0" width="1440" height="900" />

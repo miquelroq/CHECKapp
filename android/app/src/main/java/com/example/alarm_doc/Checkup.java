@@ -1,37 +1,31 @@
 package com.example.alarm_doc;
 
-import android.Manifest;
-import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.Timer;
 
 import info.plux.pluxapi.BTHDeviceScan;
 import info.plux.pluxapi.Constants;
@@ -59,6 +53,8 @@ import info.plux.pluxapi.Constants;
 
 public class Checkup extends ListActivity {
 
+    private int bitalinoNumber = 1;
+
     private DeviceListAdapter deviceListAdapter;
     private BluetoothAdapter mBluetoothAdapter;
     private boolean mScanning;
@@ -68,7 +64,7 @@ public class Checkup extends ListActivity {
     private boolean isScanDevicesUpdateReceiverRegistered = false;
 
     private static final int REQUEST_ENABLE_BT = 1;
-    private static final int PERMISSION_REQUEST_COARSE_LOCATION = 2;
+
 
     // Stops scanning after 10 seconds.
     private static final long SCAN_PERIOD = 10000;
@@ -80,37 +76,121 @@ public class Checkup extends ListActivity {
         setContentView(R.layout.activity_checkup);
         mHandler = new Handler();
 
-        double test_outcome = Math.random();
-        final Intent intent;
-        int fatigue, chills;
-        Timer timer = new Timer();
+        registerReceiver(scanDevicesUpdateReceiver, new IntentFilter(Constants.ACTION_MESSAGE_SCAN));
+
+        Bundle bundle = getIntent().getExtras();
+        assert bundle != null;
+        bitalinoNumber = bundle.getInt("bitalinoNumber", 1);
 
         // Initializes a Bluetooth adapter.  For API level 18 and above, get a reference to
         // BluetoothAdapter through BluetoothManager.
         final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
+        assert bluetoothManager != null;
         mBluetoothAdapter = bluetoothManager.getAdapter();
-
-        // Checks if Bluetooth is supported on the device.
-        if (mBluetoothAdapter == null) {
-            Toast.makeText(this, "Error - Bluetooth not supported", Toast.LENGTH_SHORT).show();
-            finish();
-            return;
-        }
-
-        permissionCheck();
 
         bthDeviceScan = new BTHDeviceScan(this);
 
-        // Collect the received dictionary
-        fatigue = getIntent().getIntExtra("fatigue", 0);
-        chills = getIntent().getIntExtra("chills", 0);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
 
-        // Starting Datagen in the background when this activity is created
-        Intent service = new Intent(this, DataGenerator.class);
-        // startService(service);
+        DividerItemDecoration dItem = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
+
 
         scanDevice(true);
+    }
 
+    private final BroadcastReceiver scanDevicesUpdateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+
+            assert action != null;
+            if(BluetoothDevice.ACTION_FOUND.equals(action)){
+                BluetoothDevice bluetoothDevice = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+
+                if(bluetoothDevice != null){
+                    deviceListAdapter.addDevice(bluetoothDevice);
+                    deviceListAdapter.notifyDataSetChanged();
+                }
+            }
+        }
+    };
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // User chose not to enable Bluetooth.
+        if (requestCode == REQUEST_ENABLE_BT && resultCode == Activity.RESULT_CANCELED) {
+            finish();
+            return;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void scanDevice(final boolean enable) {
+        if (enable) {
+            // Stops scanning after a pre-defined scan period.
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mScanning = false;
+                    bthDeviceScan.stopScan();
+                    invalidateOptionsMenu();
+                }
+            }, SCAN_PERIOD);
+
+            mScanning = true;
+            bthDeviceScan.doDiscovery();
+        } else {
+            mScanning = false;
+            bthDeviceScan.stopScan();
+        }
+        invalidateOptionsMenu();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(BluetoothDevice.ACTION_FOUND);
+        intentFilter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+
+        registerReceiver(scanDevicesUpdateReceiver, intentFilter);
+        isScanDevicesUpdateReceiverRegistered = true;
+
+        // Ensures Bluetooth is enabled on the device.  If Bluetooth is not currently enabled,
+        // fire an intent to display a dialog asking the user to grant permission to enable it.
+        if (!mBluetoothAdapter.isEnabled()) {
+            if (!mBluetoothAdapter.isEnabled()) {
+                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+            }
+        }
+
+        // Initializes list view adapter.
+        deviceListAdapter = new DeviceListAdapter();
+        setListAdapter(deviceListAdapter);
+
+        scanDevice(true);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        scanDevice(false);
+        deviceListAdapter.clear();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        if(bthDeviceScan != null){
+            bthDeviceScan.closeScanReceiver();
+        }
+
+        if(isScanDevicesUpdateReceiverRegistered){
+            unregisterReceiver(scanDevicesUpdateReceiver);
+        }
     }
 
     @Override
@@ -140,163 +220,6 @@ public class Checkup extends ListActivity {
                 break;
         }
         return true;
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(BluetoothDevice.ACTION_FOUND);
-        intentFilter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
-
-        registerReceiver(scanDevicesUpdateReceiver, intentFilter);
-        isScanDevicesUpdateReceiverRegistered = true;
-
-        // Ensures Bluetooth is enabled on the device.  If Bluetooth is not currently enabled,
-        // fire an intent to display a dialog asking the user to grant permission to enable it.
-        if (!mBluetoothAdapter.isEnabled()) {
-            if (!mBluetoothAdapter.isEnabled()) {
-                Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-                startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
-            }
-        }
-
-        // Initializes list view adapter.
-        deviceListAdapter = new DeviceListAdapter();
-        setListAdapter(deviceListAdapter);
-        scanDevice(true);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // User chose not to enable Bluetooth.
-        if (requestCode == REQUEST_ENABLE_BT && resultCode == Activity.RESULT_CANCELED) {
-            finish();
-            return;
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR1)
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        switch (requestCode) {
-            case PERMISSION_REQUEST_COARSE_LOCATION:
-                if(grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                    Log.d("banana", "coarse location permission granted");
-                }
-                else{
-                    final AlertDialog.Builder builder = new AlertDialog.Builder(this)
-                            .setTitle(getString(R.string.permission_denied_dialog_title))
-                            .setMessage(getString(R.string.permission_denied_dialog_message))
-                            .setPositiveButton(getString(R.string.permission_denied_dialog_positive_button), null)
-                            .setOnDismissListener(new DialogInterface.OnDismissListener() {
-                                @Override
-                                public void onDismiss(DialogInterface dialogInterface) {
-
-                                }
-                            });
-                    builder.show();
-                }
-                break;
-            default:
-                return;
-        }
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        scanDevice(false);
-        deviceListAdapter.clear();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        if(bthDeviceScan != null){
-            bthDeviceScan.closeScanReceiver();
-        }
-
-        if(isScanDevicesUpdateReceiverRegistered){
-            unregisterReceiver(scanDevicesUpdateReceiver);
-        }
-    }
-
-    @Override
-    protected void onListItemClick(ListView l, View v, int position, long id) {
-/*        final BluetoothDevice device = deviceListAdapter.getDevice(position);
-        if (device == null) return;
-        final Intent intent = new Intent(this, DeviceActivity.class);
-        intent.putExtra(DeviceActivity.EXTRA_DEVICE, device);
-        if (mScanning) {
-            bthDeviceScan.stopScan();
-            mScanning = false;
-        }
-        startActivity(intent);*/
-        Log.d("banana", "olaolaoalaoal");
-    }
-
-    private void scanDevice(final boolean enable) {
-
-        Toast.makeText(this, "scanning", Toast.LENGTH_SHORT).show();
-        
-        if (enable) {
-            // Stops scanning after a pre-defined scan period.
-            mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    mScanning = false;
-                    bthDeviceScan.stopScan();
-                    invalidateOptionsMenu();
-                }
-            }, SCAN_PERIOD);
-
-            mScanning = true;
-            bthDeviceScan.doDiscovery();
-        } else {
-            mScanning = false;
-            bthDeviceScan.stopScan();
-        }
-        invalidateOptionsMenu();
-    }
-
-    private final BroadcastReceiver scanDevicesUpdateReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getAction();
-
-            if(action.equals(Constants.ACTION_MESSAGE_SCAN)){
-                BluetoothDevice bluetoothDevice = intent.getParcelableExtra(Constants.EXTRA_DEVICE_SCAN);
-
-                if(bluetoothDevice != null){
-                    deviceListAdapter.addDevice(bluetoothDevice);
-                    deviceListAdapter.notifyDataSetChanged();
-                }
-            }
-        }
-    };
-
-    private void permissionCheck(){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            //Android Marshmallow and above permission check
-            if(this.checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-                final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setTitle(getString(R.string.permission_check_dialog_title))
-                        .setMessage(getString(R.string.permission_check_dialog_message))
-                        .setPositiveButton(getString(R.string.permission_check_dialog_positive_button), null)
-                        .setOnDismissListener(new DialogInterface.OnDismissListener() {
-                            @TargetApi(Build.VERSION_CODES.M)
-                            @Override
-                            public void onDismiss(DialogInterface dialogInterface) {
-                                requestPermissions(new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSION_REQUEST_COARSE_LOCATION);
-                            }
-                        });
-                builder.show();
-            }
-        }
     }
 
     // Adapter for holding devices found through scanning.
@@ -365,12 +288,13 @@ public class Checkup extends ListActivity {
 
             return view;
         }
-
-
     }
 
     static class ViewHolder {
         TextView deviceName;
         TextView deviceAddress;
     }
+
+
+
 }
