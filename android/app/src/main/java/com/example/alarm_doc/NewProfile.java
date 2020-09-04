@@ -1,17 +1,10 @@
 package com.example.alarm_doc;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -19,8 +12,10 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.alarm_doc.domain.Conditions;
 import com.example.alarm_doc.domain.Profile;
@@ -28,7 +23,16 @@ import com.example.alarm_doc.utils.Utils;
 
 import java.util.ArrayList;
 
-
+/**
+ *
+ * New Profile form
+ *
+ * Processes, validates and collects the data inserted when creating a new profile
+ *
+ * Adds a new profile to SharedPreferences via Utils
+ *
+ *
+ */
 public class NewProfile extends AppCompatActivity {
 
     private final int MIN_NAME_LENGTH = 3;
@@ -216,6 +220,7 @@ public class NewProfile extends AppCompatActivity {
 
         Button uploadPicture = (Button) findViewById(R.id.uploadPic);
         uploadPicture.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View view) {
 

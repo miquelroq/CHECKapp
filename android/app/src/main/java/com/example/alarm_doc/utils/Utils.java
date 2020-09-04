@@ -3,17 +3,12 @@ package com.example.alarm_doc.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.alarm_doc.domain.Profile;
 import com.example.alarm_doc.domain.Register;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -67,8 +62,6 @@ public class Utils {
         ArrayList<Profile> ret = new ArrayList<>();
 
         for (Object p : sharedPreferences.getAll().values()) {
-
-            Log.d("lolol", p.toString());
 
             ret.add(gson.fromJson(p.toString(), Profile.class));
 

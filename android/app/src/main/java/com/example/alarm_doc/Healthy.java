@@ -10,6 +10,13 @@ import android.widget.Button;
 import com.example.alarm_doc.domain.Register;
 import com.example.alarm_doc.utils.Utils;
 
+/**
+ *
+ * Activity to be displayed when the Outcome is healthy
+ *
+ * Maybe should be a subclass
+ *
+ */
 public class Healthy extends AppCompatActivity {
 
     private Utils utils = new Utils();

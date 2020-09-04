@@ -39,6 +39,9 @@ import java.util.HashMap;
  *
  * Code adapted from @joselfrias
  *
+ * Series of Questions asked to the user in order
+ * to instruct on how should they prepare their devices
+ *
  */
 
 public class CheckupProcess extends Activity {

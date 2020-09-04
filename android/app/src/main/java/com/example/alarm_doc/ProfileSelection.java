@@ -2,31 +2,31 @@ package com.example.alarm_doc;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-
-import com.example.alarm_doc.domain.Profile;
-import com.example.alarm_doc.utils.Utils;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.File;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.alarm_doc.domain.Profile;
+import com.example.alarm_doc.utils.Utils;
+
 import java.util.List;
 
+/**
+ *
+ * Launcher activity
+ *
+ * Just displays the registered profiles in a Layout
+ *
+ * TODO: Limit profiles to be displayed in a single line
+ *
+ *
+ */
 public class ProfileSelection extends AppCompatActivity {
 
     private LinearLayout layout;
@@ -35,6 +35,8 @@ public class ProfileSelection extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        getIntent().setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_selection);
 

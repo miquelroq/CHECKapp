@@ -25,6 +25,20 @@ import java.util.TimerTask;
 import static android.app.PendingIntent.getActivity;
 import static androidx.core.app.ShareCompat.getCallingActivity;
 
+/**
+ *
+ * DataGen service
+ *
+ * Right now it only generates random data for a bit
+ *
+ * Should be used to:
+ *      * Connect cellphone to Bitalino via Bluetooth
+ *      * Collect all the data
+ *      * Return
+ *
+ * TODO: Create another class responsible for sending the data to the API?
+ *
+ */
 public class DataGenerator extends Service {
 
     private Looper serviceLooper;

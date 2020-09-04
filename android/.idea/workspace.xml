@@ -6,69 +6,95 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="lifesty" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="banana" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/jar/api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/androidTest/java/info/plux/pluxapi/ApplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/BTHDeviceScan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/CommandArguments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/CommandProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/Communication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/ConnectionState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/Device.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalino.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoCRC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoCommunication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoCommunicationFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoDescription.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoErrorTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoFrameDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoStateDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/CommandDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/ble/BLECommunication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/ble/DeviceScan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/ble/PluxGattAttributes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/bth/BTHCommunication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/bth/BTHDeviceScan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/bth/OnBITalinoDataAvailable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DisplayRegisters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/register.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/BTHDeviceScan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/CommandArguments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/CommandProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/Communication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/ConnectionState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/Device.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalino.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoCRC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoCommunication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoCommunicationFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoDescription.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoErrorTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoFrameDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/BITalinoStateDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/CommandDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/ble/BLECommunication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/ble/DeviceScan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/ble/PluxGattAttributes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/bth/BTHCommunication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/bth/BTHDeviceScan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/info/plux/pluxapi/bitalino/bth/OnBITalinoDataAvailable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/radio_button_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/actionbar_indeterminate_progress.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/listitem_device.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/jar/api.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/androidTest/java/info/plux/pluxapi/ApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/BTHDeviceScan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/CommandArguments.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/CommandProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/Communication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/ConnectionState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/Constants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/Device.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalino.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoCRC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoCommunication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoCommunicationFactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoDescription.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoErrorTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoFrameDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/BITalinoStateDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/CommandDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/ble/BLECommunication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/ble/DeviceScan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/ble/PluxGattAttributes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/bth/BTHCommunication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/bth/BTHDeviceScan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/info/plux/pluxapi/bitalino/bth/OnBITalinoDataAvailable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Checkup.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Checkup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/CheckupProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/CheckupProcess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DiagnoseCustomizer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Healthy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/Healthy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/NewProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/NewProfile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/ProfileSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/ProfileSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/SelectDiagnostic.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/CardioRespiratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/CardioRespiratory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_healthy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_healthy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_diagnostic.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_checkup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_checkup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="5ebed666" />
   <component name="ExternalProjectsData">
@@ -113,7 +139,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../revolution-android-api-master/revolution-android-api-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SensorsDataAcquisition_Exemplo" />
     <property name="memory.settings.postsync.last.time.stamp" value="1597843418351" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
@@ -132,13 +158,16 @@
     <key name="android.template.-97881325">
       <recent name="com.example.alarm_doc" />
     </key>
-    <key name="android.template.1134086599">
+    <key name="android.template.-575784124">
       <recent name="com.example.alarm_doc" />
     </key>
     <key name="android.template.1794688958">
       <recent name="com.example.alarm_doc" />
     </key>
-    <key name="android.template.-575784124">
+    <key name="android.template.2067670071">
+      <recent name="com.example.alarm_doc" />
+    </key>
+    <key name="android.template.1134086599">
       <recent name="com.example.alarm_doc" />
     </key>
   </component>
@@ -296,26 +325,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="updated Register class , Emotional class skeleton" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1598966818414">
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1599213721051">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1854" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598014080029" />
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1598966818414" />
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1599213721051" />
     <state x="514" y="89" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1598052206176" />
     <state x="494" y="316" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1597834805989">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="494" y="316" width="451" height="276" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1440.900@0.0.1440.900" timestamp="1597834805989" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598968673428">
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599212623112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1779" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598100807250" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598968673428" />
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1598950078750">
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599212623112" />
+    <state x="263" y="119" key="AndroidCreateResourceDirectoryDialog" timestamp="1599214282332">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="119" key="AndroidCreateResourceDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1599214282332" />
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog" timestamp="1599214374695">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1629" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598100950129" />
-    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1598950078750" />
+    <state x="263" y="119" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1599214374695" />
     <state x="541" y="177" key="AndroidCreateXmlResourceDialog" timestamp="1598950088062">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -329,37 +362,37 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="80" y="26" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1597533932182" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1598957134191">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1599243218442">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1598957134191" />
-    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1598968444440">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599243218442" />
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom" timestamp="1599243579832">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
-    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598968444440" />
+    <state width="1323" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599243579832" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597967962484" />
-    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1598968444440">
+    <state width="1323" height="217" key="GridCell.Tab.0.center" timestamp="1599243579832">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
-    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598968444440" />
+    <state width="1323" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599243579832" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597967962483" />
-    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1598968444438">
+    <state width="1323" height="217" key="GridCell.Tab.0.left" timestamp="1599243579831">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667302" />
-    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598968444438" />
+    <state width="1323" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599243579831" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597967962482" />
-    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1598968444440">
+    <state width="1323" height="217" key="GridCell.Tab.0.right" timestamp="1599243579832">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
-    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598968444440" />
+    <state width="1323" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599243579832" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597967962484" />
     <state x="433" y="173" key="MultipleFileMergeDialog" timestamp="1597676441518">
       <screen x="0" y="0" width="1440" height="900" />
@@ -378,18 +411,19 @@
     </state>
     <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1597319584404" />
     <state x="400" y="237" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1597950809235" />
-    <state x="483" y="303" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598952188212">
+    <state x="483" y="303" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599227110377">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="483" y="303" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1598952188212" />
+    <state x="483" y="303" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1599227110377" />
     <state x="509" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1598059482481" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1598966132369">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1598966132369" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1597834266622">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="365" y="159" width="672" height="547" key="search.everywhere.popup" timestamp="1599214563815">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1712" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1597957792358" />
+    <state x="365" y="159" width="672" height="547" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1599214563815" />
   </component>
 </project>
