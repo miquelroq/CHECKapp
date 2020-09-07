@@ -9,6 +9,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -35,26 +36,15 @@ import info.plux.pluxapi.Constants;
 
 /**
  *
- * Running the diagnostic
+ * Scan Bluetooth devices
+ * When one of them is picked, BitalinoCapture is started
+ * When Bitalino Capture is finished, the Test activity will catch the broadcast data
  *
  * Connect to BTH via Bluetooth
  * Collect BTH data
- * Process signals in order to extract the most relevant features to be sent to the API
- * Send to the API
- * GET the response
- * Launch activity according to the response/outcome
- *
  *
  */
-
-// TODO:
-//      * Connect to BITalino via Bluetooth
-//      * Collect BITalino data and store it in a HashMap or ArrayLists of ints
-//      * Send the collected data to Django API
-//      * Wait for the response
-//      * Launch Healthy/Unhealthy activity according to the received response
-
-public class Checkup extends ListActivity {
+public class DeviceSelect extends ListActivity {
 
     private int bitalinoNumber = 1;
 
@@ -237,7 +227,7 @@ public class Checkup extends ListActivity {
         public DeviceListAdapter() {
             super();
             devices = new ArrayList<>();
-            mInflator = Checkup.this.getLayoutInflater();
+            mInflator = DeviceSelect.this.getLayoutInflater();
         }
 
         public void addDevice(BluetoothDevice device) {
@@ -296,9 +286,23 @@ public class Checkup extends ListActivity {
             viewHolder.deviceName.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    // Start the BITalino capture and pass on the address as extra
-                    Intent bitCapture = new Intent(Checkup.this, BitalinoCapture.class);
-                    startService(bitCapture);
+
+                    AsyncTask.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            // Start the BITalino capture and pass on the address as extra (todo)
+                            Intent bitCapture = new Intent(DeviceSelect.this, BitalinoCapture.class);
+                            startService(bitCapture);
+                        }
+                    });
+
+
+
+                    // Launch the animated testing activity
+                    Intent dataProcessing = new Intent(DeviceSelect.this, DataProcessing.class);
+                    startActivity(dataProcessing);
+
+
                 }
             });
 

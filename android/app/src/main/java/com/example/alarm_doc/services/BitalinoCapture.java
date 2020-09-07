@@ -15,6 +15,7 @@ import android.os.ParcelUuid;
 import android.util.Log;
 
 import androidx.annotation.RequiresApi;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.bitalino.comm.BITalinoDevice;
 import com.bitalino.comm.BITalinoException;
@@ -22,6 +23,8 @@ import com.bitalino.comm.BITalinoFrame;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class BitalinoCapture extends Service {
@@ -32,6 +35,10 @@ public class BitalinoCapture extends Service {
     private boolean isRunning = false;
     private android.os.Handler Handler = null;
     private Runnable runnableCode = null;
+    public static final String ACTION_CAPTURE = "capture";
+    private BitalinoCapture data_instance = this;
+    private int second = 0;
+    private HashMap<Integer, ArrayList<Integer>> collectedData = new HashMap<>();
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
@@ -46,6 +53,14 @@ public class BitalinoCapture extends Service {
         thread.start();
         Looper serviceLooper = thread.getLooper();
         this.Handler = new Handler(serviceLooper);
+
+        collectedData.put(0, new ArrayList<Integer>());
+        collectedData.put(1, new ArrayList<Integer>());
+        collectedData.put(2, new ArrayList<Integer>());
+        collectedData.put(3, new ArrayList<Integer>());
+        collectedData.put(4, new ArrayList<Integer>());
+        collectedData.put(5, new ArrayList<Integer>());
+
 
         try {
             final BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
@@ -113,12 +128,20 @@ public class BitalinoCapture extends Service {
     public void getBitalinoData() throws BITalinoException {
         final int numberOfSamplesToRead = 100;
         // Repeat this the same runnable code block again another 1000 milliseconds
-        Handler.postDelayed(runnableCode, 1000);
-        if(isRunning) {
+        if(second < 10) {
+            Handler.postDelayed(runnableCode, 100);
             BITalinoFrame[] frames = bitalino.read(numberOfSamplesToRead);
             // prepare reading for upload
             for (BITalinoFrame myBitFrame : frames) {
                 String line = Integer.valueOf(myBitFrame.getSequence()).toString();
+
+                this.collectedData.get(0).add(myBitFrame.getAnalog(0));
+                this.collectedData.get(1).add(myBitFrame.getAnalog(1));
+                this.collectedData.get(2).add(myBitFrame.getAnalog(2));
+                this.collectedData.get(3).add(myBitFrame.getAnalog(3));
+                this.collectedData.get(4).add(myBitFrame.getAnalog(4));
+                this.collectedData.get(5).add(myBitFrame.getAnalog(5));
+
                 line += "\t" + myBitFrame.getAnalog(0);
                 line += "\t" + myBitFrame.getAnalog(1);
                 line += "\t" + myBitFrame.getAnalog(2);
@@ -128,8 +151,16 @@ public class BitalinoCapture extends Service {
                 line += "\n";
 
                 Log.d("FIXE", line);
-
             }
+
+            ++second;
+        } else {
+
+            // Kill this service and broadcast the results back to checkup
+            this.stopSelf();
+            sendBroadcastMessage(this.collectedData);
+            Log.d("stopBitalino", "stop");
+
         }
     }
 
@@ -156,6 +187,12 @@ public class BitalinoCapture extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         return Service.START_STICKY;
+    }
+
+    private void sendBroadcastMessage(HashMap<Integer, ArrayList<Integer>> hm) {
+        Intent intent = new Intent(ACTION_CAPTURE);
+        intent.putExtra(ACTION_CAPTURE, hm);
+        LocalBroadcastManager.getInstance(data_instance).sendBroadcast(intent);
     }
 
 }

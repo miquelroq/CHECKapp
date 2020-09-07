@@ -6,19 +6,20 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <uses-feature
         android:name="android.hardware.bluetooth_le"
-        android:required="true"/>
+        android:required="true" />
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DataProcessing"></activity>
         <activity android:name=".DisplayRegisters" />
         <activity android:name=".CheckupProcess" />
         <activity android:name=".NewProfile" />
@@ -34,17 +35,13 @@
         </activity>
         <activity android:name=".Unhealthy" />
         <activity android:name=".Healthy" />
-        <activity android:name=".Checkup" />
+        <activity android:name=".DeviceSelect" />
         <activity android:name=".MainActivity" />
-
-
-
 
         <service android:name=".DataGenerator" />
         <service
             android:name=".services.BitalinoCapture"
-            android:enabled="true"/>
-
+            android:enabled="true" />
     </application>
 
 </manifest>
