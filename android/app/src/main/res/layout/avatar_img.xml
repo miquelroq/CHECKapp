@@ -11,12 +11,15 @@
 
     <ImageView
         android:id="@+id/avatar_img"
+
         android:layout_width="64dp"
         android:layout_height="64dp"
-        app:srcCompat="@drawable/alarm_doc"
-        tools:srcCompat="@drawable/alarm_doc"
+        app:srcCompat="@drawable/logo_dark"
+        tools:srcCompat="@drawable/logo_dark"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        />
+
 
     <TextView
         android:id="@+id/profile_name"

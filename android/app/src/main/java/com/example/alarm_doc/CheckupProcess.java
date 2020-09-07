@@ -148,7 +148,7 @@ public class CheckupProcess extends Activity {
             myViewPagerAdapter = new MyViewPagerAdapter();
             viewPager.setAdapter(myViewPagerAdapter);
             viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
-            btnBack.setBackgroundResource(R.drawable.alarm_doc);
+            btnBack.setBackgroundResource(R.drawable.logo);
 
             btnBack.setOnClickListener(new View.OnClickListener() {
                 @Override

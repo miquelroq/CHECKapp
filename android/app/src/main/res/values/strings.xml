@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">alarm-doc</string>
+    <string name="app_name">CHECKapp</string>
     <string name="diagnose">Diagnose</string>
     <string name="description_logo">logo</string>
     <string name="stats">Statistics</string>
