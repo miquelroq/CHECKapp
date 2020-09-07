@@ -19,11 +19,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.alarm_doc.services.BitalinoCapture;
 
 import java.util.ArrayList;
 
@@ -94,7 +97,6 @@ public class Checkup extends ListActivity {
 
         DividerItemDecoration dItem = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
 
-
         scanDevice(true);
     }
 
@@ -111,6 +113,7 @@ public class Checkup extends ListActivity {
                     deviceListAdapter.addDevice(bluetoothDevice);
                     deviceListAdapter.notifyDataSetChanged();
                 }
+
             }
         }
     };
@@ -210,6 +213,9 @@ public class Checkup extends ListActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        Toast.makeText(this, "ola", Toast.LENGTH_SHORT).show();
+
         switch (item.getItemId()) {
             case R.id.menu_scan:
                 deviceListAdapter.clear();
@@ -219,6 +225,7 @@ public class Checkup extends ListActivity {
                 scanDevice(false);
                 break;
         }
+
         return true;
     }
 
@@ -264,7 +271,7 @@ public class Checkup extends ListActivity {
 
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
-            ViewHolder viewHolder;
+            final ViewHolder viewHolder;
             // General ListView optimization code.
             if (view == null) {
                 view = mInflator.inflate(R.layout.listitem_device, null);
@@ -285,6 +292,15 @@ public class Checkup extends ListActivity {
                 viewHolder.deviceName.setText("BITalino");
             }
             viewHolder.deviceAddress.setText(device.getAddress());
+
+            viewHolder.deviceName.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Start the BITalino capture and pass on the address as extra
+                    Intent bitCapture = new Intent(Checkup.this, BitalinoCapture.class);
+                    startService(bitCapture);
+                }
+            });
 
             return view;
         }
