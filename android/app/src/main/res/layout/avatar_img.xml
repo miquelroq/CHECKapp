@@ -12,9 +12,10 @@
     <ImageView
         android:id="@+id/avatar_img"
 
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:foreground="@drawable/frame"
+        android:background="@color/colorPrimary"
         app:srcCompat="@drawable/logo_dark"
         tools:srcCompat="@drawable/logo"
         android:clickable="true"
@@ -24,10 +25,11 @@
 
     <TextView
         android:id="@+id/profile_name"
-        android:layout_width="78dp"
+        android:layout_width="100dp"
         android:layout_height="24dp"
-        android:text="@string/app_name"
+        android:gravity="center"
         android:clickable="true"
-        android:focusable="true"/>
+        android:focusable="true"
+        android:text="@string/app_name" />
 
 </LinearLayout>
