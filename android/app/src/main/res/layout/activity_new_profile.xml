@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
 
 
     <ScrollView
@@ -33,6 +35,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="-60dp"
+                android:foreground="@drawable/frame"
                 app:srcCompat="@drawable/logo_dark"
                 tools:srcCompat="@drawable/logo_dark" />
 
@@ -219,7 +222,7 @@
                 android:layout_marginBottom="40dp"
                 android:background="@color/colorPrimary"
                 android:text="@string/finish"
-                android:textColor= "@color/colorPrimaryDark"/>
+                android:textColor="@color/colorPrimaryDark" />
 
         </LinearLayout>
     </ScrollView>
