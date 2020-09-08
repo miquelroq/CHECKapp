@@ -41,7 +41,7 @@ A AI tem bases em diversas áreas do conhecimento tais como :
 
   Fenómeno da percepção e do controlo motor, técnicas experimentais.
   
-- **Engenharia de computadores**
+- **Engenharia de Computadores**
 
   Computadores eficientes.
 
@@ -255,7 +255,160 @@ A  lot  of  problems consider an heuristic function, h(n), which is the estimate
 
 ## Machine Learning 101
 
-//TODO: add stuff
+* AI sub-field that was made possible due to the huge computational increase in recent years
+
+* Exponential growth of data demands data mining and handling
+
+* Applied to many products and applications nowadays
+
+
+### History
+
+* **1950** Alan Turing "Computing Machinery and Intelligence": defines the question
+Can machines think? -> Turing Test
+
+* **1956** The field of AI is formally established in Dartmouth College
+
+* **1959** Artthur Samuel Defines AI as: The field of study that gives the ability to learn without being explicitly programmed
+
+* **1998** Tom M. Mitchell: "Can the computer program learn from experience?"
+
+
+### ML Today
+
+* Recommendation Systems (YouTube, Netflix and Spotify)
+
+* NLP (Alexa, Google Assistant)
+
+* Computer Vision (Chinese Surveillance System, Autonomous Driving)
+
+
+### Formal Definition
+
+Tom Mitchell defines ML as:
+
+	"A computer program is said to learn from experience E with respect to some task T and some performance measure P, if its performance on T, as measured by P, improves with experience E."
+	
+in other words, if a computer's performance on a given task improves with experience, we can label it as learning.
+
+#### Example
+
+Recognizing Spam-Mail
+
+**Task:**	sort e-mails into categories (Regular / Spam)
+
+**Performance Measure:** weighted sum of mistakes (labelling spam as regular is not so bad as labelling regular as spam)
+	
+**Experience:**	handsorted e-mails in your folder
+	
+### Machine Learning Approaches
+
+**Supervised Learning**
+Given examples with "correct answer" (labelled examples)
+
+**Unsupervised Learning**
+Given examples without answers (no labels)
+
+**Reinforcement Learning**
+Rewarding or punishing intelligent agents depending on their actions
+Agent Design:
+		* A utility-based agent learns an utility function on states and uses it to select actions that maximize the expected outcome utility. It must also have a model of the environment in order to make decisions, because it needs to know the states to which its actions will lead
+		* A Q-learning agent  that  learns  an action-utility  functionor Q-function,  giving  the expected utility of taking a given action in a given state. It can compare the  expected utilities  for  its  available  choices  without  needing  to  know  their  outcomes –does  not need an model, and cannot look ahead
+		* A reflex agent learns a policy that maps directly from states to actions
+    
+
+#### Supervised Learning - Regression
+
+Example
+Model learns to predict the house price based on its area and number of bedrooms
+
+Each of these is called a **feature**
+
+#### Supervised Learning - Classification
+
+Model learns to classify whether the imovel is a house or an apartament based on price, bedrooms and area.
+
+### Features
+
+* Nominal (Qualitative)
+	* Days of the week, seasons
+	* Good, Better, Best
+	* Color (Red, Green, Blue,...)
+	
+* Numeric (Quantitative)
+	* Discrete features (integer numbers)
+		* Age, countings, # bedrooms, binary features (has a cold?)
+	* Continuous features (real numbers)
+		* Temperature, height, weight, area
+
+### Linear Regression
+
+The core, underlying understanding of Machine Learning lies vastly on comprehending Linear Regression. This is a Machine Learning model that outputs a real number based on N feature inputs.
+
+Common terminology:
+* X - features
+* y - output
+* N - number of features
+* M - number of training examples
+
+#### Underlying Theory
+
+Linear Model
+
+Cost Function
+
+Cost Function Convergence
+
+Goal -> min(COST)
+
+Gradient Descent Algorithm
+
+Learning Rate
+
+Theta Updates
+
+### Logistic Regression
+
+While linreg is a nice model for regression and real number prediction, the same cannot be said regarding classification problems.
+
+As we have discussed, classification covers a wide range of problems, such as email as spam or not spam, classifying properties or identifying illnesses.
+
+* Binary Classification - the label (y) is either a 0 or a 1. For instance, if we are predicting COVID in patients with a number of symptoms.
+
+* Multiclass classification (N classes) - y (= {0, 1, 2, ...}) we will have N binary classifiers. For each classifier one of the classes has label 1 and all the other classes take label 0. This is called One Versus All strategy.
+
+#### Underlying Theory
+
+Logistic Model
+
+Cost Function
+
+Goal -> min(COST)
+
+Gradient Descent Algorithm
+
+### Overfitting
+
+If we have too many features, the learned hypothesis may fit the training data well but fail to generalize new examples
+
+This can be solved via feature regularization and selection (done automatically in recent libraries)
+
+<img src="https://miro.medium.com/max/1125/1*_7OPgojau8hkiPUiHoGK_w.png" alt="Overfitting" width="500"/>
+
+
+### Neural Networks
+
+Computer Vision - each pixel is a feature. If we have 50 x 50 pixels in an RGB image. If we are using quadratic features that's 3M, which can easily lead us to an overfitted model.
+
+Logistic Regression is not suitable for this. 
+
+Neural Networks fit these models better.
+
+#### Architecture and Underlying Theory
+
+<img src="https://i.stack.imgur.com/eVP3n.png" alt="NN Architecture" width="500">
+
+Best [video](https://www.youtube.com/watch?v=aircAruvnKk) to understand NNs.
 
 ## Examples related to the Health sector
 
@@ -265,11 +418,20 @@ A  lot  of  problems consider an heuristic function, h(n), which is the estimate
 
 ## Useful resources
 
-- Python lib 1 //TODO: add stuff
+A good option is to install [Anaconda](https://docs.anaconda.com/) and get most (DL4J is not included) of the below packages. But if you want to cherrypick them:
 
-- [Deeplearning4j](https://deeplearning4j.org/) //TODO: add stuff
+- [Deeplearning4j](https://deeplearning4j.org/)
 
-- Python lib 2 //TODO: add stuff
+- [TensorFlow](https://tensorflow.org/)
+
+- [Keras](https://keras.io) - Useful for assembling CNNs
+
+- [Sci-Kit Learn](https://scikit-learn.org) - Useful for a range of algorithms (LinReg, LogReg, SVM, Decision Trees) and handling data
+
+- [Jupyter-Notebook](https://jupyter.org) - Useful for writing code in Notebooks! Instead of full scripts, you get to run your code one cell at the time
+
+- [Numpy](https://numpy.org/) and [Pandas](https://pandas.pydata.org/) - Array and data manipulation
+
 
 ## More links you might want to check 
 
