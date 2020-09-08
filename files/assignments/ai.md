@@ -210,19 +210,19 @@ The possible solutions for any problem usually come in a set of possible action 
 
 - **Uniform cost search (Procura de Custo-uniforme)**
 
-  ![UCS](https://static.javatpoint.com/tutorial/ai/images/uniform-cost-search-algorithm.png)
+  <img src="https://static.javatpoint.com/tutorial/ai/images/uniform-cost-search-algorithm.png" alt="UCS" width="500"/>
   
 - **DLS (Procura em Profundidade Limitada)**
-  
-  ![DLS](https://static.javatpoint.com/tutorial/ai/images/depth-limited-search-algorithm.png)
+
+  <img src="https://static.javatpoint.com/tutorial/ai/images/depth-limited-search-algorithm.png" alt="DLS" width="500"/>
   
 - **Iterative deepening DFS (Procura em Profundidade iterativa)**
   
-  ![IDFS](https://i.stack.imgur.com/Y5iyJ.png)
+  <img src="https://i.stack.imgur.com/Y5iyJ.png" alt="IDFS" width="500"/>
   
 - **Bidirectional search (Procura Bidirecional)**
 
-  ![BBFS](https://static.javatpoint.com/tutorial/ai/images/bidirectional-search-algorithm.png)
+  <img src="https://static.javatpoint.com/tutorial/ai/images/bidirectional-search-algorithm.png" alt="IDFS" width="500"/>
 
 #### Informed search
 
