@@ -17,63 +17,59 @@ We hope that this class contributes to wonder you with the amazing world of AI a
 
 A AI tem bases em diversas áreas do conhecimento tais como :
 
-- Filosofia
+- **Filosofia**
 
   Lógica, raciocínio, mente como sistema físico, fundamentos de aprendizagem, linguagem, racionalidade.
 
-- Matemática
+- **Matemática**
 
   Representação formal e algoritmos, provas, computação, probabilidade.
   
-- Economia
+- **Economia**
 
   Utilidade, investigação operacional.
   
-- Neurologia
+- **Neurologia**
 
   Componente física da actividade mental.
 
-- Psicologia
+- **Psicologia**
 
   Fenómeno da percepção e do controlo motor, técnicas experimentais.
   
-- Engenharia de computadores
+- **Engenharia de computadores**
 
   Computadores eficientes.
 
-- Controlo
+- **Controlo**
 
   Desenho de sistemas que maximizam uma função objectivo ao longo do tempo.
 
-- Linguística
+- **Linguística**
 
   Representação, gramática.
 
-
-
-
-
 #### Modern history of AI
 
-- 1943      McCulloch & Pitts: modelo do cérebro usando um circuito Booleano
+- **1943**      McCulloch & Pitts: modelo do cérebro usando um circuito Booleano
 
-- 1950      Artigo Turing "Computing Machinery and Intelligence" : define a questão "Can machines think?"
+- **1950**      Artigo Turing "Computing Machinery and Intelligence" : define a questão "Can machines think?"
 
-- 1956      Encontro de Dartmouth: o campo da “Inteligência Artificial" é estabelecido.
+- **1956**      Encontro de Dartmouth: o campo da “Inteligência Artificial" é estabelecido.
 
-- 1950s     Primeiros sistemas da IA, incluindo jogo de xadrez de Samuel, demonstrador de teoremas de Newell & Simon, engenho de geometria de Gelernter
+- **1950s**     Primeiros sistemas da IA, incluindo jogo de xadrez de Samuel, demonstrador de teoremas de Newell & Simon, engenho de geometria de Gelernter
 
-- 1965      Algoritmo completo para raciocínio lógico de Robinson
+- **1965**      Algoritmo completo para raciocínio lógico de Robinson
 
-- 1966—73   IA descobre complexidade computacional
+- **1966—73**   IA descobre complexidade computacional
 
-- 1969—79   Início dos sistemas baseados em conhecimento
+- **1969—79**   Início dos sistemas baseados em conhecimento
 
-- 1980--    IA como indústria 
+- **1980--**    IA como indústria 
 
-- 1987--    IA como ciência 
+- **1987--**    IA como ciência 
 
-- 1995--    Agentes inteligentes 
+- **1995--**    Agentes inteligentes 
 
 
 
@@ -187,4 +183,4 @@ A AI tem bases em diversas áreas do conhecimento tais como :
 
 - Miguel Roque : [miguelroq](miguelroque99@tecnico.ulisboa.pt)
 
-- Tiago Melo§ : [tiagoleonmelo](tiagomelo@ua.pt)
+- Tiago Melo   : [tiagoleonmelo](tiagomelo@ua.pt)
