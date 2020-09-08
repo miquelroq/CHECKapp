@@ -108,9 +108,9 @@ A AI tem bases em diversas áreas do conhecimento tais como :
   
   Nunca nenhuma máquina conseguiu passar o teste de Turing (ainda).
   
-  ![Turing_test](https://cdn.shortpixel.ai/spai/w_977+q_lossy+ret_img+to_webp/https://mk0iaexpertacadlbryk.kinstacdn.com/wp-content/uploads/2016/07/AlanTuring-otestedeturing.png)
+  <img src="https://cdn.shortpixel.ai/spai/w_977+q_lossy+ret_img+to_webp/https://mk0iaexpertacadlbryk.kinstacdn.com/wp-content/uploads/2016/07/AlanTuring-otestedeturing.png" alt="turing" width="300"/>
   
-  ![Turing_comic](https://geekandpoke.typepad.com/geekandpoke/images/2008/04/24/turingtest.jpg)
+  <img src="https://geekandpoke.typepad.com/geekandpoke/images/2008/04/24/turingtest.jpg" alt="turingcomic" width="300"/>
 
 - **Rational behaviour in artifacts (Atuar racionalmente)**
   
@@ -122,67 +122,73 @@ A AI tem bases em diversas áreas do conhecimento tais como :
 
 - Data(Star-Trek)
 
-![Data](https://vignette.wikia.nocookie.net/memoryalpha/images/9/94/You_are_not_my_mother.jpg/revision/latest?cb=20111116232857&path-prefix=en)
+ <img src="https://vignette.wikia.nocookie.net/memoryalpha/images/9/94/You_are_not_my_mother.jpg/revision/latest?cb=20111116232857&path-prefix=en" alt="data" width="300"/>
 
 - J.A.R.V.I.S (MCU)
 
-![Jarvis](https://vignette.wikia.nocookie.net/universocinematograficomarvel/images/b/b0/JuARaVeInSy.png/revision/latest?cb=20150919150102&path-prefix=pt)
+ <img src="https://vignette.wikia.nocookie.net/universocinematograficomarvel/images/b/b0/JuARaVeInSy.png/revision/latest?cb=20150919150102&path-prefix=pt" alt="jarvis" width="300"/>
 
-![Vision](https://img.cinemablend.com/filter:scale/quill/5/3/c/4/0/5/53c405592e11ae6dc5956d3a26aadd25d004ad80.jpg?fw=1200)
+ <img src="https://img.cinemablend.com/filter:scale/quill/5/3/c/4/0/5/53c405592e11ae6dc5956d3a26aadd25d004ad80.jpg?fw=1200" alt="vision" width="300"/>
 
 - C3PO and R2D2 (Star Wars)
 
-![StarWars](https://s2.glbimg.com/WJoBA31T50iBoho7fljoeEjeTeM=/smart/e.glbimg.com/og/ed/f/original/2015/09/23/untitled-1_1.jpg)
+ <img src="https://s2.glbimg.com/WJoBA31T50iBoho7fljoeEjeTeM=/smart/e.glbimg.com/og/ed/f/original/2015/09/23/untitled-1_1.jpg" alt="StarWars" width="300"/>
 
 - HAL (2001 Space Odyssey)
 
-![HAL](https://static01.nyt.com/images/2018/05/15/arts/01hal-voice1/25hal-voice1-facebookJumbo.jpg)
+ <img src="https://static01.nyt.com/images/2018/05/15/arts/01hal-voice1/25hal-voice1-facebookJumbo.jpg" alt="HAL" width="300"/>
 
 - KITT (Knight Rider)
 
-![KITT](https://www.scalemates.com/products/img/9/7/7/542977-18821-54-pristine.jpg)
+<img src="https://www.scalemates.com/products/img/9/7/7/542977-18821-54-pristine.jpg" alt="HAL" width="300"/>
 
 - Samantha (Her)
 
-![Samantha](https://miro.medium.com/max/2480/1*3URV6TzrVQnfPlpgMO7WNg.jpeg)
+<img src="https://miro.medium.com/max/2480/1*3URV6TzrVQnfPlpgMO7WNg.jpeg" alt="Samantha" width="300"/>
 
 
 #### Real-world
 
 - IBM Watson Jeopardy Player
 
-![Watson](https://i.ytimg.com/vi/P18EdAKuC1U/maxresdefault.jpg)
+<img src="https://i.ytimg.com/vi/P18EdAKuC1U/maxresdefault.jpg" alt="Watson" width="300"/>
 
 - Infinite Mario AI player
 
-![mArIo](https://i.ytimg.com/vi/DlkMs4ZHHr8/hqdefault.jpg)
+<img src="https://i.ytimg.com/vi/DlkMs4ZHHr8/hqdefault.jpg" alt="Watson" width="300"/>
 
 - [Deep-Q Atari Player](https://www.youtube.com/watch?v=V1eYniJ0Rnk)
 
 - AlphaGo
 
-![AlphaGo](https://miro.medium.com/max/1200/1*3DvSjCLORuexj3Y-G-r8hw.jpeg)
+<img src="https://miro.medium.com/max/1200/1*3DvSjCLORuexj3Y-G-r8hw.jpeg" alt="alphago" width="300"/>
 
 - Elon Musk's OpenAI DOTA Player
 
-![DOTAMUSK](https://techcaption.com/wp-content/uploads/2017/09/Elon-Musks-AI-Just-Beat-The-Worlds-Best-DOTA-2-Players.png)
+<img src="https://techcaption.com/wp-content/uploads/2017/09/Elon-Musks-AI-Just-Beat-The-Worlds-Best-DOTA-2-Players.png" alt="dota" width="300"/>
 
 - [Table-tennis Playing Quadcopter](https://www.youtube.com/watch?v=YvbHXz3lccc)
 
 - CMU's TARTAN Racing Autonomous Vehicle
-//TODO: INSERT IMG
+
+<img src="https://lh3.googleusercontent.com/proxy/-aRbVhoHSrM0uRP8-0q3t2X65xCwkiGYWcx-yMdR86yfW3QkhJe6OcVLbvQSV-8s4aVigYblg816AttQEZIVk32yoonK" alt="car" width="300"/>
 
 - CS GO bots
-//TODO: INSERT IMG
+
+<img src="https://i.ytimg.com/vi/Oj3WtIY6Gvo/maxresdefault.jpg" alt="csgo" width="300"/>
+
 
 - Spotify recomendation algorithm
-//TODO: INSERT IMG
+
+<img src="https://nordicgame.com/wp-content/uploads/2019/11/csgo.ai_.challenge.850.560.jpg" alt="spotify" width="300"/>
 
 - Netflix recomendation algorithm
-//TODO: INSERT IMG
+
+<img src="https://github.com/miquelroq/health-app/blob/master/files/resources/sherlock.png" alt="netflix" width="300"/>
 
 - Google personalized ADs
-//TODO: INSERT IMG
+
+<img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/UAC_Blog_8_14_-_Image_3.-_FINAL.max-1000x1000.jpg" alt="google" width="300"/>
 
 ## AI algorythms
 
