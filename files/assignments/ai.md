@@ -108,7 +108,8 @@ A AI tem bases em diversas áreas do conhecimento tais como :
   
   Nunca nenhuma máquina conseguiu passar o teste de Turing (ainda).
   
-  <img src="https://cdn.shortpixel.ai/spai/w_977+q_lossy+ret_img+to_webp/https://mk0iaexpertacadlbryk.kinstacdn.com/wp-content/uploads/2016/07/AlanTuring-otestedeturing.png" alt="turing" width="300"/>
+  <img src="https://cdn.shortpixel.ai/spai/w_977+q_lossy+ret_img+to_webp/https://mk0iaexpertacadlbryk.kinstacdn.com/wp-content/uploads/2016/07/AlanTuring-otestedeturing.png" alt="turing" width="500"/>
+  
   
   <img src="https://geekandpoke.typepad.com/geekandpoke/images/2008/04/24/turingtest.jpg" alt="turingcomic" width="300"/>
 
@@ -180,7 +181,7 @@ A AI tem bases em diversas áreas do conhecimento tais como :
 
 - **Spotify recomendation algorithm**
 
-<img src="https://nordicgame.com/wp-content/uploads/2019/11/csgo.ai_.challenge.850.560.jpg" alt="spotify" width="300"/>
+<img src="https://thumb.spokesman.com/GsJALbsxruDIAgPJdGdubb-x00I=/2500x0/media.spokesman.com/photos/2020/07/15/5f0dee5554d81.hires.jpg" alt="spotify" width="300"/>
 
 - **Netflix recomendation algorithm**
 
