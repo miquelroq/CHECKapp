@@ -184,6 +184,6 @@ A AI tem bases em diversas áreas do conhecimento tais como :
 
 ## Authors
 
-- [Miguel Roque](www.github.com/miquelroq)
+- [Miguel Roque](https://www.github.com/miquelroq)
 
-- [Tiago Melo](www.github.com/tiagoleonmelo)
+- [Tiago Melo](https://www.github.com/tiagoleonmelo)
