@@ -210,11 +210,12 @@ The possible solutions for any problem usually come in a set of possible action 
   
   ![DLS](https://static.javatpoint.com/tutorial/ai/images/depth-limited-search-algorithm.png)
   
-- **Iterative deepening DFS (Procura em Profundidade iterativa)
+- **Iterative deepening DFS (Procura em Profundidade iterativa)**
   
   ![IDFS](https://i.stack.imgur.com/Y5iyJ.png)
   
-- **Bidirectional search (Procura Bidirecional)
+- **Bidirectional search (Procura Bidirecional)**
+
   ![BBFS](https://static.javatpoint.com/tutorial/ai/images/bidirectional-search-algorithm.png)
 
 #### Informed search
