@@ -1,5 +1,7 @@
 # AI and Machine Learning class
 
+**[click here if you want to see it in prezi format!](https://prezi.com/view/GwpGPjUYEJQpqR9nECvH/)**
+
 ## Introduction
 
 In this document we'll explore what is AI and Machine Learning, how it started and what are their applications. 
