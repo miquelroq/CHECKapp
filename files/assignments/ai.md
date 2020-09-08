@@ -120,73 +120,73 @@ A AI tem bases em diversas áreas do conhecimento tais como :
 
 #### Fiction
 
-- Data(Star-Trek)
+- **Data(Star-Trek)**
 
  <img src="https://vignette.wikia.nocookie.net/memoryalpha/images/9/94/You_are_not_my_mother.jpg/revision/latest?cb=20111116232857&path-prefix=en" alt="data" width="300"/>
 
-- J.A.R.V.I.S (MCU)
+- **J.A.R.V.I.S (MCU)**
 
  <img src="https://vignette.wikia.nocookie.net/universocinematograficomarvel/images/b/b0/JuARaVeInSy.png/revision/latest?cb=20150919150102&path-prefix=pt" alt="jarvis" width="300"/>
 
  <img src="https://img.cinemablend.com/filter:scale/quill/5/3/c/4/0/5/53c405592e11ae6dc5956d3a26aadd25d004ad80.jpg?fw=1200" alt="vision" width="300"/>
 
-- C3PO and R2D2 (Star Wars)
+- **C3PO and R2D2 (Star Wars)**
 
  <img src="https://s2.glbimg.com/WJoBA31T50iBoho7fljoeEjeTeM=/smart/e.glbimg.com/og/ed/f/original/2015/09/23/untitled-1_1.jpg" alt="StarWars" width="300"/>
 
-- HAL (2001 Space Odyssey)
+- **HAL (2001 Space Odyssey)**
 
  <img src="https://static01.nyt.com/images/2018/05/15/arts/01hal-voice1/25hal-voice1-facebookJumbo.jpg" alt="HAL" width="300"/>
 
-- KITT (Knight Rider)
+- **KITT (Knight Rider)**
 
 <img src="https://www.scalemates.com/products/img/9/7/7/542977-18821-54-pristine.jpg" alt="HAL" width="300"/>
 
-- Samantha (Her)
+- **Samantha (Her)**
 
 <img src="https://miro.medium.com/max/2480/1*3URV6TzrVQnfPlpgMO7WNg.jpeg" alt="Samantha" width="300"/>
 
 
 #### Real-world
 
-- IBM Watson Jeopardy Player
+- **IBM Watson Jeopardy Player**
 
 <img src="https://i.ytimg.com/vi/P18EdAKuC1U/maxresdefault.jpg" alt="Watson" width="300"/>
 
-- Infinite Mario AI player
+- **Infinite Mario AI player**
 
 <img src="https://i.ytimg.com/vi/DlkMs4ZHHr8/hqdefault.jpg" alt="Watson" width="300"/>
 
-- [Deep-Q Atari Player](https://www.youtube.com/watch?v=V1eYniJ0Rnk)
+- **[Deep-Q Atari Player](https://www.youtube.com/watch?v=V1eYniJ0Rnk)**
 
-- AlphaGo
+- **AlphaGo**
 
 <img src="https://miro.medium.com/max/1200/1*3DvSjCLORuexj3Y-G-r8hw.jpeg" alt="alphago" width="300"/>
 
-- Elon Musk's OpenAI DOTA Player
+- **Elon Musk's OpenAI DOTA Player**
 
 <img src="https://techcaption.com/wp-content/uploads/2017/09/Elon-Musks-AI-Just-Beat-The-Worlds-Best-DOTA-2-Players.png" alt="dota" width="300"/>
 
-- [Table-tennis Playing Quadcopter](https://www.youtube.com/watch?v=YvbHXz3lccc)
+- **[Table-tennis Playing Quadcopter](https://www.youtube.com/watch?v=YvbHXz3lccc)**
 
-- CMU's TARTAN Racing Autonomous Vehicle
+- **CMU's TARTAN Racing Autonomous Vehicle**
 
 <img src="https://lh3.googleusercontent.com/proxy/-aRbVhoHSrM0uRP8-0q3t2X65xCwkiGYWcx-yMdR86yfW3QkhJe6OcVLbvQSV-8s4aVigYblg816AttQEZIVk32yoonK" alt="car" width="300"/>
 
-- CS GO bots
+- **CS GO bots**
 
 <img src="https://i.ytimg.com/vi/Oj3WtIY6Gvo/maxresdefault.jpg" alt="csgo" width="300"/>
 
 
-- Spotify recomendation algorithm
+- **Spotify recomendation algorithm**
 
 <img src="https://nordicgame.com/wp-content/uploads/2019/11/csgo.ai_.challenge.850.560.jpg" alt="spotify" width="300"/>
 
-- Netflix recomendation algorithm
+- **Netflix recomendation algorithm**
 
 <img src="https://github.com/miquelroq/health-app/blob/master/files/resources/sherlock.png" alt="netflix" width="300"/>
 
-- Google personalized ADs
+- **Google personalized ADs**
 
 <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/UAC_Blog_8_14_-_Image_3.-_FINAL.max-1000x1000.jpg" alt="google" width="300"/>
 
@@ -254,22 +254,31 @@ A  lot  of  problems consider an heuristic function, h(n), which is the estimate
 
 ## Machine Learning 101
 
+//TODO: add stuff
 
 ## Examples related to the Health sector
 
 - [Google Health TED talk](https://www.youtube.com/watch?v=MNp26DgKxOA&list=PL590L5WQmH8e3dS9CtvRofb0nfdGb-Of9&index=2&t=0s)
+
 - [How useful is artificial intelligence (AI) in medical research?](https://www.srgtalent.com/blog/how-useful-is-ai-in-medical-research)
 
 ## Useful resources
-- [Deeplearning4j]
 
-## Links used
+- Python lib 1 //TODO: add stuff
+
+- [Deeplearning4j](https://deeplearning4j.org/) //TODO: add stuff
+
+- Python lib 2 //TODO: add stuff
+
+## More links you might want to check 
 
 - [Google health playlist](https://www.youtube.com/playlist?list=PL590L5WQmH8e3dS9CtvRofb0nfdGb-Of9)
 
 - [IST IArt class slides](https://www.edenbox.org/index.php/s/edenbox?path=%2FLEIC%2F3%C2%BA%20Ano%2F1%C2%BA%20Semestre%2FIA%2FTe%C3%B3ricas)
 
 - [How Machine Learning is Building Super Mario Levels](https://towardsdatascience.com/mariomakers-8a67b25866dd)
+
+- [7 types of AI](https://www.forbes.com/sites/cognitiveworld/2019/06/19/7-types-of-artificial-intelligence/)
 
 ## Authors
 
