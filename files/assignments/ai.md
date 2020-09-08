@@ -191,7 +191,7 @@ A AI tem bases em diversas áreas do conhecimento tais como :
 
 <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/UAC_Blog_8_14_-_Image_3.-_FINAL.max-1000x1000.jpg" alt="google" width="300"/>
 
-## AI algorythms
+## AI algorithms
 
 Necessidade inicial de definir o problema de forma a poder depois criar um agente que o resolva.
 
