@@ -281,6 +281,8 @@ A  lot  of  problems consider an heuristic function, h(n), which is the estimate
 
 - [7 types of AI](https://www.forbes.com/sites/cognitiveworld/2019/06/19/7-types-of-artificial-intelligence/)
 
+- [Data science and machine learning ebook](https://www.ibm.com/uk-en/analytics/machine-learning?p1=Search&p4=43700052280982540&p5=b&cm_mmc=Search_Google-_-1S_1S-_-EP_PT-_-%2Bmachine%20%2Blearning%20%2Btool_b&cm_mmca7=71700000064600078&cm_mmca8=kwd-64218526042&cm_mmca9=Cj0KCQjwy8f6BRC7ARIsAPIXOjgVgj673i-DDfuayevtXVPNRtpQkuYN-bWP8GAPTQNJJSjYbL7l9GIaAgZwEALw_wcB&cm_mmca10=424451313515&cm_mmca11=b&gclid=Cj0KCQjwy8f6BRC7ARIsAPIXOjgVgj673i-DDfuayevtXVPNRtpQkuYN-bWP8GAPTQNJJSjYbL7l9GIaAgZwEALw_wcB&gclsrc=aw.ds)
+
 ## Authors
 
 - [Miguel Roque](https://www.github.com/miquelroq)
