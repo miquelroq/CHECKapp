@@ -246,7 +246,7 @@ A  lot  of  problems consider an heuristic function, h(n), which is the estimate
   
   Conditions for optimality include that **h(n) must be an admissible heuristic which means that it never overestimates the cost to reach the goal**. It must therefore  be optimistic because it will often  think  the  cost  of  solving  the  problem  is  less  than  it  is.  Other  condition,  only  applied  to graph search, is  that **h(n) must  be consistent which happens f for every node n and for every successor n’generated  by  an  action a the  estimated  cost  of  reaching  the  goal  from n is  not greated than the step cost of getting to n’plus the estimated cost of reaching the goal from n’**. Every consistent heuristic is also admissible.
 
-- **IDA* Memory-bounded heuristic search **
+- **IDA*search**
   
   IDA*  emerges  with  the  idea  of  adapting  **iterative  deepening  search  to  the  heuristic  search context**. The cutoff used is the f-cost rather than depth, and therefore at each iteration the cutoff value is the smallest f-costof any node that exceeded the cutoffof the previous iteration.
   
