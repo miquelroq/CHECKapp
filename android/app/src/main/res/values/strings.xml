@@ -5,9 +5,9 @@
     <string name="stats">Statistics</string>
     <string name="loading">Testing</string>
     <string name="unhealthy">Call a doc!</string>
-    <string name="healthy">All seems good</string>
+    <string name="healthy">All seems good!</string>
     <string name="custom">Custom Diagnostic</string>
-    <string name="select_request">Please, select the checks you wish to perform</string>
+    <string name="select_request">Please, select the checks you wish to perform.</string>
     <string name="basic_checkup">Basic Checkup (Temperature, Heartbeat, Blood pressure, Breath rate)</string>
     <string name="eeg">EEG</string>
     <string name="ecg">ECG</string>
@@ -42,7 +42,7 @@
 
     <string name="question1">How often have you felt chills lately?</string>
     <string name="question2">How often do you feel fatigued?</string>
-    <string name="insert_electrodes">Insert the electrodes as pictured</string>
+    <string name="insert_electrodes">Insert the electrodes as pictured.</string>
     <string name="everyday">Everyday</string>
     <string name="never">Never</string>
 

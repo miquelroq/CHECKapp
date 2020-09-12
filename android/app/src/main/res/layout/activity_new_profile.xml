@@ -17,26 +17,36 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                style="@android:style/Widget.Holo.ImageButton"
+                android:layout_width="46dp"
+                android:layout_height="45dp"
+                android:background="@color/colorPrimary"
+                android:src="@android:drawable/ic_menu_close_clear_cancel" />
 
             <Button
                 android:id="@+id/uploadPic"
-                android:layout_width="wrap_content"
+                android:layout_width="182dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="192dp"
                 android:layout_marginLeft="192dp"
                 android:layout_marginTop="48dp"
-                android:text="@string/uploadPic" />
+                android:background="@color/colorPrimary"
+                android:text="@string/uploadPic"
+                android:textColor="@color/colorPrimaryDark" />
 
             <ImageView
                 android:id="@+id/pfp_preview"
-                android:layout_width="66dp"
-                android:layout_height="68dp"
+                android:layout_width="94dp"
+                android:layout_height="92dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="-60dp"
-                android:foreground="@drawable/frame"
                 android:background="@color/colorPrimary"
+                android:foreground="@drawable/frame"
                 app:srcCompat="@drawable/logo_dark"
                 tools:srcCompat="@drawable/logo_dark" />
 
@@ -44,18 +54,18 @@
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="50dp"
                 android:text="@string/name" />
 
             <EditText
                 android:id="@+id/name_select"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="John Doe"
                 android:inputType="textPersonName" />
@@ -64,26 +74,26 @@
                 android:id="@+id/sex"
                 android:layout_width="wrap_content"
                 android:layout_height="16dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/sex_hehe" />
 
             <Spinner
                 android:id="@+id/sex_select"
                 android:layout_width="277dp"
                 android:layout_height="29dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginLeft="50dp"
-                android:layout_marginStart="50dp" />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:id="@+id/age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/age" />
 
             <EditText
@@ -101,9 +111,9 @@
                 android:id="@+id/weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/weight" />
 
             <EditText
@@ -121,9 +131,9 @@
                 android:id="@+id/height"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/height" />
 
             <EditText
@@ -141,9 +151,9 @@
                 android:id="@+id/lifestyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/lifestyle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -152,9 +162,9 @@
                 android:id="@+id/lifestyle_selector"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -162,9 +172,9 @@
                 android:id="@+id/prev_dis_selector"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/prev_dis"
                 app:layout_constraintBottom_toTopOf="@+id/prev_dis1"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -173,9 +183,9 @@
                 android:id="@+id/prev_dis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/hiv"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lifestyle_selector" />
@@ -184,9 +194,9 @@
                 android:id="@+id/prev_dis1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/aids"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lifestyle_selector" />
@@ -195,9 +205,9 @@
                 android:id="@+id/prev_dis2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/epilepsy"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lifestyle_selector" />
@@ -206,9 +216,9 @@
                 android:id="@+id/prev_dis3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
                 android:layout_marginStart="50dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/asthma"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/lifestyle_selector" />
