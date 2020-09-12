@@ -1,0 +1,31 @@
+API Functioning notes
+
+Idea:
+
+GET endpoint that allows:
+    * passing the BITalino collected data as parameter
+    * returning the resulting report
+    * this report should be able to be parsed by the BaseValuesHandler
+        ...meaning
+        
+
+    * Overall scores can be calculated in the device
+    * when the details are returned, BaseValuesHandler knows the ideal score and calculates differences
+    or something
+
+
+DATA TO BE RETURNED:
+    * BPM
+    * FREQ
+    * BREATH
+    * BMI
+    * FAT
+    * MDF
+    * MNF
+    * RMS
+    * RRMS
+    * ALPHA
+    * BETA
+    * DELTA
+    * THETA
+    
