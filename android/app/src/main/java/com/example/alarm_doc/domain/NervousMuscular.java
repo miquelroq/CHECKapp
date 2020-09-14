@@ -5,17 +5,14 @@ import static java.lang.Math.abs;
 public class NervousMuscular {
     //TODO: replace using BaseVAlues Handler value
     //idea - method called getBaseValues that uses machine learning to get the best "normal" base values
-    private int BASEMDF = -1;
-    private int BASEMNF = -1;
-    private int BASERMS = -1;
-    private int BASERRMS = -1;
+    private int BASEREFLEXES = -1;
+
+    private int CONSTFATIGUE = 20;
 
 
     private int score;
-    private int mdf;
-    private int mnf;
-    private int rms;
-    private int rrms;
+    private int reflexes;
+    private int fatigue;
 
     public NervousMuscular() {
         //TODO: review and complete
@@ -27,45 +24,28 @@ public class NervousMuscular {
         return score;
     }
 
-    public int getMdf() {
-        return mdf;
+    public int getReflexes() {
+        return reflexes;
     }
 
-    public int getMnf() {
-        return mnf;
-    }
-
-    public int getRms() {
-        return rms;
-    }
-
-    public int getRrms() {
-        return rrms;
+    public int getFatigue() {
+        return fatigue;
     }
 
     private void setScore(int score) {
         this.score = score;
     }
 
-    public void setMdf(int mdf) {
-        this.mdf = mdf;
+    public void setReflexes(int reflexes) {
+        this.reflexes = reflexes;
     }
 
-    public void setMnf(int mnf) {
-        this.mnf = mnf;
-    }
-
-    public void setRms(int rms) {
-        this.rms = rms;
-    }
-
-    public void setRrms(int rrms) {
-        this.rrms = rrms;
+    public void setFatigue(int fatigue) {
+        this.fatigue = fatigue;
     }
 
     public void calculateScore(){
-        int score = 100 - (1/4) * (abs(mdf-BASEMDF)/BASEMDF) - (1/4) * (abs(mdf-BASEMNF)/BASEMNF) -
-                (1/4) * (abs(mdf-BASERMS)/BASERMS) - (1/4) * (abs(mdf-BASERRMS)/BASERRMS);
+        int score = 100 - (1/2) * (abs(reflexes - BASEREFLEXES)/BASEREFLEXES) - (1/2) * (fatigue * CONSTFATIGUE);
         this.setScore(score);
         //TODO: max score como variavel global (?)
         //TODO: formula

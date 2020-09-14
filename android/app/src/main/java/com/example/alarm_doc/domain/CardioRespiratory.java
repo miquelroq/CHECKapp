@@ -6,15 +6,14 @@ public class CardioRespiratory {
     //TODO: replace using BaseVAlues Handler value
     //idea - method called getBaseValues that uses machine learning to get the best "normal" base values
     private int BASEBPM = -1;
-    private int BASEFREQ = -1;
+    private int BASEDIFF = -1;
     private int BASEBREATH = -1;
 
     private int score;
     private int bpm;
-    private int frequency;
-    private int spikes;
+    private int diff;
     private int breathRate;
-    //TODO: variables may be modificated in order to be more useful for the diagnosis
+
 
     public CardioRespiratory() {
         //TODO: review and complete
@@ -29,12 +28,8 @@ public class CardioRespiratory {
         return bpm;
     }
 
-    public int getFrequency() {
-        return frequency;
-    }
-
-    public int getSpikes() {
-        return spikes;
+    public int getDiff() {
+        return diff;
     }
 
     public int getBreathRate() {
@@ -49,12 +44,8 @@ public class CardioRespiratory {
         this.bpm = bpm;
     }
 
-    public void setFrequency(int frequency) {
-        this.frequency = frequency;
-    }
-
-    public void setSpikes(int spikes) {
-        this.spikes = spikes;
+    public void setDiff(int diff) {
+        this.diff = diff;
     }
 
     public void setBreathRate(int breathRate) {
@@ -62,8 +53,8 @@ public class CardioRespiratory {
     }
 
     public void calculateScore(){
-        int score = 100 - (1/4) * (abs(bpm-BASEBPM)/BASEBPM) - (1/4) * (abs(frequency-BASEFREQ)/BASEFREQ) -
-                (1/4) * (spikes /10) - (1/4) * (abs(breathRate-BASEBREATH)/BASEBREATH);
+        int score = 100 - (1/3) * (abs(bpm-BASEBPM)/BASEBPM) - (1/3) * (abs(diff - BASEDIFF)/ BASEDIFF) -
+               - (1/3) * (abs(breathRate-BASEBREATH)/BASEBREATH);
         this.setScore(score);
         //TODO: max score como variavel global (?)
         //TODO: formula
