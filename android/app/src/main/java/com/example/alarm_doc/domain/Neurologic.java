@@ -12,7 +12,8 @@ public class Neurologic {
     private int score;
 
     //TODO: if alpha, beta, delta and theta waves come to be processed exactly the same consider
-    // merging all the classes into a "Wave" class
+    // merging all the corresponding classes into a "Wave" class
+
     public Alpha alpha;
     public Beta beta;
     public Delta delta;

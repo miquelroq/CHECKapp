@@ -10,8 +10,8 @@ public class Fitness {
     private int score;
     private int bmi;
     //TODO: add a height and weight confirmation screen that makes it possible to update before each test so that bmi is accurate
-    //test
-    private int bodyFat;
+
+    //private int bodyFat;
 
     public Fitness() {
         //TODO: review
@@ -26,9 +26,7 @@ public class Fitness {
         return bmi;
     }
 
-    public int getBodyFat() {
-        return bodyFat;
-    }
+    //public int getBodyFat() { return bodyFat; }
 
     private void setScore(int score) {
         this.score=score;
@@ -38,12 +36,10 @@ public class Fitness {
         this.bmi = bmi;
     }
 
-    public void setBodyFat(int bodyFat) {
-        this.bodyFat = bodyFat;
-    }
+    //public void setBodyFat(int bodyFat) { this.bodyFat = bodyFat; }
 
     public void calculateScore() {
-        int score = 100 - (1/2) * (abs(bmi-bmiIdeal)/bmiIdeal) - (1/2) * (abs(bodyFat-bodyFatIdeal)/bodyFatIdeal);
+        int score = 100 - (abs(bmi-bmiIdeal)/bmiIdeal) ;
         this.setScore(score);
         //TODO: max score como variavel global
         //TODO: formula
