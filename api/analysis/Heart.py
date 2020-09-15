@@ -37,6 +37,8 @@ class Heart:
         for measure in m.keys():
             print('%s: %f' %(measure, m[measure]))
 
+    # 
+
 
 def parse_file():
     f = open("tiago.txt", "r")
@@ -47,7 +49,7 @@ def parse_file():
         if line[0] == "#":
             continue
 
-        line_data = int(line.split(sep="\t")[-4])
+        line_data = int(line.split(sep="\t")[-5])
 
         ecg += [line_data]
 
