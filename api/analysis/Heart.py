@@ -41,7 +41,7 @@ class Heart:
 
 
 def parse_file():
-    f = open("tiago.txt", "r")
+    f = open("miguel_ecg.txt", "r")
 
     ecg = list()
 
@@ -49,7 +49,7 @@ def parse_file():
         if line[0] == "#":
             continue
 
-        line_data = int(line.split(sep="\t")[-5])
+        line_data = int(line.split(sep="\t")[-6])
 
         ecg += [line_data]
 
