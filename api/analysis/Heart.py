@@ -37,6 +37,8 @@ class Heart:
         for measure in m.keys():
             print('%s: %f' %(measure, m[measure]))
 
+        return m
+
     # 
 
 
@@ -56,13 +58,13 @@ def parse_file():
     return ecg
 
 
-dados = np.array(parse_file())
+# dados = np.array(parse_file())
 
 
-heart = Heart(dados, 1000)
+# heart = Heart(dados, 1000)
 
 # heart.plot()
-heart.run_analysis(True)
+# heart.run_analysis(True)
 
 
 

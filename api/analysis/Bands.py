@@ -62,8 +62,9 @@ class Bands:
         return eeg_band_fft
 
     def get_spikes(self):
+        # TODO
         return
 
-bands = Bands(parse_file())
+# bands = Bands(parse_file())
 
-print(bands.get_bands())
+# print(bands.get_bands())
