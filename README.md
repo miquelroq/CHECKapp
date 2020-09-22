@@ -2,6 +2,12 @@
 
 *Project developed in the Summer Course "IoT apps in the health field" by IPV, supported by a research schoolarship by FCT.*
 
+## TODO:
+- Finish endpoints and server
+- Web chart drawing
+- User and registers save
+- Finish Layouts
+- Make a document where will describe what were the next steps to make our app better (where to apply machine learning, add specific diseases etc)
 
 ## POST IT NOTES 
  - BITalino protocol and utilities meant to write to/read from BITalino devices. <https://github.com/BITalinoWorld/java-sdk>
