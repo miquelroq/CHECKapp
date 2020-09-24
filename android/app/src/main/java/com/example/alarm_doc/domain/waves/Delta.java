@@ -1,23 +1,23 @@
 package com.example.alarm_doc.domain.waves;
 
+import com.example.alarm_doc.domain.Profile;
+
 import static java.lang.Math.abs;
 
 public class Delta {
-    //TODO: replace using BaseVAlues Handler value
     //idea - method called getBaseValues that uses machine learning to get the best "normal" base values
-    private int BASEFREQ = -1;
 
     private int score;
+    private int maxScore = 100;
+    private Profile profile;
+
     private int pikes;
-    private int frequency;
+    private int amp;
 
-    public Delta() {
-
-    }
-
-    public Delta(int pikes, int frequency) {
-        setPikes(pikes);
-        setFrequency(frequency);
+    public Delta(int pikes, int amp, Profile profile) {
+        this.pikes = pikes;
+        this.amp = amp;
+        this.profile = profile;
     }
 
     public int getScore() {
@@ -28,8 +28,8 @@ public class Delta {
         return pikes;
     }
 
-    public int getFrequency() {
-        return frequency;
+    public int getAmp() {
+        return amp;
     }
 
     private void setScore(int score) {
@@ -41,13 +41,14 @@ public class Delta {
         calculateScore();
     }
 
-    public void setFrequency(int frequency) {
-        this.frequency = frequency;
+    public void setAmp(int amp) {
+        this.amp = amp;
         calculateScore();
     }
 
     public void calculateScore() {
-        int score = 100 - (1/2) * (pikes/10) - (1/2) * (abs(frequency-BASEFREQ)/BASEFREQ);
+        int baseAmp = profile.getBaseValues().getDeltaAmp();
+        int score = 100 - (1/2) * (pikes * 10) - (1/2) * (abs(amp - baseAmp )/baseAmp) * 100;
         this.setScore(score);
     }
 }
