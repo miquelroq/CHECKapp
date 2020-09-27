@@ -10,10 +10,10 @@ public class BaseValuesHandler {
     private int cardioDiff;
     private int cardioBreath;
 
-    private int fitnessBmi;
+    private double fitnessBmi;
     private int fitnessFat;
 
-    private int nervesReflexes;
+    private double nervesReflexes;
     private int nervesFatigue;
 
     private int alphaAmp;
@@ -37,15 +37,11 @@ public class BaseValuesHandler {
         return cardioBreath;
     }
 
-    public int getFitnessBmi() {
+    public double getFitnessBmi() {
         return fitnessBmi;
     }
 
-    public int getFitnessFat() {
-        return fitnessFat;
-    }
-
-    public int getNervesReflexes() {
+    public double getNervesReflexes() {
         return nervesReflexes;
     }
 
@@ -81,7 +77,7 @@ public class BaseValuesHandler {
         this.cardioBreath = cardioBreath;
     }
 
-    private void setFitnessBmi(int fitnessBmi) {
+    private void setFitnessBmi(double fitnessBmi) {
         this.fitnessBmi = fitnessBmi;
     }
 
@@ -89,7 +85,7 @@ public class BaseValuesHandler {
         this.fitnessFat = fitnessFat;
     }
 
-    private void setNervesReflexes(int nervesReflexes) {
+    private void setNervesReflexes(double nervesReflexes) {
         this.nervesReflexes = nervesReflexes;
     }
 
@@ -117,12 +113,11 @@ public class BaseValuesHandler {
         //TODO: different values considering previous conditions
 
         //TODO: see what values are needed for each calculations and pass only them to the calculate functions
-        calculateCardioBpm(age, female, weight, height, activityLevel);
-        calculateCardioFreq(age, female, weight, height, activityLevel);
-        calculateCardioBreath(age, female, weight, height, activityLevel);
+        calculateCardioBpm(age, activityLevel);
+        calculateCardioDiff(age);
+        calculateCardioBreath(age);
 
         calculateFitnessBmi(age, female, weight, height, activityLevel);
-        calculateFitnessFat(age, female, weight, height, activityLevel);
 
         calculateNervesReflexes(age, female, weight, height, activityLevel);
         calculateNervesFatigue(age, female, weight, height, activityLevel);
@@ -133,45 +128,76 @@ public class BaseValuesHandler {
         calculateThetaFreq(age, female, weight, height, activityLevel);
     }
 
-    private void calculateCardioBpm(int age, boolean female, float weight, float height, int activityLevel) {
+    private void calculateCardioBpm(int age, int activityLevel) {
         int value = -1;
-        //TODO calculate ideal value
+        value = activityLevel * (220 - age);
         setCardioBpm(value);
     }
 
-    private void calculateCardioFreq(int age, boolean female, float weight, float height, int activityLevel) {
+    private void calculateCardioDiff(int age) {
+        //TODO: branch diff into two different indicators(min and max)!!!!!
         int value = -1;
-        //TODO calculate ideal value
+        int min = (int) (0.55 * (220 - age));
+        int max = (int) (0.85 * (220 - age));
+        value = max - min;
         setCardioDiff(value);
     }
 
-    private void calculateCardioBreath(int age, boolean female, float weight, float height, int activityLevel) {
+    private void calculateCardioBreath(int age) {
+        //TODO divide into two indicators, max and min breath rate
         int value = -1;
+        if (age <= (6/52.177457)){
+            value = 35; //30-40
+        }
+        else if (age <= 0.5){
+            value = 33; // 25-40
+        }
+        else if (age <= 3){
+            value = 25; // 20-30
+        }
+        else if (age <= 6){
+            value = 22; // 18-25
+        }
+        else if (age <= 10){
+            value = 20; // 17-23
+        }
+        else if (age < 65){
+            value = 15; //12-18
+        }
+        else if (age < 80){
+            value = 20; //12-28
+        }
+        else{
+            value = 20; //10-30
+        }
         //TODO calculate ideal value
         setCardioBreath(value);
     }
 
     private void calculateFitnessBmi(int age, boolean female, float weight, float height, int activityLevel) {
-        int value = -1;
-        //TODO calculate ideal value
+        double value = -1;
+        double idealWeight;
+
+        if (female){
+            idealWeight = 53.1 + 1.36 * ((height/2.54) - 60);
+        }
+        else{
+            idealWeight = 56.2 + 1.41 * ((height/2.54) - 60);
+        }
+
+        value = idealWeight/(height*height);
         setFitnessBmi(value);
     }
 
-    private void calculateFitnessFat(int age, boolean female, float weight, float height, int activityLevel) {
-        int value = -1;
-        //TODO calculate ideal value
-        setFitnessFat(value);
-    }
-
     private void calculateNervesReflexes(int age, boolean female, float weight, float height, int activityLevel) {
-        int value = -1;
-        //TODO calculate ideal value
+        double value = -1;
+        value = 0.215;
         setNervesReflexes(value);
     }
 
     private void calculateNervesFatigue(int age, boolean female, float weight, float height, int activityLevel) {
         int value = -1;
-        //TODO calculate ideal value
+        value = 0;
         setNervesFatigue(value);
     }
 

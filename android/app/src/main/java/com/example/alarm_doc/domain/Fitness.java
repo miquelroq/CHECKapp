@@ -5,7 +5,7 @@ import static java.lang.Math.abs;
 public class Fitness {
 
     private int maxScore = 100;
-    private int score;
+    private double score;
     private Profile profile;
 
     private int bmi;
@@ -19,7 +19,7 @@ public class Fitness {
         this.profile = profile;
     }
 
-    public int getScore() {
+    public double getScore() {
         return score;
     }
 
@@ -27,7 +27,7 @@ public class Fitness {
         return bmi;
     }
 
-    private void setScore(int score) {
+    private void setScore(double score) {
         this.score = score;
     }
 
@@ -36,8 +36,8 @@ public class Fitness {
     }
 
     public void calculateScore() {
-        int baseBMI = profile.getBaseValues().getFitnessBmi();
-        int score = (abs(bmi-baseBMI)/baseBMI) * 100 ;
+        double baseBMI = profile.getBaseValues().getFitnessBmi();
+        double score = (abs(bmi-baseBMI)/baseBMI) * 100 ;
         this.setScore(score);
     }
 

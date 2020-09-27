@@ -6,7 +6,7 @@ public class NervousMuscular {
     //idea : method called getBaseValues that uses machine learning to get the best "normal" base values
 
     private int maxScore = 100;
-    private int score;
+    private double score;
     private Profile profile;
 
     private int reflexes;
@@ -17,7 +17,7 @@ public class NervousMuscular {
         this.score = maxScore;
     }
 
-    public int getScore() {
+    public double getScore() {
         return score;
     }
 
@@ -29,7 +29,7 @@ public class NervousMuscular {
         return fatigue;
     }
 
-    private void setScore(int score) {
+    private void setScore(double score) {
         this.score = score;
     }
 
@@ -42,9 +42,9 @@ public class NervousMuscular {
     }
 
     public void calculateScore(){
-        int baseReflexes = this.profile.getBaseValues().getNervesReflexes();
+        double baseReflexes = this.profile.getBaseValues().getNervesReflexes();
         int baseFatigue = this.profile.getBaseValues().getNervesFatigue();
-        int score = this.score - (1/2) * (abs(reflexes - baseReflexes)/baseReflexes) * 100 - (1/2) * (abs(fatigue - baseFatigue)/baseFatigue) * 100;
+        double score = this.score - (1/2) * (abs(reflexes - baseReflexes)/baseReflexes) * 100 - (1/2) * (abs(fatigue - baseFatigue)/baseFatigue) * 100;
         this.setScore(score);
     }
 }
