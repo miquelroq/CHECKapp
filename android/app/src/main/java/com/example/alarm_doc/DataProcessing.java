@@ -1,5 +1,6 @@
 package com.example.alarm_doc;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +13,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
+import com.example.alarm_doc.domain.CardioRespiratory;
+import com.example.alarm_doc.domain.Emotional;
+import com.example.alarm_doc.domain.Fitness;
+import com.example.alarm_doc.domain.NervousMuscular;
+import com.example.alarm_doc.domain.Neurologic;
+import com.example.alarm_doc.domain.Register;
 import com.example.alarm_doc.services.BitalinoCapture;
 import com.example.alarm_doc.utils.Utils;
 import com.mashape.unirest.http.HttpResponse;
@@ -52,6 +59,7 @@ public class DataProcessing extends AppCompatActivity {
 
         StrictMode.setThreadPolicy(policy);
         final Utils utils = new Utils();
+        final Activity act = this;
 
         // When we receive the collected data, send it to the API
         LocalBroadcastManager.getInstance(DataProcessing.this).registerReceiver(
@@ -95,11 +103,18 @@ public class DataProcessing extends AppCompatActivity {
                             startActivity(main);
                         }
 
-                        // TODO: When data is received, store it in shared preferences and launch new activity
-/*                        Register r = new Register(
+                        // When data is received, store it in shared preferences and launch new activity
+                        Register r = new Register(
+                            new Emotional(),
+                            new NervousMuscular(utils.getLoggedProfile(act)),
+                            new Neurologic(),
+                            new Fitness(utils.getLoggedProfile(act)),
+                            new CardioRespiratory(utils.getLoggedProfile(act))
+                        );
 
-                        )
-                        utils.addRegisterToLoggedUser(r, this);*/
+                        // utils.addRegisterToLoggedUser(r, act);
+
+                        // Launch DataDisplay activity with the latest register
 
 
                     }
