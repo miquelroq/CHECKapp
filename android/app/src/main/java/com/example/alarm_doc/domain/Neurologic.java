@@ -8,11 +8,11 @@ import com.example.alarm_doc.domain.waves.Theta;
 
 
 public class Neurologic {
-
-    private int score;
-
     //TODO: if alpha, beta, delta and theta waves come to be processed exactly the same consider
     // merging all the corresponding classes into a "Wave" class
+
+    private int score;
+    private int maxScore = 100;
 
     public Alpha alpha;
     public Beta beta;
@@ -20,8 +20,7 @@ public class Neurologic {
     public Theta theta;
 
     public Neurologic(){
-        //TODO: review
-        score = 100;
+        score = maxScore;
     }
 
     public int getScore() {
@@ -65,10 +64,8 @@ public class Neurologic {
     }
 
     public void calculateScore() {
-        int score = 100 - (1/4) * alpha.getScore() - (1/4) * beta.getScore() - (1/4) * delta.getScore() - (1/4) * theta.getScore();
+        int score = this.maxScore - (1/4) * alpha.getScore() - (1/4) * beta.getScore() - (1/4) * delta.getScore() - (1/4) * theta.getScore();
         this.setScore(score);
-        //TODO: max score como variavel global
-        //TODO: formula
     }
 
 }

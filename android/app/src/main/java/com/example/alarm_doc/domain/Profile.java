@@ -1,11 +1,6 @@
 package com.example.alarm_doc.domain;
 
 
-import android.net.Uri;
-
-import com.example.alarm_doc.domain.Conditions;
-import com.example.alarm_doc.domain.Register;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,20 +18,8 @@ public class Profile {
     private List<Register> registers = new ArrayList<>();
     private BaseValuesHandler baseValues;
 
-    public Profile() {
-    }
 
-    public Profile(String name, boolean female, int age, float weight, float height, String photo, List<Conditions> conditions) {
-        setName(name);
-        setFemale(female);
-        setAge(age);
-        setWeight(weight);
-        setHeight(height);
-        setPhoto(photo);
-        setConditions(conditions);
-    }
-
-    public Profile(String name, boolean female, int age, float weight, float height, String photo, int activityLevel, List<Conditions> conditions){
+    public Profile(String name, boolean female, int age, float weight, float height, int activityLevel, String photo, List<Conditions> conditions){
         this.name = name;
         this.female = female;
         this.age = age;
@@ -44,7 +27,7 @@ public class Profile {
         this.height = height;
         this.photo = photo;
         this.conditions = conditions;
-        baseValues = new BaseValuesHandler(age,female,  weight, height, activityLevel, conditions);
+        baseValues = new BaseValuesHandler(age, female,  weight, height, activityLevel, conditions);
     }
 
     public int getId() {

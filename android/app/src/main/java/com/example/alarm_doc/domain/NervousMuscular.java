@@ -3,24 +3,21 @@ package com.example.alarm_doc.domain;
 import static java.lang.Math.abs;
 
 public class NervousMuscular {
-    //TODO: replace using BaseVAlues Handler value
-    //idea - method called getBaseValues that uses machine learning to get the best "normal" base values
-    private int BASEREFLEXES = -1;
+    //idea : method called getBaseValues that uses machine learning to get the best "normal" base values
 
-    private int CONSTFATIGUE = 20;
+    private int maxScore = 100;
+    private double score;
+    private Profile profile;
 
-
-    private int score;
     private int reflexes;
     private int fatigue;
 
-    public NervousMuscular() {
-        //TODO: review and complete
-        score = 100;
-
+    public NervousMuscular(Profile profile) {
+        this.profile = profile;
+        this.score = maxScore;
     }
 
-    public int getScore() {
+    public double getScore() {
         return score;
     }
 
@@ -32,7 +29,7 @@ public class NervousMuscular {
         return fatigue;
     }
 
-    private void setScore(int score) {
+    private void setScore(double score) {
         this.score = score;
     }
 
@@ -45,9 +42,9 @@ public class NervousMuscular {
     }
 
     public void calculateScore(){
-        int score = 100 - (1/2) * (abs(reflexes - BASEREFLEXES)/BASEREFLEXES) - (1/2) * (fatigue * CONSTFATIGUE);
+        double baseReflexes = this.profile.getBaseValues().getNervesReflexes();
+        int baseFatigue = this.profile.getBaseValues().getNervesFatigue();
+        double score = this.score - (1/2) * (abs(reflexes - baseReflexes)/baseReflexes) * 100 - (1/2) * (abs(fatigue - baseFatigue)/baseFatigue) * 100;
         this.setScore(score);
-        //TODO: max score como variavel global (?)
-        //TODO: formula
     }
 }

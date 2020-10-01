@@ -67,7 +67,7 @@ public class Register {
         return emotional.getScore();
     }
 
-    public int getNervousMuscularScore() {
+    public double getNervousMuscularScore() {
         return nervousMuscular.getScore();
     }
 
@@ -75,7 +75,7 @@ public class Register {
         return neurologic.getScore();
     }
 
-    public int getFitnessScore() {
+    public double getFitnessScore() {
         return fitness.getScore();
     }
 

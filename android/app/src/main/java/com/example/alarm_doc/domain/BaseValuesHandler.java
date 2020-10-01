@@ -7,21 +7,19 @@ public class BaseValuesHandler {
     //in the future, this class will fetch from the server the most updated BASE aka "normal" values
 
     private int cardioBpm;
-    private int cardioFreq;
+    private int cardioDiff;
     private int cardioBreath;
 
-    private int fitnessBmi;
+    private double fitnessBmi;
     private int fitnessFat;
 
-    private int nervesMdf;
-    private int nervesMnf;
-    private int nervesRms;
-    private int nervesRrms;
+    private double nervesReflexes;
+    private int nervesFatigue;
 
-    private int alphaFreq;
-    private int betaFreq;
-    private int deltaFreq;
-    private int thetaFreq;
+    private int alphaAmp;
+    private int betaAmp;
+    private int deltaAmp;
+    private int thetaAmp;
 
     public BaseValuesHandler(int age, boolean female, float weight, float height, int activityLevel, List<Conditions> conditionsList){
         calculateIdeal(age, female, weight, height, activityLevel, conditionsList);
@@ -31,67 +29,55 @@ public class BaseValuesHandler {
         return cardioBpm;
     }
 
-    public int getCardioFreq() {
-        return cardioFreq;
+    public int getCardioDiff() {
+        return cardioDiff;
     }
 
     public int getCardioBreath() {
         return cardioBreath;
     }
 
-    public int getFitnessBmi() {
+    public double getFitnessBmi() {
         return fitnessBmi;
     }
 
-    public int getFitnessFat() {
-        return fitnessFat;
+    public double getNervesReflexes() {
+        return nervesReflexes;
     }
 
-    public int getNervesMdf() {
-        return nervesMdf;
+    public int getNervesFatigue() {
+        return nervesFatigue;
     }
 
-    public int getNervesMnf() {
-        return nervesMnf;
+    public int getAlphaAmp() {
+        return alphaAmp;
     }
 
-    public int getNervesRms() {
-        return nervesRms;
+    public int getBetaAmp() {
+        return betaAmp;
     }
 
-    public int getNervesRrms() {
-        return nervesRrms;
+    public int getDeltaAmp() {
+        return deltaAmp;
     }
 
-    public int getAlphaFreq() {
-        return alphaFreq;
-    }
-
-    public int getBetaFreq() {
-        return betaFreq;
-    }
-
-    public int getDeltaFreq() {
-        return deltaFreq;
-    }
-
-    public int getThetaFreq() {
-        return thetaFreq;
+    public int getThetaAmp() {
+        return thetaAmp;
     }
 
     private void setCardioBpm(int cardioBpm) {
         this.cardioBpm = cardioBpm;
     }
 
-    private void setCardioFreq(int cardioFreq) {
-        this.cardioFreq = cardioFreq;
+    private void setCardioDiff(int cardioDiff) {
+        this.cardioDiff = cardioDiff;
     }
 
     private void setCardioBreath(int cardioBreath) {
         this.cardioBreath = cardioBreath;
     }
 
-    private void setFitnessBmi(int fitnessBmi) {
+    private void setFitnessBmi(double fitnessBmi) {
         this.fitnessBmi = fitnessBmi;
     }
 
@@ -99,53 +85,42 @@ public class BaseValuesHandler {
         this.fitnessFat = fitnessFat;
     }
 
-    private void setNervesMdf(int nervesMdf) {
-        this.nervesMdf = nervesMdf;
+    private void setNervesReflexes(double nervesReflexes) {
+        this.nervesReflexes = nervesReflexes;
     }
 
-    private void setNervesMnf(int nervesMnf) {
-        this.nervesMnf = nervesMnf;
+    private void setNervesFatigue(int nervesFatigue) {
+        this.nervesFatigue = nervesFatigue;
     }
 
-    private void setNervesRms(int nervesRms) {
-        this.nervesRms = nervesRms;
+    private void setAlphaAmp(int alphaAmp) {
+        this.alphaAmp = alphaAmp;
     }
 
-    private void setNervesRrms(int nervesRrms) {
-        this.nervesRrms = nervesRrms;
+    private void setBetaAmp(int betaAmp) {
+        this.betaAmp = betaAmp;
     }
 
-    private void setAlphaFreq(int alphaFreq) {
-        this.alphaFreq = alphaFreq;
+    private void setDeltaAmp(int deltaAmp) {
+        this.deltaAmp = deltaAmp;
     }
 
-    private void setBetaFreq(int betaFreq) {
-        this.betaFreq = betaFreq;
-    }
-
-    private void setDeltaFreq(int deltaFreq) {
-        this.deltaFreq = deltaFreq;
-    }
-
-    private void setThetaFreq(int thetaFreq) {
-        this.thetaFreq = thetaFreq;
+    private void setThetaAmp(int thetaAmp) {
+        this.thetaAmp = thetaAmp;
     }
 
     public void calculateIdeal(int age, boolean female, float weight, float height, int activityLevel, List<Conditions> conditionsList) {
         //TODO: different values considering previous conditions
 
         //TODO: see what values are needed for each calculations and pass only them to the calculate functions
-        calculateCardioBpm(age, female, weight, height, activityLevel);
-        calculateCardioFreq(age, female, weight, height, activityLevel);
-        calculateCardioBreath(age, female, weight, height, activityLevel);
+        calculateCardioBpm(age, activityLevel);
+        calculateCardioDiff(age);
+        calculateCardioBreath(age);
 
         calculateFitnessBmi(age, female, weight, height, activityLevel);
-        calculateFitnessFat(age, female, weight, height, activityLevel);
 
-        calculateNervesMdf(age, female, weight, height, activityLevel);
-        calculateNervesMnf(age, female, weight, height, activityLevel);
-        calculateNervesRms(age, female, weight, height, activityLevel);
-        calculateNervesRrms(age, female, weight, height, activityLevel);
+        calculateNervesReflexes(age, female, weight, height, activityLevel);
+        calculateNervesFatigue(age, female, weight, height, activityLevel);
 
         calculateAlphaFreq(age, female, weight, height, activityLevel);
         calculateBetaFreq(age, female, weight, height, activityLevel);
@@ -153,82 +128,102 @@ public class BaseValuesHandler {
         calculateThetaFreq(age, female, weight, height, activityLevel);
     }
 
-    private void calculateCardioBpm(int age, boolean female, float weight, float height, int activityLevel) {
+    private void calculateCardioBpm(int age, int activityLevel) {
         int value = -1;
-        //TODO calculate ideal value
+        value = activityLevel * (220 - age);
         setCardioBpm(value);
     }
 
-    private void calculateCardioFreq(int age, boolean female, float weight, float height, int activityLevel) {
+    private void calculateCardioDiff(int age) {
+        //TODO: branch diff into two different indicators(min and max)!!!!!
         int value = -1;
-        //TODO calculate ideal value
-        setCardioFreq(value);
+        int min = (int) (0.55 * (220 - age));
+        int max = (int) (0.85 * (220 - age));
+        value = max - min;
+        setCardioDiff(value);
     }
 
-    private void calculateCardioBreath(int age, boolean female, float weight, float height, int activityLevel) {
+    private void calculateCardioBreath(int age) {
+        //TODO divide into two indicators, max and min breath rate
         int value = -1;
+        if (age <= (6/52.177457)){
+            value = 35; //30-40
+        }
+        else if (age <= 0.5){
+            value = 33; // 25-40
+        }
+        else if (age <= 3){
+            value = 25; // 20-30
+        }
+        else if (age <= 6){
+            value = 22; // 18-25
+        }
+        else if (age <= 10){
+            value = 20; // 17-23
+        }
+        else if (age < 65){
+            value = 15; //12-18
+        }
+        else if (age < 80){
+            value = 20; //12-28
+        }
+        else{
+            value = 20; //10-30
+        }
         //TODO calculate ideal value
         setCardioBreath(value);
     }
 
     private void calculateFitnessBmi(int age, boolean female, float weight, float height, int activityLevel) {
-        int value = -1;
-        //TODO calculate ideal value
+        double value = -1;
+        double idealWeight;
+
+        if (female){
+            idealWeight = 53.1 + 1.36 * ((height/2.54) - 60);
+        }
+        else{
+            idealWeight = 56.2 + 1.41 * ((height/2.54) - 60);
+        }
+
+        value = idealWeight/(height*height);
         setFitnessBmi(value);
     }
 
-    private void calculateFitnessFat(int age, boolean female, float weight, float height, int activityLevel) {
-        int value = -1;
-        //TODO calculate ideal value
-        setFitnessFat(value);
+    private void calculateNervesReflexes(int age, boolean female, float weight, float height, int activityLevel) {
+        double value = -1;
+        value = 0.215;
+        setNervesReflexes(value);
     }
 
-    private void calculateNervesMdf(int age, boolean female, float weight, float height, int activityLevel) {
+    private void calculateNervesFatigue(int age, boolean female, float weight, float height, int activityLevel) {
         int value = -1;
-        //TODO calculate ideal value
-        setNervesMdf(value);
+        value = 0;
+        setNervesFatigue(value);
     }
 
-    private void calculateNervesMnf(int age, boolean female, float weight, float height, int activityLevel) {
-        int value = -1;
-        //TODO calculate ideal value
-        setNervesMnf(value);
-    }
-
-    private void calculateNervesRms(int age, boolean female, float weight, float height, int activityLevel) {
-        int value = -1;
-        //TODO calculate ideal value
-        setNervesRms(value);
-    }
-
-    private void calculateNervesRrms(int age, boolean female, float weight, float height, int activityLevel) {
-        int value = -1;
-        //TODO calculate ideal value
-        setNervesRrms(value);
-    }
 
     private void calculateAlphaFreq(int age, boolean female, float weight, float height, int activityLevel) {
         int value = -1;
         //TODO calculate ideal value
-        setAlphaFreq(value);
+        setAlphaAmp(value);
     }
 
     private void calculateBetaFreq(int age, boolean female, float weight, float height, int activityLevel) {
         int value = -1;
         //TODO calculate ideal value
-        setBetaFreq(value);
+        setBetaAmp(value);
     }
 
     private void calculateDeltaFreq(int age, boolean female, float weight, float height, int activityLevel) {
         int value = -1;
         //TODO calculate ideal value
-        setDeltaFreq(value);
+        setDeltaAmp(value);
     }
 
     private void calculateThetaFreq(int age, boolean female, float weight, float height, int activityLevel) {
         int value = -1;
         //TODO calculate ideal value
-        setThetaFreq(value);
+        setThetaAmp(value);
     }
 
 
