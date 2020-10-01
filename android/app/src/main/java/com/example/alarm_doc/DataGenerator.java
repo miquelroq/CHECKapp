@@ -2,28 +2,18 @@ package com.example.alarm_doc;
 
 import android.app.Activity;
 import android.app.Service;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
-import android.widget.TextView;
-import android.widget.Toast;
 import android.os.Process;
+import android.widget.Toast;
 
-
-import androidx.annotation.Nullable;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.example.alarm_doc.domain.Register;
 import com.example.alarm_doc.utils.Utils;
-
-import java.util.TimerTask;
-
-import static android.app.PendingIntent.getActivity;
-import static androidx.core.app.ShareCompat.getCallingActivity;
 
 /**
  *
@@ -36,7 +26,6 @@ import static androidx.core.app.ShareCompat.getCallingActivity;
  *      * Collect all the data
  *      * Return
  *
- * TODO: Create another class responsible for sending the data to the API?
  *
  */
 public class DataGenerator extends Service {

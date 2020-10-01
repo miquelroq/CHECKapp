@@ -5,13 +5,25 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import com.example.alarm_doc.services.BitalinoCapture;
+import com.example.alarm_doc.utils.Utils;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -36,18 +48,104 @@ public class DataProcessing extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_processing);
 
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+        StrictMode.setThreadPolicy(policy);
+        final Utils utils = new Utils();
+
         // When we receive the collected data, send it to the API
         LocalBroadcastManager.getInstance(DataProcessing.this).registerReceiver(
                 new BroadcastReceiver() {
                     @Override
-                    public void onReceive(Context context, Intent intent) {
+                    public void onReceive(final Context context, Intent intent) {
 
                         HashMap<Integer, ArrayList<Integer>> values = (HashMap<Integer, ArrayList<Integer>>) intent.getExtras().get(BitalinoCapture.ACTION_CAPTURE);
-                        // Send
-                        Toast.makeText(context, "Ola, recebi os dados", Toast.LENGTH_SHORT).show();
+
+                        String eeg = values.get(1).toString();
+                        String ecg = values.get(3).toString();
+
+                        Log.d("arraysFixes",eeg);
+                        Log.d("arraysFixes",ecg);
+
+                        // Send this req to the API
+                        String myBody = "{\n    \"eeg\":" + eeg + ",\n    \"ecg\":" + ecg + "\n}";
+
+                        // writeToFile(myBody, context);
+
+                        myBody = readFromFile(context);
+
+                        Unirest.setTimeouts(0, 0);
+                        Log.d("myBody", myBody);
+
+                        try {
+                            HttpResponse<String> response = Unirest.post("http://checkapp.pythonanywhere.com/api/generate")
+                                    .header("Content-Type", "application/json")
+                                    .body(myBody)
+                                    .asString();
+
+                            Toast.makeText(context, ""+response.getCode(), Toast.LENGTH_LONG).show();
+
+                            Log.d("respostaFixe", response.getBody());
+
+                        } catch (UnirestException e) {
+                            e.printStackTrace();
+
+                            Toast.makeText(context, "Error connecting to API", Toast.LENGTH_LONG).show();
+                            Intent main = new Intent(context, MainActivity.class);
+                            startActivity(main);
+                        }
+
+                        // TODO: When data is received, store it in shared preferences and launch new activity
+/*                        Register r = new Register(
+
+                        )
+                        utils.addRegisterToLoggedUser(r, this);*/
+
 
                     }
                 }, new IntentFilter(BitalinoCapture.ACTION_CAPTURE)
         );
+    }
+
+
+    private void writeToFile(String data,Context context) {
+        try {
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("reading.txt", Context.MODE_PRIVATE));
+            outputStreamWriter.write(data);
+            outputStreamWriter.close();
+        }
+        catch (IOException e) {
+            Log.e("Exception", "File write failed: " + e.toString());
+        }
+    }
+
+    private String readFromFile(Context context) {
+
+        String ret = "";
+
+        try {
+            InputStream inputStream = context.openFileInput("reading.txt");
+
+            if ( inputStream != null ) {
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String receiveString = "";
+                StringBuilder stringBuilder = new StringBuilder();
+
+                while ( (receiveString = bufferedReader.readLine()) != null ) {
+                    stringBuilder.append("\n").append(receiveString);
+                }
+
+                inputStream.close();
+                ret = stringBuilder.toString();
+            }
+        }
+        catch (FileNotFoundException e) {
+            Log.e("login activity", "File not found: " + e.toString());
+        } catch (IOException e) {
+            Log.e("login activity", "Can not read file: " + e.toString());
+        }
+
+        return ret;
     }
 }

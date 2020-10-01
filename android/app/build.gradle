@@ -40,6 +40,11 @@ dependencies {
     implementation 'com.bitalino:bitalino-java-sdk:1.0.1'
     implementation 'com.google.code.gson:gson:2.8.5'
 
+    implementation 'com.android.volley:volley:1.1.1'
+
+    implementation 'com.squareup.okhttp:okhttp:2.5.0'
+
+    implementation 'com.mashape.unirest:unirest-android:1.0+'
 
 
 }

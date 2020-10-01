@@ -59,6 +59,7 @@ public class Utils {
     public List<Profile> getAllProfiles(Activity activity) {
 
         SharedPreferences sharedPreferences = activity.getSharedPreferences("profiles", Context.MODE_PRIVATE);
+
         ArrayList<Profile> ret = new ArrayList<>();
 
         for (Object p : sharedPreferences.getAll().values()) {

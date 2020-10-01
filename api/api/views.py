@@ -16,7 +16,9 @@ class ReportViewSet(viewsets.ModelViewSet):
     serializer_class = ReportSerializer
 
 @api_view(('GET',))
-def get_report(request, dto=None):
+def get_report(request):
+
+    dto = request.data
 
     if dto == None:
         return JsonResponse({'Error': 'No DTO provided'})
