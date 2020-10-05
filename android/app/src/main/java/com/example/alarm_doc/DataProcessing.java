@@ -72,6 +72,9 @@ public class DataProcessing extends AppCompatActivity {
                         String eeg = values.get(1).toString();
                         String ecg = values.get(3).toString();
 
+                        int bpm, diff, alpha, beta, delta, gamma, theta;
+                        bpm = diff = alpha = beta = delta = gamma = theta = 0;
+
                         Log.d("arraysFixes",eeg);
                         Log.d("arraysFixes",ecg);
 
@@ -107,14 +110,16 @@ public class DataProcessing extends AppCompatActivity {
                         Register r = new Register(
                             new Emotional(),
                             new NervousMuscular(utils.getLoggedProfile(act)),
-                            new Neurologic(),
+                            new Neurologic(utils.getLoggedProfile(act), alpha, beta, delta, gamma, theta),
                             new Fitness(utils.getLoggedProfile(act)),
-                            new CardioRespiratory(utils.getLoggedProfile(act))
+                            new CardioRespiratory(utils.getLoggedProfile(act), bpm, diff)
                         );
 
-                        // utils.addRegisterToLoggedUser(r, act);
+                        utils.addRegisterToLoggedUser(r, act);
 
                         // Launch DataDisplay activity with the latest register
+                        Intent main = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(main);
 
 
                     }

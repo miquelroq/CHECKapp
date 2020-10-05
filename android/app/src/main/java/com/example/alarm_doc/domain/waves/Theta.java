@@ -48,7 +48,7 @@ public class Theta {
 
     public void calculateScore() {
         int baseAmp = profile.getBaseValues().getThetaAmp();
-        int score = 100 - (1/2) * (pikes * 10) - (1/2) * (abs(amp - baseAmp )/baseAmp) * 100;
+        int score = (int) (100 - 0.5 * (pikes * 10) - 0.5 * (abs(amp - baseAmp )/baseAmp) * 100);
         this.setScore(score);
     }
 }

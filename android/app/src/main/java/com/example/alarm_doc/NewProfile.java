@@ -195,15 +195,15 @@ public class NewProfile extends AppCompatActivity {
                     // Instance a profile
 
                     Profile p = new Profile(
-                            input_name,
-                            female,
-                            input_age,
-                            input_weight,
-                            input_height,
-                            img_name.toString(),
+                                                input_name,
+                                                female,
+                                                input_age,
+                                                input_weight,
+                                                input_height,
                             activityLevel,
-                            conditions
-                    );
+                            img_name.toString(),
+                                                conditions
+                                        );
 
                     // Save profile persistently
                     utils.saveProfile(p, act);

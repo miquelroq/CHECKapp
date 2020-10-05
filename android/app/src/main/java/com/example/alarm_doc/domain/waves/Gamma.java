@@ -4,7 +4,7 @@ import com.example.alarm_doc.domain.Profile;
 
 import static java.lang.Math.abs;
 
-public class Alpha {
+public class Gamma {
     //idea - method called getBaseValues that uses machine learning to get the best "normal" base values
 
     private int score;
@@ -13,8 +13,8 @@ public class Alpha {
 
     private int pikes;
     private int amp;
-    
-    public Alpha(int pikes, int amp, Profile profile) {
+
+    public Gamma(int pikes, int amp, Profile profile) {
         this.pikes = pikes;
         this.amp = amp;
         this.profile = profile;

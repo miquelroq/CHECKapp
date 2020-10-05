@@ -44,7 +44,7 @@ public class NervousMuscular {
     public void calculateScore(){
         double baseReflexes = this.profile.getBaseValues().getNervesReflexes();
         int baseFatigue = this.profile.getBaseValues().getNervesFatigue();
-        double score = this.score - (1/2) * (abs(reflexes - baseReflexes)/baseReflexes) * 100 - (1/2) * (abs(fatigue - baseFatigue)/baseFatigue) * 100;
+        double score = this.score - 0.5 * (abs(reflexes - baseReflexes)/baseReflexes) * 100 - 0.5 * (abs(fatigue - baseFatigue)/baseFatigue) * 100;
         this.setScore(score);
     }
 }

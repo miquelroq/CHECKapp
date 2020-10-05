@@ -13,8 +13,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Gamma.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DataProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DataProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/NewProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/NewProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/CardioRespiratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/CardioRespiratory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/NervousMuscular.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/NervousMuscular.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Neurologic.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Neurologic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Alpha.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Alpha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Beta.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Beta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Delta.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Delta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Theta.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/waves/Theta.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,8 +98,11 @@
     <key name="android.template.-97881325">
       <recent name="com.example.alarm_doc" />
     </key>
-    <key name="android.template.-575784124">
+    <key name="android.template.1134086599">
       <recent name="com.example.alarm_doc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.alarm_doc.domain.waves" />
     </key>
     <key name="android.template.1794688958">
       <recent name="com.example.alarm_doc" />
@@ -98,7 +110,7 @@
     <key name="android.template.2067670071">
       <recent name="com.example.alarm_doc" />
     </key>
-    <key name="android.template.1134086599">
+    <key name="android.template.-575784124">
       <recent name="com.example.alarm_doc" />
     </key>
   </component>
@@ -353,33 +365,33 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599243218442" />
-    <state width="1323" height="388" key="GridCell.Tab.0.bottom" timestamp="1601410239340">
+    <state width="1323" height="388" key="GridCell.Tab.0.bottom" timestamp="1601898806664">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
-    <state width="1323" height="388" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601410239340" />
+    <state width="1323" height="388" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601898806664" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1597967962484" />
-    <state width="1323" height="388" key="GridCell.Tab.0.center" timestamp="1601410239340">
+    <state width="1323" height="388" key="GridCell.Tab.0.center" timestamp="1601898806663">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
-    <state width="1323" height="388" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601410239340" />
+    <state width="1323" height="388" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601898806663" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1597967962483" />
-    <state width="1323" height="388" key="GridCell.Tab.0.left" timestamp="1601410239340">
+    <state width="1323" height="388" key="GridCell.Tab.0.left" timestamp="1601898806663">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667302" />
-    <state width="1323" height="388" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601410239340" />
+    <state width="1323" height="388" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601898806663" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1597967962482" />
-    <state width="1323" height="388" key="GridCell.Tab.0.right" timestamp="1601410239340">
+    <state width="1323" height="388" key="GridCell.Tab.0.right" timestamp="1601898806664">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@0.0.1366.728" timestamp="1598138815416" />
     <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1366.728@1366.0.1366.728" timestamp="1598109667304" />
-    <state width="1323" height="388" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601410239340" />
+    <state width="1323" height="388" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601898806664" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1597967962484" />
     <state x="433" y="173" key="MultipleFileMergeDialog" timestamp="1597676441518">
       <screen x="0" y="0" width="1440" height="900" />
@@ -393,10 +405,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="515" y="235" key="chooseDestDirectoryDialog/0.0.1440.900@0.0.1440.900" timestamp="1597834568647" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1601542590532">
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1601896193845">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1601542590532" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1601896193845" />
     <state x="400" y="237" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1597950809235" />
     <state x="483" y="303" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599227110377">
       <screen x="0" y="0" width="1366" height="728" />

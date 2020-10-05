@@ -13,9 +13,11 @@ public class CardioRespiratory {
     private int breathRate;
 
 
-    public CardioRespiratory(Profile profile) {
+    public CardioRespiratory(Profile profile, int bpm, int diff) {
         this.score = maxScore;
         this.profile = profile;
+        this.bpm = bpm;
+        this.diff = diff;
     }
 
     public int getScore() {
@@ -54,8 +56,8 @@ public class CardioRespiratory {
         int baseBPM = profile.getBaseValues().getCardioBpm();
         int baseBreath = profile.getBaseValues().getCardioBreath();
         int baseDiff = profile.getBaseValues().getCardioDiff();
-        int score = this.score - (1/3) * (abs(bpm-baseBPM)/baseBPM) * 100 - (1/3) * (abs(diff - baseDiff)/ baseDiff) * 100 -
-               - (1/3) * (abs(breathRate-baseBreath)/baseBreath) * 100;
+        int score = (int) (this.score - (1.0/3.0) * (abs(bpm-baseBPM)/baseBPM) * 100 - (1.0/3.0) * (abs(diff - baseDiff)/ baseDiff) * 100 -
+                       - (1.0/3.0) * (abs(breathRate-baseBreath)/baseBreath) * 100);
         this.setScore(score);
     }
 }

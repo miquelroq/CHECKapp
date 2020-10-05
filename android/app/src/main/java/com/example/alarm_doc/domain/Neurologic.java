@@ -3,6 +3,7 @@ package com.example.alarm_doc.domain;
 import com.example.alarm_doc.domain.waves.Alpha;
 import com.example.alarm_doc.domain.waves.Beta;
 import com.example.alarm_doc.domain.waves.Delta;
+import com.example.alarm_doc.domain.waves.Gamma;
 import com.example.alarm_doc.domain.waves.Theta;
 
 
@@ -18,9 +19,17 @@ public class Neurologic {
     public Beta beta;
     public Delta delta;
     public Theta theta;
-
+    public Gamma gamma;
     public Neurologic(){
         score = maxScore;
+    }
+
+    public Neurologic(Profile profile, int alpha, int beta, int delta, int theta, int gamma) {
+        this.alpha = new Alpha(0, alpha, profile);
+        this.beta = new Beta(0, beta, profile);
+        this.delta = new Delta(0, delta, profile);
+        this.theta = new Theta(0, theta, profile);
+        this.gamma = new Gamma(0, gamma, profile);
     }
 
     public int getScore() {
@@ -64,7 +73,7 @@ public class Neurologic {
     }
 
     public void calculateScore() {
-        int score = this.maxScore - (1/4) * alpha.getScore() - (1/4) * beta.getScore() - (1/4) * delta.getScore() - (1/4) * theta.getScore();
+        int score = (int) (this.maxScore - 0.25 * alpha.getScore() - 0.25 * beta.getScore() - 0.25 * delta.getScore() - 0.25 * theta.getScore());
         this.setScore(score);
     }
 
