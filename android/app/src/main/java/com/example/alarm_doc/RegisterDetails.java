@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.alarm_doc.domain.Register;
 import com.example.alarm_doc.utils.Utils;
 
+import org.eazegraph.lib.charts.BarChart;
+import org.eazegraph.lib.models.BarModel;
+
 public class RegisterDetails extends AppCompatActivity {
 
     @Override
@@ -47,6 +50,15 @@ public class RegisterDetails extends AppCompatActivity {
         TextView breath_tv = findViewById(R.id.breath);
         breath_tv.setText(""+breath);
 
+        BarChart mBarChart = (BarChart) findViewById(R.id.barchart);
+
+        mBarChart.addBar(new BarModel(bpm, 0xFF123456));
+        // TODO: Plot here the ideal value for bpm
+        mBarChart.addBar(new BarModel(breath,  0xFF343456));
+        // TODO: Plot here the ideal value for breath rate
+
+        mBarChart.startAnimation();
+
 
         // Alpha
         int alpha = register.getNeurologic().getAlpha().getAmp();
@@ -72,6 +84,22 @@ public class RegisterDetails extends AppCompatActivity {
         int gamma = register.getNeurologic().getGamma().getAmp();
         TextView gamma_tv = findViewById(R.id.gamma);
         gamma_tv.setText(""+gamma);
+
+        BarChart nBarChart = (BarChart) findViewById(R.id.barchart_neuro);
+
+        nBarChart.addBar(new BarModel(alpha, 0xFF123456));
+        // TODO: Plot here the ideal value for alpha
+        nBarChart.addBar(new BarModel(beta,  0xFF343456));
+        // TODO: Plot here the ideal value for beta
+        nBarChart.addBar(new BarModel(delta, 0xFF123456));
+        // TODO: Plot here the ideal value for delta
+        nBarChart.addBar(new BarModel(theta,  0xFF343456));
+        // TODO: Plot here the ideal value for theta
+        nBarChart.addBar(new BarModel(gamma, 0xFF123456));
+        // TODO: Plot here the ideal value for gamma
+
+
+        nBarChart.startAnimation();
 
 
 

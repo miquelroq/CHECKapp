@@ -74,6 +74,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
+            <org.eazegraph.lib.charts.BarChart
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/barchart"
+                android:layout_width="match_parent"
+                android:layout_marginTop="186dp"
+                android:layout_height="256dp"
+                android:padding="10dp"
+                app:egFixedBarWidth="true"
+                app:egBarWidth="80dp"
+                app:egLegendHeight="40dp"/>
+
             <TextView
                 android:id="@+id/breath"
                 android:layout_width="wrap_content"
@@ -256,6 +267,17 @@
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/neurologic" />
+
+            <org.eazegraph.lib.charts.BarChart
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/barchart_neuro"
+                android:layout_width="match_parent"
+                android:layout_marginTop="520dp"
+                android:layout_height="256dp"
+                android:padding="10dp"
+                app:egFixedBarWidth="true"
+                app:egBarWidth="20dp"
+                app:egLegendHeight="40dp"/>
 
         </RelativeLayout>
 
