@@ -55,5 +55,14 @@
     <string name="permission_denied_dialog_title">Functionality limited</string>
     <string name="permission_denied_dialog_message">Since location access has no been granted, this app will not be able to discover bluetooth devices.</string>
     <string name="permission_denied_dialog_positive_button">OK</string>
+    <string name="neurologic">Neurologic</string>
+    <string name="nervous_muscular">Nervous-Muscular</string>
+    <string name="fitness">Fitness</string>
+    <string name="cardio_respiratory">Cardio-Respiratory</string>
+    <string name="register_details">Register Details</string>
+    <string name="bpm">BPM</string>
+    <string name="breath_rate">Breath Rate</string>
+    <string name="bmi">BMI</string>
+    <string name="body_fat">Body Fat</string>
 
 </resources>

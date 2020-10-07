@@ -1,17 +1,14 @@
 package com.example.alarm_doc;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.alarm_doc.domain.Profile;
 import com.example.alarm_doc.domain.Register;
@@ -57,14 +54,14 @@ public class DisplayRegisters extends AppCompatActivity {
         final String date = r.getDate();
 
         View register = getLayoutInflater().inflate(R.layout.register, null, false);
-        final Intent registerDetails = new Intent(getApplicationContext(), MainActivity.class);
+        final Intent registerDetails = new Intent(getApplicationContext(), RegisterDetails.class);
 
         TextView display_date = (TextView) register.findViewById(R.id.date);
 
         if(date != null) {
             display_date.setText(date);
         } else {
-            display_date.setText("Esta data é inválida :)");
+            display_date.setText("ERR: INVALID DATE FOUND");
         }
 
         display_date.setOnClickListener(new View.OnClickListener() {

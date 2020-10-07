@@ -72,6 +72,10 @@ public class Neurologic {
         this.theta = theta;
     }
 
+    public Gamma getGamma() {
+        return gamma;
+    }
+
     public void calculateScore() {
         int score = (int) (this.maxScore - 0.25 * alpha.getScore() - 0.25 * beta.getScore() - 0.25 * delta.getScore() - 0.25 * theta.getScore());
         this.setScore(score);

@@ -21,7 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DataProcessing"></activity>
+        <activity android:name=".RegisterDetails"></activity>
+        <activity android:name=".DataProcessing" />
         <activity android:name=".DisplayRegisters" />
         <activity android:name=".CheckupProcess" />
         <activity android:name=".NewProfile" />

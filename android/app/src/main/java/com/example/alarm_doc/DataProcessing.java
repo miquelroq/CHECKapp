@@ -21,6 +21,8 @@ import com.example.alarm_doc.domain.Neurologic;
 import com.example.alarm_doc.domain.Register;
 import com.example.alarm_doc.services.BitalinoCapture;
 import com.example.alarm_doc.utils.Utils;
+import com.google.common.reflect.TypeToken;
+import com.google.gson.Gson;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
@@ -33,6 +35,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -97,6 +100,22 @@ public class DataProcessing extends AppCompatActivity {
                             Toast.makeText(context, ""+response.getCode(), Toast.LENGTH_LONG).show();
 
                             Log.d("respostaFixe", response.getBody());
+
+                            Map<String, Object> retMap = new Gson().fromJson(
+                                    response.getBody(), new TypeToken<HashMap<String, Object>>() {}.getType()
+                            );
+
+                            bpm = retMap.get("bpm") == null ? null : ((Double) retMap.get("bpm")).intValue();
+                            diff = ((String) retMap.get("breathrate")).equals("NaN") ? 0 : ((Double) retMap.get("breathrate")).intValue();
+
+                            alpha = retMap.get("alpha") == null ? null : ((Double) retMap.get("alpha")).intValue();
+                            beta = retMap.get("beta") == null ? null : ((Double) retMap.get("beta")).intValue();
+                            delta = retMap.get("delta") == null ? null : ((Double) retMap.get("delta")).intValue();
+                            theta = retMap.get("theta") == null ? null : ((Double) retMap.get("theta")).intValue();
+                            gamma = retMap.get("gamma") == null ? null : ((Double) retMap.get("gamma")).intValue();
+
+
+
 
                         } catch (UnirestException e) {
                             e.printStackTrace();

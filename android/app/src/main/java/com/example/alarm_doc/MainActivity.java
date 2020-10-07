@@ -1,13 +1,13 @@
 package com.example.alarm_doc;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.alarm_doc.domain.Profile;
 import com.example.alarm_doc.utils.Utils;
@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR); // white font on status bar
 
         Profile p = utils.getLoggedProfile(act);
         Toast.makeText(getApplicationContext(), p.getName(), Toast.LENGTH_SHORT).show();

@@ -118,4 +118,24 @@ public class Utils {
         logIn(p, activity);
 
     }
+
+    /**
+     *
+     * @param date - The date being queried for
+     * @param activity - Activity, for context
+     * @return Register of the logged profile registered in that date
+     */
+    public Register getRegisterByDate(String date, Activity activity) {
+
+        Profile p = getLoggedProfile(activity);
+
+        for (Register r : p.getRegisters()) {
+            if (r.getDate().equals(date)){
+                return r;
+            }
+        }
+
+        return null;
+
+    }
 }
