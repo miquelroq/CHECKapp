@@ -11,6 +11,7 @@
     <ScrollView
         android:layout_width="410dp"
         android:layout_height="728dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -19,13 +20,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/imageButton"
-                style="@android:style/Widget.Holo.ImageButton"
-                android:layout_width="46dp"
-                android:layout_height="45dp"
-                android:background="@color/colorPrimary"
-                android:src="@android:drawable/ic_menu_close_clear_cancel" />
+            <Button
+                android:id="@+id/closeBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_close_x" />
 
             <Button
                 android:id="@+id/uploadPic"
@@ -44,7 +44,7 @@
                 android:layout_height="92dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginLeft="50dp"
-                android:layout_marginTop="-60dp"
+                android:layout_marginTop="-70dp"
                 android:background="@color/colorPrimary"
                 android:foreground="@drawable/frame"
                 app:srcCompat="@drawable/logo_dark"
@@ -230,7 +230,7 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginBottom="40dp"
+                android:layout_marginBottom="60dp"
                 android:background="@color/colorPrimary"
                 android:text="@string/finish"
                 android:textColor="@color/colorPrimaryDark" />

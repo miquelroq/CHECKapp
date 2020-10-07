@@ -56,6 +56,17 @@ public class NewProfile extends AppCompatActivity {
         setContentView(R.layout.activity_new_profile);
 
 
+        // Go back
+        Button back = (Button) findViewById(R.id.closeBtn);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+
+        });
+
         // Fill in the sex Spinner
         Spinner sex = (Spinner) findViewById(R.id.sex_select);
         // Create an ArrayAdapter using the string array and a default spinner layout

@@ -8,22 +8,20 @@
     android:orientation="horizontal"
     tools:context=".ProfileSelection">
 
-    <Button
+
+    <ImageButton
         android:id="@+id/fab"
-        android:layout_width="116dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginRight="52dp"
-        android:layout_marginBottom="84dp"
-        android:background="@color/colorPrimary"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/ic_add_icon"
         android:clickable="true"
         android:focusable="true"
-        android:text="@string/new_profile"
-        android:textColor="@color/white"
+        android:foreground="@drawable/frame"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:ignore="VectorDrawableCompat" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/linear_layout"
@@ -33,7 +31,9 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
         android:id="@+id/imageView11"

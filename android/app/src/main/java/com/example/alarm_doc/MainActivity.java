@@ -37,6 +37,17 @@ public class MainActivity extends AppCompatActivity {
         Profile p = utils.getLoggedProfile(act);
         Toast.makeText(getApplicationContext(), p.getName(), Toast.LENGTH_SHORT).show();
 
+        // Go back
+        Button back = (Button) findViewById(R.id.btn_back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    finish();
+                }
+
+        });
+
         // Run a Diagnostic
         Button diagnose = (Button) findViewById(R.id.diagnose);
 

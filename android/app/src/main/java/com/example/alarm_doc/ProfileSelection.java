@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -50,7 +50,7 @@ public class ProfileSelection extends AppCompatActivity {
             addView(p);
 
         // Set up the button to add a new profile
-        Button add = (Button) findViewById(R.id.fab);
+        ImageButton add = (ImageButton) findViewById(R.id.fab);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
