@@ -137,9 +137,9 @@ public class DataProcessing extends AppCompatActivity {
                         utils.addRegisterToLoggedUser(r, act);
 
                         // Launch DataDisplay activity with the latest register
-                        Intent main = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(main);
-
+                        Intent registerDetails = new Intent(getApplicationContext(), RegisterDetails.class);
+                        registerDetails.putExtra("date", "LAST");
+                        startActivity(registerDetails);
 
                     }
                 }, new IntentFilter(BitalinoCapture.ACTION_CAPTURE)

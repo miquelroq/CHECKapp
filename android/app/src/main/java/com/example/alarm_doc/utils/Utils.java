@@ -128,8 +128,13 @@ public class Utils {
     public Register getRegisterByDate(String date, Activity activity) {
 
         Profile p = getLoggedProfile(activity);
+        List<Register> registers = p.getRegisters();
 
-        for (Register r : p.getRegisters()) {
+        if (date.equals("LAST")) {
+            return registers.get(registers.size() - 1);
+        }
+
+        for (Register r : registers) {
             if (r.getDate().equals(date)){
                 return r;
             }
