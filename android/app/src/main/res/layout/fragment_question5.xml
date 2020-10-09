@@ -32,7 +32,7 @@
         android:layout_marginRight="35dp"
         android:background="@color/colorPrimary"
         android:padding="10sp"
-        android:text="@string/insert_electrodes"
+        android:text="Now, hold the temperture sensor."
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp" />
 
@@ -54,6 +54,6 @@
         android:layout_height="255dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
-        android:src="@drawable/logo_dark" />
+        android:src="@drawable/temp" />
 
 </RelativeLayout>
