@@ -41,7 +41,7 @@
         android:background="@color/colorPrimary"
         android:textColor="@color/colorPrimaryDark"
         android:padding="10sp"
-        android:text="How often have you been bothered by feeling down, depressed, irritable, or hopeless over the last two weeks?"
+        android:text="How often have you been bothered that you have poor appetite, weight loss, or overeating over the last two weeks?"
         android:textSize="20sp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"

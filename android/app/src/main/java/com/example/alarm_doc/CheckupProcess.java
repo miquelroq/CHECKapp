@@ -1,22 +1,20 @@
 package com.example.alarm_doc;
 
-import androidx.core.content.ContextCompat;
-import androidx.viewpager.widget.ViewPager;
-
-import android.os.Bundle;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-
-import androidx.viewpager.widget.PagerAdapter;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  *
@@ -107,9 +105,9 @@ public class CheckupProcess extends Activity {
             layouts = new int[]{
                     R.layout.fragment_question1,
                     R.layout.fragment_question2,
-                    R.layout.fragment_question3,
-                    R.layout.fragment_question4,
-                    R.layout.fragment_question5,
+                    R.layout.fragment_question13,
+                    R.layout.fragment_question14,
+                    R.layout.fragment_question15,
                     R.layout.fragment_question6
             };
 

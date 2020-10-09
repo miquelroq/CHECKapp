@@ -13,10 +13,10 @@ import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Question5#newInstance} factory method to
+ * Use the {@link Question6#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Question5 extends Fragment {
+public class Question6 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +29,7 @@ public class Question5 extends Fragment {
 
     private Question1.OnFragmentInteractionListener mListener;
 
-    public Question5() {
+    public Question6() {
         // Required empty public constructor
     }
 
@@ -42,8 +42,8 @@ public class Question5 extends Fragment {
      * @return A new instance of fragment Tab1.
      */
     // TODO: Rename and change types and number of parameters
-    public static Question5 newInstance(String param1, String param2) {
-        Question5 fragment = new Question5();
+    public static Question6 newInstance(String param1, String param2) {
+        Question6 fragment = new Question6();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

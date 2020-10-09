@@ -6,17 +6,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Question5#newInstance} factory method to
+ * Use the {@link Question13#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Question5 extends Fragment {
+public class Question13 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +27,7 @@ public class Question5 extends Fragment {
 
     private Question1.OnFragmentInteractionListener mListener;
 
-    public Question5() {
+    public Question13() {
         // Required empty public constructor
     }
 
@@ -42,8 +40,8 @@ public class Question5 extends Fragment {
      * @return A new instance of fragment Tab1.
      */
     // TODO: Rename and change types and number of parameters
-    public static Question5 newInstance(String param1, String param2) {
-        Question5 fragment = new Question5();
+    public static Question13 newInstance(String param1, String param2) {
+        Question13 fragment = new Question13();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,22 +61,8 @@ public class Question5 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        View myView = inflater.inflate(R.layout.fragment_question2, container, false);
-
-        RadioGroup radioGroup = (RadioGroup) myView.findViewById(R.id.radioGroupFatigue);
-
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
-
-                Toast.makeText(getContext(), "OLA", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
         // Inflate the layout for this fragment
-        return myView;
+        return inflater.inflate(R.layout.fragment_question1, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -109,4 +93,5 @@ public class Question5 extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }

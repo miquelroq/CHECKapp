@@ -7,7 +7,7 @@
     tools:context=".Question1">
 
     <Button
-        android:id="@+id/skipBtn7"
+        android:id="@+id/skipBtn3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
@@ -16,28 +16,8 @@
         android:layout_margin="10dp"
         android:background="@drawable/ic_close_x" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="377dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="-3dp"
-        android:layout_marginLeft="-3dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:background="@color/colorPrimary"
-        android:padding="10sp"
-        android:text="Now, hold the temperture sensor."
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp" />
-
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageView"
         android:layout_width="297dp"
         android:layout_height="256dp"
         android:layout_alignParentEnd="true"
@@ -49,11 +29,77 @@
         android:layout_marginBottom="-4dp"
         android:src="@drawable/edge_inverted" />
 
-    <ImageView
-        android:layout_width="263dp"
-        android:layout_height="255dp"
+    <TextView
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="35dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorPrimaryDark"
+        android:padding="10sp"
+        android:text="How often have you been bothered by trouble falling asleep, staying asleep, or sleeping too much over the last two weeks?"
+        android:textSize="20sp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginRight="35dp" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupFatigue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
-        android:src="@drawable/temp" />
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+
+        <RadioButton
+            android:id="@+id/never"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/never"
+            android:layoutDirection="rtl"
+            android:textAlignment="textStart"
+            android:layout_gravity="start"
+            android:onClick="checkButton"
+            >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/almost_never"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/sometimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/almost_always"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="checkButton">
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/always"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/everyday"
+            android:onClick="checkButton">
+        </RadioButton>
+
+    </RadioGroup>
 
 </RelativeLayout>
