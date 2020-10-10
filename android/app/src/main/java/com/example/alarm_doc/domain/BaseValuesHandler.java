@@ -13,7 +13,7 @@ public class BaseValuesHandler {
     private double fitnessBmi;
     private int fitnessFat;
 
-    private double nervesReflexes;
+    private double nervesChills;
     private int nervesFatigue;
 
     private int alphaAmp;
@@ -41,8 +41,8 @@ public class BaseValuesHandler {
         return fitnessBmi;
     }
 
-    public double getNervesReflexes() {
-        return nervesReflexes;
+    public double getNervesChills() {
+        return nervesChills;
     }
 
     public int getNervesFatigue() {
@@ -85,8 +85,8 @@ public class BaseValuesHandler {
         this.fitnessFat = fitnessFat;
     }
 
-    private void setNervesReflexes(double nervesReflexes) {
-        this.nervesReflexes = nervesReflexes;
+    private void setNervesChills(double nervesChills) {
+        this.nervesChills = nervesChills;
     }
 
     private void setNervesFatigue(int nervesFatigue) {
@@ -119,7 +119,7 @@ public class BaseValuesHandler {
 
         calculateFitnessBmi(age, female, weight, height, activityLevel);
 
-        calculateNervesReflexes(age, female, weight, height, activityLevel);
+        calculateNervesChills(age, female, weight, height, activityLevel);
         calculateNervesFatigue(age, female, weight, height, activityLevel);
 
         calculateAlphaFreq(age, female, weight, height, activityLevel);
@@ -189,15 +189,15 @@ public class BaseValuesHandler {
         setFitnessBmi(value);
     }
 
-    private void calculateNervesReflexes(int age, boolean female, float weight, float height, int activityLevel) {
+    private void calculateNervesChills(int age, boolean female, float weight, float height, int activityLevel) {
         double value = -1;
-        value = 0.215;
-        setNervesReflexes(value);
+        value = 1;
+        setNervesChills(value);
     }
 
     private void calculateNervesFatigue(int age, boolean female, float weight, float height, int activityLevel) {
         int value = -1;
-        value = 0;
+        value = 1;
         setNervesFatigue(value);
     }
 
