@@ -35,7 +35,6 @@ public class CheckupProcess extends Activity {
         private Button btnBack, btnNext;
         private int dotscount;
         Button btnToApp;
-        Button skipBtn;
         RadioGroup radioGroup;
 
         private int fatigue, chills;
@@ -99,20 +98,28 @@ public class CheckupProcess extends Activity {
             dotsLayout = findViewById(R.id.layoutDots);
             btnBack = findViewById(R.id.btn_back);
             btnNext =  findViewById(R.id.btn_next);
-            skipBtn = findViewById(R.id.skipBtn);
 
             // layouts of questions
             layouts = new int[]{
                     R.layout.fragment_question1,
                     R.layout.fragment_question2,
+                    R.layout.fragment_question3,
+                    R.layout.fragment_question4,
+                    R.layout.fragment_question5,
+                    R.layout.fragment_question6,
+                    R.layout.fragment_question7,
+                    R.layout.fragment_question8,
+                    R.layout.fragment_question9,
+                    R.layout.fragment_question10,
+                    R.layout.fragment_question11,
+                    R.layout.fragment_question12,
                     R.layout.fragment_question13,
                     R.layout.fragment_question14,
-                    R.layout.fragment_question15,
-                    R.layout.fragment_question6
+                    R.layout.fragment_question15
             };
 
             // adding bottom dots
-            dotscount = 6;
+            dotscount = 15;
             dots = new ImageView[dotscount];
 
             for(int i = 0; i < dotscount; i++) {
@@ -153,13 +160,6 @@ public class CheckupProcess extends Activity {
                 });
             }
 
-            skipBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(CheckupProcess.this, MainActivity.class);
-                    startActivity(intent);
-                }
-            });
         }
 
         private int getItem(int i) {
@@ -185,6 +185,11 @@ public class CheckupProcess extends Activity {
                             Intent intent = new Intent(CheckupProcess.this, DeviceSelect.class);
                             intent.putExtra("chills", chills);
                             intent.putExtra("fatigue", fatigue);
+
+                            // Store chills
+
+                            // Store fatigue
+
 
                             startActivity(intent);
                         }
@@ -233,9 +238,7 @@ public class CheckupProcess extends Activity {
                 layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
                 View view = layoutInflater.inflate(layouts[position], container, false);
-                if (position==2) {
 
-                }
                 container.addView(view);
 
                 return view;
