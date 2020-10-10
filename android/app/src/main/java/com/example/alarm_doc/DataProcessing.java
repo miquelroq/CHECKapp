@@ -127,7 +127,7 @@ public class DataProcessing extends AppCompatActivity {
 
                         // When data is received, store it in shared preferences and launch new activity
                         Register r = new Register(
-                            new Emotional(), //TODO: pass values? HOW? help sm00sh0
+                            new Emotional(),
                             new NervousMuscular(utils.getLoggedProfile(act)),
                             new Neurologic(utils.getLoggedProfile(act), alpha, beta, delta, gamma, theta),
                             new Fitness(utils.getLoggedProfile(act)),
