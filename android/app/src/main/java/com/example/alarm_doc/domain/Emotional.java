@@ -2,125 +2,123 @@ package com.example.alarm_doc.domain;
 
 public class Emotional {
     private int score;
-    //TODO: replace following vars  by variables that describe what we're measuring in the questions
-    private int var1;
-    private int var2;
-    private int var3;
-    private int var4;
-    private int var5;
-    private int var6;
-    private int var7;
-    private int var8;
-    private int var9;
-    private int var10;
+    private int q1;
+    private int q2;
+    private int q3;
+    private int q4;
+    private int q5;
+    private int q6;
+    private int q7;
+    private int q8;
+    private int q9;
+    private int q10;
 
     public Emotional() {
         //TODO: review
         this.score = 100;
-        this.var1 = 0;
-        this.var2 = 0;
-        this.var3 = 0;
-        this.var4 = 0;
-        this.var5 = 0;
-        this.var6 = 0;
-        this.var7 = 0;
-        this.var8 = 0;
-        this.var9 = 0;
-        this.var10 = 0;
+        this.q1 = 0;
+        this.q2 = 0;
+        this.q3 = 0;
+        this.q4 = 0;
+        this.q5 = 0;
+        this.q6 = 0;
+        this.q7 = 0;
+        this.q8 = 0;
+        this.q9 = 0;
+        this.q10 = 0;
     }
 
     public int getScore() {
         return score;
     }
 
-    public int getVar1() {
-        return var1;
+    public int getQ1() {
+        return q1;
     }
 
-    public int getVar2() {
-        return var2;
+    public int getQ2() {
+        return q2;
     }
 
     private void setScore(int score) {
         this.score=score;
     }
 
-    public void setVar1(int var1) {
-        this.var1 = var1;
+    public void setQ1(int q1) {
+        this.q1 = q1;
     }
 
-    public void setVar2(int var2) {
-        this.var2 = var2;
+    public void setQ2(int q2) {
+        this.q2 = q2;
     }
 
     public void calculateScore() {
-        int score = 100 - (1/2) * var1 - (1/2) * var2;
+        int score = 100 - (1/10) * q1 - (1/10) * q2 - (1/10) * q3 - (1/10) * q4 - (1/10) * q5 - (1/10) * q6 - (1/10) * q7 - (1/10) * q8 - (1/10) * q9 - (1/10) * q10;
         this.setScore(score);
         //TODO: max score como variavel global
-        //TODO: formula
     }
 
-    public int getVar3() {
-        return var3;
+    public int getQ3() {
+        return q3;
     }
 
-    public void setVar3(int var3) {
-        this.var3 = var3;
+    public void setQ3(int q3) {
+        this.q3 = q3;
     }
 
-    public int getVar4() {
-        return var4;
+    public int getQ4() {
+        return q4;
     }
 
-    public void setVar4(int var4) {
-        this.var4 = var4;
+    public void setQ4(int q4) {
+        this.q4 = q4;
     }
 
-    public int getVar5() {
-        return var5;
+    public int getQ5() {
+        return q5;
     }
 
-    public void setVar5(int var5) {
-        this.var5 = var5;
+    public void setQ5(int q5) {
+        this.q5 = q5;
     }
 
-    public int getVar6() {
-        return var6;
+    public int getQ6() {
+        return q6;
     }
 
-    public void setVar6(int var6) {
-        this.var6 = var6;
+    public void setQ6(int q6) {
+        this.q6 = q6;
     }
 
-    public int getVar7() {
-        return var7;
+    public int getQ7() {
+        return q7;
     }
 
-    public void setVar7(int var7) {
-        this.var7 = var7;
+    public void setQ7(int q7) {
+        this.q7 = q7;
     }
 
-    public int getVar8() {
-        return var8;
+    public int getQ8() {
+        return q8;
     }
 
-    public void setVar8(int var8) {
-        this.var8 = var8;
+    public void setQ8(int q8) {
+        this.q8 = q8;
     }
 
-    public int getVar9() {
-        return var9;
+    public int getQ9() {
+        return q9;
     }
 
-    public void setVar9(int var9) {
-        this.var9 = var9;
+    public void setQ9(int q9) {
+        this.q9 = q9;
     }
 
-    public int getVar10() {
-        return var10;
+    public int getQ10() {
+        return q10;
     }
 
-    public void setVar10(int var10) {
-        this.var10 = var10;
+    public void setQ10(int q10) {
+        this.q10 = q10;
     }
 }
