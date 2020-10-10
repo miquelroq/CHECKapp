@@ -13,16 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ec8a7ad9-a133-4c3f-a044-0f76ac6170d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/CheckupProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/CheckupProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DataProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/DataProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/RegisterDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/RegisterDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/CardioRespiratory.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/CardioRespiratory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Emotional.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Emotional.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Fitness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/NervousMuscular.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/NervousMuscular.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/domain/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alarm_doc/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

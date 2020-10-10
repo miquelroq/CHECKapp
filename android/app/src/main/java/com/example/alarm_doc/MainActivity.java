@@ -2,9 +2,11 @@ package com.example.alarm_doc;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -78,5 +80,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        // Set image source to logged in profile
+        ImageView imgview = (ImageView) findViewById(R.id.avatar_img);
+        Uri img = Uri.parse(p.getPhoto());
+
+        imgview.setImageURI(img);
     }
 }
