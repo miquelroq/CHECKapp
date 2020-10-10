@@ -9,7 +9,7 @@ public class NervousMuscular {
     private double score;
     private Profile profile;
 
-    private int reflexes;
+    private int chills;
     private int fatigue;
 
     public NervousMuscular(Profile profile) {
@@ -21,8 +21,8 @@ public class NervousMuscular {
         return score;
     }
 
-    public int getReflexes() {
-        return reflexes;
+    public int getChills() {
+        return chills;
     }
 
     public int getFatigue() {
@@ -33,8 +33,8 @@ public class NervousMuscular {
         this.score = score;
     }
 
-    public void setReflexes(int reflexes) {
-        this.reflexes = reflexes;
+    public void setChills(int chills) {
+        this.chills = chills;
     }
 
     public void setFatigue(int fatigue) {
@@ -44,7 +44,7 @@ public class NervousMuscular {
     public void calculateScore(){
         double baseReflexes = this.profile.getBaseValues().getNervesReflexes();
         int baseFatigue = this.profile.getBaseValues().getNervesFatigue();
-        double score = this.score - 0.5 * (abs(reflexes - baseReflexes)/baseReflexes) * 100 - 0.5 * (abs(fatigue - baseFatigue)/baseFatigue) * 100;
+        double score = this.score - 0.5 * (abs(chills - baseReflexes)/baseReflexes) * 100 - 0.5 * (abs(fatigue - baseFatigue)/baseFatigue) * 100;
         this.setScore(score);
     }
 }
