@@ -13,20 +13,21 @@ public class Emotional {
     private int q9;
     private int q10;
     private int max_score = 100;
+    private Profile p;
 
-    public Emotional() {
-        //TODO: review
-        this.score = 100;
-        this.q1 = 0;
-        this.q2 = 0;
-        this.q3 = 0;
-        this.q4 = 0;
-        this.q5 = 0;
-        this.q6 = 0;
-        this.q7 = 0;
-        this.q8 = 0;
-        this.q9 = 0;
-        this.q10 = 0;
+    public Emotional(int q1, int q2, int q3, int q4, int q5, int q6, int q7, int q8, int q9, int q10, Profile p) {
+        this.score = max_score;
+        this.q1 = q1;
+        this.q2 = q2;
+        this.q3 = q3;
+        this.q4 = q4;
+        this.q5 = q5;
+        this.q6 = q6;
+        this.q7 = q7;
+        this.q8 = q8;
+        this.q9 = q9;
+        this.q10 = q10;
+        this.p = p;
     }
 
     public int getScore() {

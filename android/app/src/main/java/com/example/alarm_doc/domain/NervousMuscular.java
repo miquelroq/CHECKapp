@@ -12,7 +12,9 @@ public class NervousMuscular {
     private int chills;
     private int fatigue;
 
-    public NervousMuscular(Profile profile) {
+    public NervousMuscular(int chills, int fatigue, Profile profile) {
+        this.chills = chills;
+        this.fatigue = fatigue;
         this.profile = profile;
         this.score = maxScore;
     }

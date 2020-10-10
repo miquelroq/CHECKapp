@@ -37,9 +37,6 @@ public class RegisterDetails extends AppCompatActivity {
             return;
         }
 
-        Log.d("REGISTER FIXE", register.toString());
-
-
         // BPM
         int bpm = register.getCardioRespiratory().getBpm();
         TextView bpm_tv = findViewById(R.id.bpm);
@@ -52,12 +49,22 @@ public class RegisterDetails extends AppCompatActivity {
 
         BarChart mBarChart = (BarChart) findViewById(R.id.barchart);
 
-        mBarChart.addBar(new BarModel(bpm, 0xFF123456));
+        BarModel bpmBar = new BarModel(bpm, 0xFF123456);
+        bpmBar.setLegendLabel("BPM");
+
+        BarModel breathBar = new BarModel(breath, 0xFF123456);
+        breathBar.setLegendLabel("Breath Rate");
+
+        mBarChart.addBar(bpmBar);
         // TODO: Plot here the ideal value for bpm
-        mBarChart.addBar(new BarModel(breath,  0xFF343456));
+        mBarChart.addBar(breathBar);
         // TODO: Plot here the ideal value for breath rate
 
+
         mBarChart.startAnimation();
+
+
+
 
 
         // Alpha
@@ -87,17 +94,31 @@ public class RegisterDetails extends AppCompatActivity {
 
         BarChart nBarChart = (BarChart) findViewById(R.id.barchart_neuro);
 
-        nBarChart.addBar(new BarModel(alpha, 0xFF123456));
-        // TODO: Plot here the ideal value for alpha
-        nBarChart.addBar(new BarModel(beta,  0xFF343456));
-        // TODO: Plot here the ideal value for beta
-        nBarChart.addBar(new BarModel(delta, 0xFF123456));
-        // TODO: Plot here the ideal value for delta
-        nBarChart.addBar(new BarModel(theta,  0xFF343456));
-        // TODO: Plot here the ideal value for theta
-        nBarChart.addBar(new BarModel(gamma, 0xFF123456));
-        // TODO: Plot here the ideal value for gamma
+        BarModel alphaBar = new BarModel(alpha, 0xFF123456);
+        alphaBar.setLegendLabel("Alpha");
 
+        BarModel betaBar = new BarModel(beta, 0xFF123456);
+        betaBar.setLegendLabel("Beta");
+
+        BarModel deltaBar = new BarModel(delta, 0xFF123456);
+        deltaBar.setLegendLabel("Delta");
+
+        BarModel thetaBar = new BarModel(theta, 0xFF123456);
+        thetaBar.setLegendLabel("Theta");
+
+        BarModel gammaBar = new BarModel(gamma, 0xFF123456);
+        gammaBar.setLegendLabel("Gamma");
+
+        nBarChart.addBar(alphaBar);
+        // TODO: Plot here the ideal value for alpha
+        nBarChart.addBar(betaBar);
+        // TODO: Plot here the ideal value for beta
+        nBarChart.addBar(deltaBar);
+        // TODO: Plot here the ideal value for delta
+        nBarChart.addBar(thetaBar);
+        // TODO: Plot here the ideal value for theta
+        nBarChart.addBar(gammaBar);
+        // TODO: Plot here the ideal value for gamma
 
         nBarChart.startAnimation();
 

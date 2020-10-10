@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
@@ -38,13 +39,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
  * Process signals in order to extract the most relevant features to be sent to the API
  * Send to the API
  * GET the response
  * Launch activity according to the response/outcome
- *
- *
  */
 
 // TODO:
@@ -78,8 +76,8 @@ public class DataProcessing extends AppCompatActivity {
                         int bpm, diff, alpha, beta, delta, gamma, theta;
                         bpm = diff = alpha = beta = delta = gamma = theta = 0;
 
-                        Log.d("arraysFixes",eeg);
-                        Log.d("arraysFixes",ecg);
+                        Log.d("arraysFixes", eeg);
+                        Log.d("arraysFixes", ecg);
 
                         // Send this req to the API
                         String myBody = "{\n    \"eeg\":" + eeg + ",\n    \"ecg\":" + ecg + "\n}";
@@ -97,12 +95,13 @@ public class DataProcessing extends AppCompatActivity {
                                     .body(myBody)
                                     .asString();
 
-                            Toast.makeText(context, ""+response.getCode(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(context, "" + response.getCode(), Toast.LENGTH_LONG).show();
 
                             Log.d("respostaFixe", response.getBody());
 
                             Map<String, Object> retMap = new Gson().fromJson(
-                                    response.getBody(), new TypeToken<HashMap<String, Object>>() {}.getType()
+                                    response.getBody(), new TypeToken<HashMap<String, Object>>() {
+                                    }.getType()
                             );
 
                             bpm = retMap.get("bpm") == null ? null : ((Double) retMap.get("bpm")).intValue();
@@ -115,8 +114,6 @@ public class DataProcessing extends AppCompatActivity {
                             gamma = retMap.get("gamma") == null ? null : ((Double) retMap.get("gamma")).intValue();
 
 
-
-
                         } catch (UnirestException e) {
                             e.printStackTrace();
 
@@ -125,16 +122,39 @@ public class DataProcessing extends AppCompatActivity {
                             startActivity(main);
                         }
 
+                        // Fetch activity's shared preferences and their editor
+                        SharedPreferences sharedPreferences = act.getSharedPreferences("cache", Context.MODE_PRIVATE);
+                        int chills = sharedPreferences.getInt("chills", 0);
+                        int fatigue = sharedPreferences.getInt("fatigue", 0);
+
                         // When data is received, store it in shared preferences and launch new activity
                         Register r = new Register(
-                            new Emotional(),
-                            new NervousMuscular(utils.getLoggedProfile(act)),
-                            new Neurologic(utils.getLoggedProfile(act), alpha, beta, delta, gamma, theta),
-                            new Fitness(utils.getLoggedProfile(act)),
-                            new CardioRespiratory(utils.getLoggedProfile(act), bpm, diff)
+                                new Emotional(sharedPreferences.getInt("depression0", 0),
+                                        sharedPreferences.getInt("depression1", 0),
+                                        sharedPreferences.getInt("depression2", 0),
+                                        sharedPreferences.getInt("depression3", 0),
+                                        sharedPreferences.getInt("depression4", 0),
+                                        sharedPreferences.getInt("depression5", 0),
+                                        sharedPreferences.getInt("depression6", 0),
+                                        sharedPreferences.getInt("depression7", 0),
+                                        sharedPreferences.getInt("depression8", 0),
+                                        sharedPreferences.getInt("depression9", 0),
+                                        utils.getLoggedProfile(act)),
+                                new NervousMuscular(chills, fatigue, utils.getLoggedProfile(act)),
+                                new Neurologic(utils.getLoggedProfile(act), alpha, beta, delta, gamma, theta),
+                                new Fitness(utils.getLoggedProfile(act)),
+                                new CardioRespiratory(utils.getLoggedProfile(act), bpm, diff)
                         );
 
+                        r.calculateScores();
+
                         utils.addRegisterToLoggedUser(r, act);
+
+                        // Clear cache
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.clear();
+                        editor.apply();
+
 
                         // Launch DataDisplay activity with the latest register
                         Intent registerDetails = new Intent(getApplicationContext(), RegisterDetails.class);
@@ -147,13 +167,12 @@ public class DataProcessing extends AppCompatActivity {
     }
 
 
-    private void writeToFile(String data,Context context) {
+    private void writeToFile(String data, Context context) {
         try {
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("reading.txt", Context.MODE_PRIVATE));
             outputStreamWriter.write(data);
             outputStreamWriter.close();
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             Log.e("Exception", "File write failed: " + e.toString());
         }
     }
@@ -165,21 +184,20 @@ public class DataProcessing extends AppCompatActivity {
         try {
             InputStream inputStream = context.openFileInput("reading.txt");
 
-            if ( inputStream != null ) {
+            if (inputStream != null) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
                 BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
                 String receiveString = "";
                 StringBuilder stringBuilder = new StringBuilder();
 
-                while ( (receiveString = bufferedReader.readLine()) != null ) {
+                while ((receiveString = bufferedReader.readLine()) != null) {
                     stringBuilder.append("\n").append(receiveString);
                 }
 
                 inputStream.close();
                 ret = stringBuilder.toString();
             }
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             Log.e("login activity", "File not found: " + e.toString());
         } catch (IOException e) {
             Log.e("login activity", "Can not read file: " + e.toString());

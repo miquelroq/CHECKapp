@@ -119,4 +119,11 @@ public class Register {
         this.date = date;
     }
 
+    public void calculateScores() {
+        this.emotional.calculateScore();
+        this.cardioRespiratory.calculateScore();
+        this.fitness.calculateScore();
+        this.nervousMuscular.calculateScore();
+        // this.neurologic.calculateScore();
+    }
 }

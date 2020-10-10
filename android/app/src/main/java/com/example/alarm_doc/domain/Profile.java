@@ -123,4 +123,5 @@ public class Profile {
     public void addRegister(Register register) {
         this.registers.add(register);
     }
+
 }

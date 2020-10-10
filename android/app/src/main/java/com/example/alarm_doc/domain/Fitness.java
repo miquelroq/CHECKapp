@@ -8,7 +8,7 @@ public class Fitness {
     private double score;
     private Profile profile;
 
-    private int bmi;
+    private double bmi;
     //private int other_fitness_indicator_such_as_body_fat
     //TODO: add a height and weight confirmation screen that makes it possible to update
     // before each test so that bmi is accurate
@@ -17,13 +17,18 @@ public class Fitness {
     public Fitness(Profile profile) {
         this.score = maxScore;
         this.profile = profile;
+        this.bmi = calculateBMI();
+    }
+
+    private double calculateBMI() {
+        return this.profile.getWeight() / ((this.profile.getHeight() * 0.01) * (this.profile.getHeight() * 0.01));
     }
 
     public double getScore() {
         return score;
     }
 
-    public int getBmi() {
+    public double getBmi() {
         return bmi;
     }
 
@@ -31,7 +36,7 @@ public class Fitness {
         this.score = score;
     }
 
-    public void setBmi(int bmi) {
+    public void setBmi(double bmi) {
         this.bmi = bmi;
     }
 

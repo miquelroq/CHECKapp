@@ -55,9 +55,9 @@ public class CardioRespiratory {
     public void calculateScore(){
         int baseBPM = profile.getBaseValues().getCardioBpm();
         int baseBreath = profile.getBaseValues().getCardioBreath();
-        int baseDiff = profile.getBaseValues().getCardioDiff();
-        int score = (int) (this.score - (1.0/3.0) * (abs(bpm-baseBPM)/baseBPM) * 100 - (1.0/3.0) * (abs(diff - baseDiff)/ baseDiff) * 100 -
-                       - (1.0/3.0) * (abs(breathRate-baseBreath)/baseBreath) * 100);
+
+        int score = (int) (this.score - (1.0/2.0) * (abs(bpm-baseBPM)/(double) baseBPM) * 100 -
+                       - (1.0/2.0) * (abs(breathRate-baseBreath)/(double) baseBreath) * 100);
         this.setScore(score);
     }
 }

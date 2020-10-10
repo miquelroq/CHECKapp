@@ -3,6 +3,7 @@ package com.example.alarm_doc;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,8 @@ import android.widget.RadioGroup;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
+import java.util.ArrayList;
 
 /**
  *
@@ -36,8 +39,12 @@ public class CheckupProcess extends Activity {
         private int dotscount;
         Button btnToApp;
         RadioGroup radioGroup;
+        private Activity act = this;
+        private SharedPreferences sharedPreferences;
 
         private int fatigue, chills;
+
+        private ArrayList<Integer> depression = new ArrayList<>();
 
 
         public void checkButton(View v){
@@ -48,23 +55,23 @@ public class CheckupProcess extends Activity {
             switch(v.getId()) {
 
                 case R.id.never:
-                    selectedFreq = 0;
-                    break;
-
-                case R.id.almost_never:
                     selectedFreq = 1;
                     break;
 
-                case R.id.sometimes:
+                case R.id.almost_never:
                     selectedFreq = 2;
                     break;
 
-                case R.id.almost_always:
+                case R.id.sometimes:
                     selectedFreq = 3;
                     break;
 
-                case R.id.always:
+                case R.id.almost_always:
                     selectedFreq = 4;
+                    break;
+
+                case R.id.always:
+                    selectedFreq = 5;
                     break;
 
             }
@@ -74,6 +81,8 @@ public class CheckupProcess extends Activity {
                 chills = selectedFreq;
             } else if(q == 1){
                 fatigue = selectedFreq;
+            } else {
+                depression.add(selectedFreq);
             }
 
             btnNext.setOnClickListener(new View.OnClickListener() {
@@ -182,14 +191,27 @@ public class CheckupProcess extends Activity {
                     btnNext.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+
                             Intent intent = new Intent(CheckupProcess.this, DeviceSelect.class);
                             intent.putExtra("chills", chills);
                             intent.putExtra("fatigue", fatigue);
 
+                            // Fetch activity's shared preferences and their editor
+                            sharedPreferences = act.getSharedPreferences("cache", Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+
                             // Store chills
+                            editor.putInt("chills", chills);
 
                             // Store fatigue
+                            editor.putInt("fatigue", fatigue);
 
+                            // Store depression
+                            for (int iter = 0; iter < depression.size(); iter++) {
+                                editor.putInt("depression"+iter, depression.get(iter));
+                            }
+
+                            editor.apply();
 
                             startActivity(intent);
                         }
