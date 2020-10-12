@@ -1,3 +1,4 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="radio_group_vertical_centre">360dp</dimen>
 </resources>

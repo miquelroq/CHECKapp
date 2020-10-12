@@ -30,30 +30,33 @@
         android:src="@drawable/edge_inverted" />
 
     <TextView
-        android:layout_width="377dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="15dp"
+        android:autoSizeMaxTextSize="30dp"
+        android:autoSizeStepGranularity="2sp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="-3dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="35dp"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/colorPrimaryDark"
-        android:padding="10sp"
-        android:text="How often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite – being so fidgety or restless that you were moving around a lot more than usual over the last two weeks?"
-        android:textSize="18sp"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="-3dp"
-        android:layout_marginRight="35dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-6dp"
+        android:layout_marginLeft="-6dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:background="@color/colorPrimary"
+        android:padding="10sp"
+        android:text="@string/question10"
+        android:textColor="@color/colorPrimaryDark" />
 
 
     <RadioGroup
         android:id="@+id/radioGroupFatigue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="@dimen/radio_group_vertical_centre"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
