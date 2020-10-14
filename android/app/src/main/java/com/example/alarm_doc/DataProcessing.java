@@ -45,10 +45,6 @@ import java.util.Map;
  * Launch activity according to the response/outcome
  */
 
-// TODO:
-//      * Send the collected data to Django API
-//      * Wait for the response
-//      * Launch Healthy/Unhealthy activity according to the received response
 public class DataProcessing extends AppCompatActivity {
 
     @Override
