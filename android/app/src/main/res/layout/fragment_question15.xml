@@ -6,16 +6,6 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".Question1">
 
-    <Button
-        android:id="@+id/skipBtn7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_margin="10dp"
-        android:background="@drawable/ic_close_x" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="377dp"
@@ -32,7 +22,7 @@
         android:layout_marginRight="35dp"
         android:background="@color/colorPrimary"
         android:padding="10sp"
-        android:text="Now, hold the temperture sensor."
+        android:text="@string/holdtemp"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp" />
 

@@ -21,7 +21,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="100dp"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="10dp"
         android:autoSizeMaxTextSize="30dp"
@@ -38,18 +38,18 @@
         android:layout_marginRight="38dp"
         android:background="@color/colorPrimary"
         android:padding="10sp"
-        android:text="@string/question2"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:text="@string/question3"
+        android:textColor="@color/colorPrimaryDark" />
 
 
     <RadioGroup
         android:id="@+id/radioGroupFatigue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/radio_group_vertical_centre"
+        android:layout_marginTop="300dp"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="false"
+        android:layout_centerVertical="true"
         >
 
         <RadioButton

@@ -64,5 +64,16 @@
     <string name="breath_rate">Breath Rate</string>
     <string name="bmi">BMI</string>
     <string name="body_fat">Body Fat</string>
+    <string name="question3">How often have you been bothered by feeling down, depressed, irritable, or hopeless over the last two weeks?</string>
+    <string name="question5">How often have you been bothered by trouble falling asleep, staying asleep, or sleeping too much over the last two weeks?</string>
+    <string name="question4">How often have you been bothered that you have little interest or pleasure in doing things over the last two weeks?</string>
+    <string name="question6">How often have you been bothered that you have poor appetite, weight loss, or overeating over the last two weeks?</string>
+    <string name="question7">How often have you been bothered by feeling tired, or having little energy over the last two weeks?</string>
+    <string name="question8">How often have you been bothered by feeling bad about yourself – or feeling that you are a failure, or that you have let yourself or your family down over the last two weeks?</string>
+    <string name="question9">How often have you been bothered that you have trouble concentrating on things like school work, reading, or watching TV over the last two weeks?</string>
+    <string name="question10">How often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite – being so fidgety or restless that you were moving around a lot more than usual over the last two weeks?</string>
+    <string name="question11">How often have you been bothered by thoughts that you would be better off dead, or of hurting yourself in some way over the last two weeks?</string>
+    <string name="question12">How often have you been bothered by feeling nervous, anxious or on edge over the last two weeks?</string>
+    <string name="holdtemp">Now, hold the temperture sensor.</string>
 
 </resources>

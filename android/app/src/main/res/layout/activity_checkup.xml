@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:text="Name:"
             android:id="@+id/textView" android:layout_weight="1" android:textSize="16dp"
-            android:gravity="center_vertical" android:paddingLeft="10dp" android:textColor="@android:color/black"
+            android:gravity="center_vertical" android:paddingLeft="10dp" android:textColor="@color/colorPrimary"
             android:textStyle="bold"/>
         <TextView
             android:layout_width="match_parent"
@@ -28,37 +28,37 @@
             android:text="name"
             android:id="@+id/device_name_text_view" android:layout_weight="1" android:textSize="16dp"
             android:gravity="center_vertical" android:paddingLeft="10dp"
-            android:textColor="@color/material_grey_600" android:textStyle="italic"/>
+            android:textColor="@color/colorlight" android:textStyle="italic"/>
     </LinearLayout>
     <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
         <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="MAC address:"
             android:id="@+id/textView2" android:layout_weight="1" android:textSize="16dp"
-            android:gravity="center_vertical" android:paddingLeft="10dp" android:textColor="@android:color/black"
+            android:gravity="center_vertical" android:paddingLeft="10dp" android:textColor="@color/colorPrimary"
             android:textStyle="bold"/>
         <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="00:00:00:00:00:00"
             android:id="@+id/mac_address_text_view" android:layout_weight="1" android:textSize="16dp"
             android:gravity="center_vertical" android:paddingLeft="10dp"
-            android:textColor="@color/material_grey_600" android:textStyle="italic"/>
+            android:textColor="@color/colorlight" android:textStyle="italic"/>
     </LinearLayout>
     <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
         <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="Elapsed time:"
             android:id="@+id/textView6" android:layout_weight="1" android:textSize="16dp"
-            android:gravity="center_vertical" android:paddingLeft="10dp" android:textColor="@android:color/black"
+            android:gravity="center_vertical" android:paddingLeft="10dp" android:textColor="@color/colorPrimary"
             android:textStyle="bold"/>
         <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="00:00:00"
             android:id="@+id/elapsed_time_Text_view" android:layout_weight="1" android:textSize="16dp"
             android:gravity="center_vertical" android:paddingLeft="10dp"
-            android:textColor="@color/material_grey_600" android:textStyle="italic"/>
+            android:textColor="@color/colorlight" android:textStyle="italic"/>
     </LinearLayout>
     <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="30dp">
         <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="State:"
             android:id="@+id/textView4" android:layout_weight="1" android:textSize="16dp"
-            android:gravity="center_vertical" android:paddingLeft="10dp" android:textColor="@android:color/black"
+            android:gravity="center_vertical" android:paddingLeft="10dp" android:textColor="@color/colorPrimary"
             android:textStyle="bold"/>
         <TextView android:layout_width="match_parent" android:layout_height="match_parent"
             android:text="state" android:id="@+id/state_text_view" android:layout_weight="1"
             android:textSize="16dp" android:gravity="center_vertical" android:paddingLeft="10dp"
-            android:textColor="@color/material_grey_600" android:textStyle="italic"/>
+            android:textColor="@color/colorlight" android:textStyle="italic"/>
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -107,22 +107,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:id="@+id/digital_1_radio_button" android:textColor="@color/material_grey_600" android:textSize="20dp"
+                android:id="@+id/digital_1_radio_button" android:textColor="@color/colorlight" android:textSize="20dp"
                 android:textStyle="bold" android:layout_weight="1" android:gravity="center"
                 android:layout_margin="2dp" android:background="@drawable/radio_button_background"
                 />
             <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="2"
-                android:id="@+id/digital_2_radio_button" android:textColor="@color/material_grey_600"
+                android:id="@+id/digital_2_radio_button" android:textColor="@color/colorlight"
                 android:textSize="20dp" android:textStyle="bold" android:layout_weight="1"
                 android:gravity="center" android:layout_margin="2dp"
                 android:background="@drawable/radio_button_background"/>
             <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="3"
-                android:id="@+id/digital_3_radio_button" android:textColor="@color/material_grey_600"
+                android:id="@+id/digital_3_radio_button" android:textColor="@color/colorlight"
                 android:textSize="20dp" android:textStyle="bold" android:layout_weight="1"
                 android:gravity="center" android:layout_margin="2dp"
                 android:background="@drawable/radio_button_background" android:visibility="gone"/>
             <RadioButton android:layout_width="match_parent" android:layout_height="wrap_content" android:text="4"
-                android:id="@+id/digital_4_radio_button" android:textColor="@color/material_grey_600"
+                android:id="@+id/digital_4_radio_button" android:textColor="@color/colorlight"
                 android:textSize="20dp" android:textStyle="bold" android:layout_weight="1"
                 android:gravity="center" android:layout_margin="2dp"
                 android:background="@drawable/radio_button_background" android:visibility="gone"/>
@@ -158,11 +158,11 @@
         </LinearLayout>
         <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="Results:"
             android:layout_weight="1" android:textSize="16dp"
-            android:gravity="center_vertical" android:paddingLeft="10dp" android:textColor="@android:color/black"
+            android:gravity="center_vertical" android:paddingLeft="10dp" android:textColor="@color/colorPrimary"
             android:textStyle="bold"/>
         <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:text="..."
             android:id="@+id/results_text_view" android:layout_weight="1" android:textSize="16dp"
             android:gravity="center_vertical" android:paddingLeft="10dp"
-            android:textColor="@color/material_grey_600" android:textStyle="italic"/>
+            android:textColor="@color/colorlight" android:textStyle="italic"/>
     </LinearLayout>
 </LinearLayout>
