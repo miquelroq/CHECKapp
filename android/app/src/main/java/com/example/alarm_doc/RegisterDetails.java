@@ -2,6 +2,8 @@ package com.example.alarm_doc;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,6 +39,16 @@ public class RegisterDetails extends AppCompatActivity {
             return;
         }
 
+        // Set the button drawable res
+        Button back = findViewById(R.id.back);
+        back.setBackgroundResource(R.drawable.ic_arrow_left);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         // BPM
         int bpm = register.getCardioRespiratory().getBpm();
         TextView bpm_tv = findViewById(R.id.bpm);
@@ -60,11 +72,7 @@ public class RegisterDetails extends AppCompatActivity {
         mBarChart.addBar(breathBar);
         // TODO: Plot here the ideal value for breath rate
 
-
         mBarChart.startAnimation();
-
-
-
 
 
         // Alpha
@@ -110,15 +118,10 @@ public class RegisterDetails extends AppCompatActivity {
         gammaBar.setLegendLabel("Gamma");
 
         nBarChart.addBar(alphaBar);
-        // TODO: Plot here the ideal value for alpha
         nBarChart.addBar(betaBar);
-        // TODO: Plot here the ideal value for beta
         nBarChart.addBar(deltaBar);
-        // TODO: Plot here the ideal value for delta
         nBarChart.addBar(thetaBar);
-        // TODO: Plot here the ideal value for theta
         nBarChart.addBar(gammaBar);
-        // TODO: Plot here the ideal value for gamma
 
         nBarChart.startAnimation();
 
