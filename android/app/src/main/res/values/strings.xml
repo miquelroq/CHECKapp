@@ -3,7 +3,7 @@
     <string name="diagnose">Diagnose</string>
     <string name="description_logo">logo</string>
     <string name="stats">Statistics</string>
-    <string name="loading">Testing</string>
+    <string name="loading">Testing...</string>
     <string name="unhealthy">Call a doc!</string>
     <string name="healthy">All seems good!</string>
     <string name="custom">Custom Diagnostic</string>

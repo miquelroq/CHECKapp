@@ -59,7 +59,7 @@
         android:layout_marginTop="@dimen/radio_group_vertical_centre"
         android:orientation="horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_centerVertical="false"
         >
 
         <RadioButton

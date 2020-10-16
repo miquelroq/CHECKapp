@@ -37,15 +37,29 @@ public class RegisterDetails extends AppCompatActivity {
             return;
         }
 
+        //Scores
+        int emo = register.getEmotionalScore();
+        TextView emotional_tv = findViewById(R.id.emotional_score);
+        emotional_tv.setText(""+"%");
+        int cardio = register.getCardioRespiratoryScore();
+        TextView cardio_tv = findViewById(R.id.cardio_score);
+        cardio_tv.setText(""+"%");
+        int fitness = (int) register.getFitnessScore();
+        TextView fit_tv = findViewById(R.id.fitness_score);
+        fit_tv.setText(""+"%");
+        int nerves = (int) register.getNervousMuscularScore();
+        TextView nerve_tv = findViewById(R.id.muscular_score);
+        nerve_tv.setText(""+"%");
+
         // BPM
         int bpm = register.getCardioRespiratory().getBpm();
-        TextView bpm_tv = findViewById(R.id.bpm);
-        bpm_tv.setText(""+bpm);
+        //TextView bpm_tv = findViewById(R.id.bpm);
+        //bpm_tv.setText(""+bpm);
 
         // Breath Rate
         int breath = register.getCardioRespiratory().getDiff();
-        TextView breath_tv = findViewById(R.id.breath);
-        breath_tv.setText(""+breath);
+        //TextView breath_tv = findViewById(R.id.breath);
+        //breath_tv.setText(""+breath);
 
         BarChart mBarChart = (BarChart) findViewById(R.id.barchart);
 
@@ -60,37 +74,24 @@ public class RegisterDetails extends AppCompatActivity {
         mBarChart.addBar(breathBar);
         // TODO: Plot here the ideal value for breath rate
 
-
         mBarChart.startAnimation();
-
-
-
 
 
         // Alpha
         int alpha = register.getNeurologic().getAlpha().getAmp();
-        TextView alpha_tv = findViewById(R.id.alpha);
-        alpha_tv.setText(""+alpha);
 
         // Beta
         int beta = register.getNeurologic().getBeta().getAmp();
-        TextView beta_tv = findViewById(R.id.beta);
-        beta_tv.setText(""+beta);
 
         // Delta
         int delta = register.getNeurologic().getDelta().getAmp();
-        TextView delta_tv = findViewById(R.id.delta);
-        delta_tv.setText(""+delta);
 
         // Theta
         int theta = register.getNeurologic().getTheta().getAmp();
-        TextView theta_tv = findViewById(R.id.theta);
-        theta_tv.setText(""+theta);
 
         // Gamma
         int gamma = register.getNeurologic().getGamma().getAmp();
-        TextView gamma_tv = findViewById(R.id.gamma);
-        gamma_tv.setText(""+gamma);
+
 
         BarChart nBarChart = (BarChart) findViewById(R.id.barchart_neuro);
 

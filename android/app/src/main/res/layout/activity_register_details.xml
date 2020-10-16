@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linearLayout1"
             android:layout_width="match_parent"
             android:layout_height="735dp"
@@ -23,111 +23,19 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="36dp"
-                android:text="@string/register_details"
-                android:textSize="45sp" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="96dp"
-                android:text="@string/cardio_respiratory"
-                android:textSize="25sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="126dp"
-                android:text="@string/bpm"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <TextView
-                android:id="@+id/bpm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="86dp"
-                android:layout_marginLeft="86dp"
-                android:layout_marginTop="126dp"
-                android:text="-1"
-                android:textSize="20sp" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="166dp"
-                android:text="@string/breath_rate"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-            <org.eazegraph.lib.charts.BarChart
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/barchart"
-                android:layout_width="match_parent"
-                android:layout_marginTop="186dp"
-                android:layout_height="256dp"
-                android:padding="10dp"
-                app:egFixedBarWidth="true"
-                app:egBarWidth="80dp"
-                app:egLegendHeight="40dp"/>
-
-            <TextView
-                android:id="@+id/breath"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="146dp"
-                android:layout_marginLeft="146dp"
-                android:layout_marginTop="166dp"
-                android:text="-1"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/fitness"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="220dp"
-                android:text="@string/fitness"
-                android:textSize="25sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
+                android:id="@+id/fitness_score"
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
                 android:layout_marginTop="256dp"
-                android:text="@string/body_fat"
-                android:textSize="20sp"
+                android:text="100%"
+                android:textColor="@color/colorlight"
+                android:textSize="30dp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fitness" />
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="276dp"
-                android:text="@string/bmi"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fitness" />
 
             <!--    <TextView
             android:layout_width="wrap_content"
@@ -140,146 +48,164 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />-->
 
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/register_details"
+                android:textColor="@color/colorPrimary"
+                android:textSize="45sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cardio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="116dp"
+                android:text="@string/cardio_respiratory"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fitness"
+                android:layout_width="102dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="212dp"
+                android:text="@string/fitness"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/emotional"
+                android:layout_width="165dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="320dp"
+                android:text="Emotional"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nervous_muscular"
+                android:layout_width="240dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="420dp"
+                android:text="@string/nervous_muscular"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <org.eazegraph.lib.charts.BarChart
+                android:id="@+id/barchart"
+                android:layout_width="135dp"
+                android:layout_height="112dp"
+                android:layout_marginStart="264dp"
+                android:layout_marginLeft="264dp"
+                android:layout_marginTop="116dp"
+                android:padding="10dp"
+                app:egBarWidth="80dp"
+                app:egFixedBarWidth="true"
+                app:egLegendHeight="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:id="@+id/neurologic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
                 android:layout_marginTop="310dp"
                 android:text="@string/neurologic"
+                android:textColor="@color/colorPrimary"
                 android:textSize="25sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="336dp"
-                android:text="Alpha"
-                android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/neurologic" />
-
-            <TextView
-                android:id="@+id/alpha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="96dp"
-                android:layout_marginLeft="96dp"
-                android:layout_marginTop="336dp"
-                android:text="-1"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/neurologic" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="356dp"
-                android:text="Beta"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/neurologic" />
-
-            <TextView
-                android:id="@+id/beta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="96dp"
-                android:layout_marginLeft="96dp"
-                android:layout_marginTop="356dp"
-                android:text="-1"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/neurologic" />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="396dp"
-                android:text="Delta"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/neurologic" />
-
-            <TextView
-                android:id="@+id/delta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="96dp"
-                android:layout_marginLeft="96dp"
-                android:layout_marginTop="396dp"
-                android:text="-1"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/neurologic" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="436dp"
-                android:text="Theta"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/neurologic" />
-
-            <TextView
-                android:id="@+id/theta"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="96dp"
-                android:layout_marginLeft="96dp"
-                android:layout_marginTop="436dp"
-                android:text="-1"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/neurologic" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="476dp"
-                android:text="Gamma"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/neurologic" />
-
-            <TextView
-                android:id="@+id/gamma"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="106dp"
-                android:layout_marginLeft="106dp"
-                android:layout_marginTop="476dp"
-                android:text="-1"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/neurologic" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.482" />
 
             <org.eazegraph.lib.charts.BarChart
-                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/barchart_neuro"
-                android:layout_width="match_parent"
-                android:layout_marginTop="520dp"
-                android:layout_height="256dp"
+                android:layout_width="407dp"
+                android:layout_height="223dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="553dp"
                 android:padding="10dp"
-                app:egFixedBarWidth="true"
                 app:egBarWidth="20dp"
-                app:egLegendHeight="40dp"/>
+                app:egFixedBarWidth="true"
+                app:egLegendHeight="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/cardio_score"
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="149dp"
+                android:text="100%"
+                android:textColor="@color/colorlight"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/emotional_score"
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="355dp"
+                android:text="100%"
+                android:textColor="@color/colorlight"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/muscular_score"
+                android:layout_width="77dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="451dp"
+                android:text="100%"
+                android:textColor="@color/colorlight"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
