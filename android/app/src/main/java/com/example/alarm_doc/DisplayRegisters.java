@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -41,6 +42,16 @@ public class DisplayRegisters extends AppCompatActivity {
 
         // Fetch the user's past registers
         ArrayList<Register> registers = (ArrayList<Register>) loggedInProfile.getRegisters();
+
+        // Set the button drawable res
+        Button back = findViewById(R.id.back);
+        back.setBackgroundResource(R.drawable.ic_arrow_left);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         // Inflate each register into the Layout
         for (Register r : registers) {
