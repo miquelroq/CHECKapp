@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         // Go back
         Button back = (Button) findViewById(R.id.btn_back);
 
-        back.setOnClickListener(new View.OnClickListener() {
+                back.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     finish();

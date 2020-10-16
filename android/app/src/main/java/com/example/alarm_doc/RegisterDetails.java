@@ -40,8 +40,7 @@ public class RegisterDetails extends AppCompatActivity {
         }
 
         // Set the button drawable res
-        Button back = findViewById(R.id.back);
-        back.setBackgroundResource(R.drawable.ic_arrow_left);
+        Button back = findViewById(R.id.backregister);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,26 +64,45 @@ public class RegisterDetails extends AppCompatActivity {
 
         // BPM
         int bpm = register.getCardioRespiratory().getBpm();
-        //TextView bpm_tv = findViewById(R.id.bpm);
-        //bpm_tv.setText(""+bpm);
+        //TODO: int idealbpm =
 
         // Breath Rate
         int breath = register.getCardioRespiratory().getDiff();
-        //TextView breath_tv = findViewById(R.id.breath);
-        //breath_tv.setText(""+breath);
+        //TODO: int idealbreath =
 
         BarChart mBarChart = (BarChart) findViewById(R.id.barchart);
 
         BarModel bpmBar = new BarModel(bpm, 0xFF123456);
         bpmBar.setLegendLabel("BPM");
+        //TODO: BarModel idealbpmBar = new BarModel(idealbpm, 0xFF123456);
+        //TODO: idealbpmBar.setLegendLabel("Ideal BPM");
 
         BarModel breathBar = new BarModel(breath, 0xFF123456);
-        breathBar.setLegendLabel("Breath Rate");
+        breathBar.setLegendLabel("Breath-Rate");
+        //TODO: BarModel idealbreathBar = new BarModel(idealbreath, 0xFF123456);
+        //TODO: idealbpmBar.setLegendLabel("Ideal Breath-Rate");
 
         mBarChart.addBar(bpmBar);
-        // TODO: Plot here the ideal value for bpm
+        //TODO: mBarChart.addBar(idealbmiBar);
         mBarChart.addBar(breathBar);
-        // TODO: Plot here the ideal value for breath rate
+        //TODO:  mBarChart.addBar(idealbreathBar);
+
+        mBarChart.startAnimation();
+
+        //BMI
+        int bmi = (int) register.getFitness().getBmi();
+        //TODO:
+        // int idealbmi =
+        BarChart BarChart = (BarChart) findViewById(R.id.fitnessbar);
+
+        BarModel bmiBar = new BarModel(bmi, 0xFF123456);
+        bmiBar.setLegendLabel("BMI");
+
+        //TODO: BarModel idealbmiBar = new BarModel(idealbmi, 0xFF123456);
+        //TODO: idealbmiBar.setLegendLabel("Ideal BMI");
+
+        mBarChart.addBar(bmiBar);
+        //TODO: mBarChart.addBar(idealbmiBar);
 
         mBarChart.startAnimation();
 
