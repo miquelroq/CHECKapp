@@ -29,14 +29,14 @@
 
             <Button
                 android:id="@+id/uploadPic"
-                android:layout_width="182dp"
+                android:layout_width="192dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="192dp"
-                android:layout_marginLeft="192dp"
+                android:layout_marginStart="182dp"
+                android:layout_marginLeft="182dp"
                 android:layout_marginTop="48dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/mybutton"
                 android:text="@string/uploadPic"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="@color/colorPrimary" />
 
             <ImageView
                 android:id="@+id/pfp_preview"
@@ -226,14 +226,14 @@
             <Button
                 android:id="@+id/next"
                 android:layout_width="308dp"
-                android:layout_height="36dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="60dp"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/mybutton"
                 android:text="@string/finish"
-                android:textColor="@color/colorPrimaryDark" />
+                android:textColor="@color/colorPrimary" />
 
         </LinearLayout>
     </ScrollView>

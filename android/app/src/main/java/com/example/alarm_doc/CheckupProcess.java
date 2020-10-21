@@ -226,7 +226,8 @@ public class CheckupProcess extends Activity {
 
                             editor.apply();
 
-                            startActivity(intent);
+                            startActivityForResult(intent, 64);
+
                         }
                     });
                 } else if (position == 0) {
@@ -300,9 +301,24 @@ public class CheckupProcess extends Activity {
 
         @Override
         public void onDestroy() {
+            setResult(64);
             super.onDestroy();
             this.finish();
 
         }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode==64){
+            finish();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        setResult(64);
+        super.onStop();
+    }
+
 
     }

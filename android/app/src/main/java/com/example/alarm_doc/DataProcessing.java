@@ -158,6 +158,7 @@ public class DataProcessing extends AppCompatActivity {
                         Intent registerDetails = new Intent(getApplicationContext(), RegisterDetails.class);
                         registerDetails.putExtra("date", "LAST");
                         startActivity(registerDetails);
+                        finish();
 
                     }
                 }, new IntentFilter(BitalinoCapture.ACTION_CAPTURE)
@@ -202,5 +203,16 @@ public class DataProcessing extends AppCompatActivity {
         }
 
         return ret;
+    }
+
+    @Override
+    protected void onStop() {
+        setResult(64);
+        super.onStop();
+    }
+    @Override
+    protected void onDestroy() {
+        setResult(64);
+        super.onDestroy();
     }
 }

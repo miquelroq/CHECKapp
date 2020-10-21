@@ -116,6 +116,12 @@ public class DeviceSelect extends ListActivity {
             finish();
             return;
         }
+
+        if(resultCode == 64){
+            finish();
+            return;
+        }
+
         super.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -177,6 +183,7 @@ public class DeviceSelect extends ListActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        setResult(64);
 
         if(bthDeviceScan != null){
             bthDeviceScan.closeScanReceiver();
@@ -304,7 +311,7 @@ public class DeviceSelect extends ListActivity {
 
                     // Launch the animated testing activity
                     Intent dataProcessing = new Intent(DeviceSelect.this, DataProcessing.class);
-                    startActivity(dataProcessing);
+                    startActivityForResult(dataProcessing, 64);
 
 
                 }
@@ -318,6 +325,13 @@ public class DeviceSelect extends ListActivity {
         TextView deviceName;
         TextView deviceAddress;
     }
+
+    @Override
+    protected void onStop() {
+        setResult(64);
+        super.onStop();
+    }
+
 
 
 
