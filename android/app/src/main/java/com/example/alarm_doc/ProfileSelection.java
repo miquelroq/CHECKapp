@@ -2,8 +2,10 @@ package com.example.alarm_doc;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -15,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.alarm_doc.domain.Profile;
 import com.example.alarm_doc.utils.Utils;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -39,6 +42,8 @@ public class ProfileSelection extends AppCompatActivity {
         getIntent().setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_selection);
+
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR); // white font on status bar
 
         layout = findViewById(R.id.linear_layout);
 
@@ -90,7 +95,17 @@ public class ProfileSelection extends AppCompatActivity {
         });
 
         ImageView display_img = (ImageView) avatar.findViewById(R.id.avatar_img);
-        display_img.setImageURI(img);
+
+        try {
+
+            Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), img);
+            Bitmap cropped = utils.getRoundedCroppedBitmap(bitmap);
+            display_img.setImageBitmap(cropped);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            display_img.setImageURI(img);
+        }
 
         display_img.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -36,6 +36,8 @@ public class DisplayRegisters extends AppCompatActivity {
         setContentView(R.layout.activity_registers);
 
         layout = findViewById(R.id.linearLayoutRegisters);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR); // white font on status bar
+
 
         // Fetch the logged in user
         Profile loggedInProfile = utils.getLoggedProfile(act);

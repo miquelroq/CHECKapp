@@ -104,6 +104,7 @@ public class CheckupProcess extends Activity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_checkup_process);
 
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR); // white font on status bar
 
             viewPager =  findViewById(R.id.view_pager);
             dotsLayout = findViewById(R.id.layoutDots);
@@ -259,6 +260,7 @@ public class CheckupProcess extends Activity {
             public void onPageScrollStateChanged(int arg0) {
 
             }
+
         };
 
         public class MyViewPagerAdapter extends PagerAdapter {
@@ -294,6 +296,13 @@ public class CheckupProcess extends Activity {
                 View view = (View) object;
                 container.removeView(view);
             }
+        }
+
+        @Override
+        public void onDestroy() {
+            super.onDestroy();
+            this.finish();
+
         }
 
     }

@@ -2,8 +2,10 @@ package com.example.alarm_doc;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -13,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.alarm_doc.domain.Profile;
 import com.example.alarm_doc.utils.Utils;
+
+import java.io.IOException;
 
 /**
  *
@@ -84,6 +88,16 @@ public class MainActivity extends AppCompatActivity {
         ImageView imgview = (ImageView) findViewById(R.id.avatar_img);
         Uri img = Uri.parse(p.getPhoto());
 
-        imgview.setImageURI(img);
+        try {
+
+            Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), img);
+            Bitmap cropped = utils.getRoundedCroppedBitmap(bitmap);
+            imgview.setImageBitmap(cropped);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            imgview.setImageURI(img);
+        }
+
     }
 }

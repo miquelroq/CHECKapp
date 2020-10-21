@@ -14,13 +14,12 @@
 
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:foreground="@drawable/frame"
         android:background="@color/colorPrimary"
-        app:srcCompat="@drawable/logo_dark"
-        tools:srcCompat="@drawable/logo"
         android:clickable="true"
         android:focusable="true"
-        />
+        android:foreground="@drawable/frame"
+        app:srcCompat="@drawable/logo_dark"
+        tools:srcCompat="@drawable/logo" />
 
 
     <TextView

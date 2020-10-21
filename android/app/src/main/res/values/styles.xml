@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@drawable/logo_startup</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

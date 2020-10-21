@@ -3,6 +3,14 @@ package com.example.alarm_doc.utils;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.graphics.RectF;
 
 import com.example.alarm_doc.domain.Profile;
 import com.example.alarm_doc.domain.Register;
@@ -144,4 +152,29 @@ public class Utils {
 
     }
 
+    public Bitmap getRoundedCroppedBitmap(Bitmap bitmap) {
+        int widthLight = bitmap.getHeight();
+        int heightLight = bitmap.getHeight();
+
+        Bitmap output = Bitmap.createBitmap(bitmap.getHeight(), bitmap.getHeight(),
+                Bitmap.Config.ARGB_8888);
+
+        Canvas canvas = new Canvas(output);
+        Paint paintColor = new Paint();
+        paintColor.setFlags(Paint.ANTI_ALIAS_FLAG);
+
+        RectF rectF = new RectF(new Rect(0, 0, widthLight, heightLight));
+
+        canvas.drawRoundRect(rectF, widthLight / 2, heightLight / 2, paintColor);
+
+        Paint paintImage = new Paint();
+        paintImage.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_ATOP));
+        canvas.drawBitmap(bitmap, 0, 0, paintImage);
+
+        Matrix matrix = new Matrix();
+        matrix.postScale(1, -1, widthLight / 2f, heightLight / 2f);
+
+        return Bitmap.createBitmap(output, 0, 0, output.getWidth(), output.getHeight(), matrix, true);
+
+    }
 }

@@ -21,6 +21,8 @@ public class RegisterDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_details);
 
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR); // white font on status bar
+
         Bundle extras = getIntent().getExtras();
         Utils utils = new Utils();
         String date = null;
@@ -51,16 +53,16 @@ public class RegisterDetails extends AppCompatActivity {
         //Scores
         int emo = register.getEmotionalScore();
         TextView emotional_tv = findViewById(R.id.emotional_score);
-        emotional_tv.setText(""+"%");
+        emotional_tv.setText(emo+"%");
         int cardio = register.getCardioRespiratoryScore();
         TextView cardio_tv = findViewById(R.id.cardio_score);
-        cardio_tv.setText(""+"%");
+        cardio_tv.setText(cardio+"%");
         int fitness = (int) register.getFitnessScore();
         TextView fit_tv = findViewById(R.id.fitness_score);
-        fit_tv.setText(""+"%");
+        fit_tv.setText(fitness+"%");
         int nerves = (int) register.getNervousMuscularScore();
         TextView nerve_tv = findViewById(R.id.muscular_score);
-        nerve_tv.setText(""+"%");
+        nerve_tv.setText(nerves+"%");
 
         // BPM
         int bpm = register.getCardioRespiratory().getBpm();

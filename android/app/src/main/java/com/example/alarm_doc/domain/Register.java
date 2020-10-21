@@ -40,7 +40,7 @@ public class Register {
         this.setNeurologic(neurologic);
         this.setFitness(fitness);
         this.setCardioRespiratory(cardioRespiratory);
-        this.date = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        this.date = new SimpleDateFormat("yyyy-MM-dd HH.mm").format(new Date());
     }
 
     public Emotional getEmotional() {

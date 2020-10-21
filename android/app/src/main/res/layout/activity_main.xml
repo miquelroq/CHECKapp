@@ -28,23 +28,23 @@
         android:id="@+id/diagnose"
         android:layout_width="305dp"
         android:layout_height="72dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/mybutton"
         android:text="@string/diagnose"
-        android:textColor="@color/white"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.468" />
+        app:layout_constraintVertical_bias="0.409" />
 
     <Button
         android:id="@+id/stats"
         android:layout_width="305dp"
         android:layout_height="72dp"
         android:layout_marginTop="40dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/mybutton"
         android:text="@string/stats"
-        android:textColor="@color/white"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/diagnose" />

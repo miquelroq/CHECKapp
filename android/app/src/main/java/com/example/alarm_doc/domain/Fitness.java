@@ -25,6 +25,7 @@ public class Fitness {
     }
 
     public double getScore() {
+        this.calculateScore();
         return score;
     }
 

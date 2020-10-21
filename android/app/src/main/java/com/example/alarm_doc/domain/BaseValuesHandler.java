@@ -1,5 +1,7 @@
 package com.example.alarm_doc.domain;
 
+import android.util.Log;
+
 import java.util.List;
 
 public class BaseValuesHandler {
@@ -178,14 +180,19 @@ public class BaseValuesHandler {
         double value = -1;
         double idealWeight;
 
+
+
         if (female){
-            idealWeight = 53.1 + 1.36 * ((height/2.54) - 60);
+            idealWeight = 53.1 + 1.36 * (((height * 0.01)/2.54) - 60);
         }
         else{
-            idealWeight = 56.2 + 1.41 * ((height/2.54) - 60);
+            idealWeight = 56.2 + 1.41 * (((height * 0.01)/2.54) - 60);
         }
 
-        value = idealWeight/(height*height);
+        Log.d("FITNESS", ""+idealWeight);
+        Log.d("FITNESS", ""+height);
+
+        value = idealWeight/(height*height*0.01*0.01);
         setFitnessBmi(value);
     }
 

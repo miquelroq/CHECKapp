@@ -68,6 +68,7 @@ public class DeviceSelect extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkup);
         mHandler = new Handler();
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR); // white font on status bar
 
         registerReceiver(scanDevicesUpdateReceiver, new IntentFilter(Constants.ACTION_MESSAGE_SCAN));
 
@@ -184,6 +185,9 @@ public class DeviceSelect extends ListActivity {
         if(isScanDevicesUpdateReceiverRegistered){
             unregisterReceiver(scanDevicesUpdateReceiver);
         }
+
+        this.finish();
+
     }
 
     @Override

@@ -55,8 +55,8 @@ public class Emotional {
     }
 
     public void calculateScore() {
-        int score = max_score + 10 - (1/5) * q1 - (1/5) * q2 - (1/5) * q3 - (1/5) * q4 - (1/5) * q5 - (1/5) * q6 - (1/5) * q7 - (1/5) * q8 - (1/5) * q9 - (1/5) * q10;
-        this.setScore(score);
+        double score = max_score + 10 - (1/5) * (double) q1 - (1/5) * (double) q2 - (1/5) * (double) q3 - (1/5) * (double)  q4 - (1/5) * (double) q5 - (1/5) * (double) q6 - (1/5) * (double) q7 - (1/5) * (double) q8 - (1/5) * (double) q9 - (1/5) * (double) q10;
+        this.setScore((int) score);
         //TODO: max score como variavel global
     }
 
