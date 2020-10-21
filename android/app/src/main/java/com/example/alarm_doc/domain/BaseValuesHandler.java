@@ -180,13 +180,13 @@ public class BaseValuesHandler {
         double value = -1;
         double idealWeight;
 
-
+        double heightInFeet = height * 0.01 * 3.2808399;
 
         if (female){
-            idealWeight = 53.1 + 1.36 * (((height * 0.01)/2.54) - 60);
+            idealWeight = 45.5 + 2.3 * (max((heightInFeet - 5), 0) * 12);
         }
         else{
-            idealWeight = 56.2 + 1.41 * (((height * 0.01)/2.54) - 60);
+            idealWeight = 50 + 2.3 * (max((heightInFeet - 5), 0) * 12);
         }
 
         Log.d("FITNESS", ""+idealWeight);
@@ -231,6 +231,13 @@ public class BaseValuesHandler {
         int value = -1;
         //TODO calculate ideal value
         setThetaAmp(value);
+    }
+
+    private double max(double elem1, double elem2){
+        if(elem1 > elem2) {
+            return elem1;
+        }
+        return elem2;
     }
 
 

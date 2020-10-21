@@ -174,7 +174,8 @@ public class Utils {
         Matrix matrix = new Matrix();
         matrix.postScale(1, -1, widthLight / 2f, heightLight / 2f);
 
-        return Bitmap.createBitmap(output, 0, 0, output.getWidth(), output.getHeight(), matrix, true);
+        //return Bitmap.createBitmap(output, 0, 0, output.getWidth(), output.getHeight(), matrix, true);
+        return output;
 
     }
 }

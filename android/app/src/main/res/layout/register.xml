@@ -27,10 +27,10 @@
         android:id="@+id/displayOutcome"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        app:srcCompat="@drawable/logo_dark"
-        tools:srcCompat="@drawable/logo_dark"
+
         android:clickable="true"
         android:focusable="true"
+        android:background="@drawable/ic_arrow_right"
         android:layout_marginTop="20dp"/>
 
 </LinearLayout>
