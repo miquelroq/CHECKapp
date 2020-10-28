@@ -1,6 +1,13 @@
-# Alarm-doc
+# CHECKapp
 
 *Project developed in the Summer Course "IoT apps in the health field" by IPV, supported by a research schoolarship by FCT.*
+
+After being challenged to create an application that bonded mobile programming and Bitalino, we set out to build an app that allowed a user to check-up on their current health status. Thus, CHECKapp was born. Our goal is to allow a user to easily get a quality analysis on 5 different scopes: Emotional, Nervous, Cardio, Fitness and Neurological. Bearing this in mind, we hope that CHECKapp can help ease the load on the National Health System, by providing a quick, easy-to-read diagnostic that allows users to know whether there is a need to call for medical aid.
+
+# Overview
+
+The app consists of an Android application that is able to receive the signals sent by the BITalino via Bluetooth. Currently, it supports the reading of EEG and ECG data. This data is then sent to the API and the corresponding metrics are calculated. At the time of writing, the API is able to calculate Beats Per Minute, Respiration Rate and the amplitude of Alpha, Beta, Delta, Theta and Gamma waves. The Android app is then able to display and associate each of these readings and calculated metrics with timestamp, instancing a Register. Registers are available for each user and the application supports multiple users.
+
 
 ## POST IT NOTES 
  - BITalino protocol and utilities meant to write to/read from BITalino devices. <https://github.com/BITalinoWorld/java-sdk>
